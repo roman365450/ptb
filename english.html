@@ -175,14 +175,7 @@
 
         .section {
             margin-bottom: 80px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease, transform 0.8s ease;
-        }
-
-        .section.animate {
-            opacity: 1;
-            transform: translateY(0);
+            animation: fadeIn 0.8s ease;
         }
 
         @keyframes fadeIn {
@@ -205,14 +198,9 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 0;
+            width: 80px;
             height: 4px;
             background: #F6F3CA;
-            transition: width 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        }
-
-        .section.animate h2:after {
-            width: 80px;
         }
 
         .section h3 {
@@ -239,35 +227,6 @@
             border: 2px solid transparent;
             position: relative;
             overflow: hidden;
-            opacity: 0;
-            transform: translateY(50px) scale(0.9);
-        }
-
-        .feature-card.animate {
-            animation: slideInUp 0.6s ease forwards;
-        }
-
-        .feature-card:nth-child(1).animate {
-            animation-delay: 0.1s;
-        }
-
-        .feature-card:nth-child(2).animate {
-            animation-delay: 0.2s;
-        }
-
-        .feature-card:nth-child(3).animate {
-            animation-delay: 0.3s;
-        }
-
-        .feature-card:nth-child(4).animate {
-            animation-delay: 0.4s;
-        }
-
-        @keyframes slideInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
         }
 
         .feature-card::before {
@@ -296,28 +255,6 @@
             font-size: 3em;
             margin-bottom: 20px;
             display: block;
-            opacity: 0;
-            transform: scale(0);
-        }
-
-        .feature-card.animate .feature-icon {
-            animation: bounceIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
-            animation-delay: 0.3s;
-        }
-
-        @keyframes bounceIn {
-            0% {
-                opacity: 0;
-                transform: scale(0);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1.2);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
         }
 
         .feature-card h3 {
@@ -346,26 +283,6 @@
             border-left: 4px solid #F6F3CA;
             transition: all 0.3s ease;
             cursor: pointer;
-            opacity: 0;
-            transform: translateX(-30px);
-        }
-
-        .vocab-item.animate {
-            animation: slideInRight 0.5s ease forwards;
-        }
-
-        .vocab-item:nth-child(1).animate { animation-delay: 0.1s; }
-        .vocab-item:nth-child(2).animate { animation-delay: 0.15s; }
-        .vocab-item:nth-child(3).animate { animation-delay: 0.2s; }
-        .vocab-item:nth-child(4).animate { animation-delay: 0.25s; }
-        .vocab-item:nth-child(5).animate { animation-delay: 0.3s; }
-        .vocab-item:nth-child(6).animate { animation-delay: 0.35s; }
-
-        @keyframes slideInRight {
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
         }
 
         .vocab-item:hover {
@@ -393,18 +310,7 @@
             margin: 20px 0;
             border-left: 5px solid #F6F3CA;
             transition: all 0.3s ease;
-            opacity: 0;
-            transform: translateY(20px);
         }
-
-        .grammar-box.animate {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .grammar-box:nth-child(1).animate { animation-delay: 0.1s; }
-        .grammar-box:nth-child(2).animate { animation-delay: 0.2s; }
-        .grammar-box:nth-child(3).animate { animation-delay: 0.3s; }
-        .grammar-box:nth-child(4).animate { animation-delay: 0.4s; }
 
         .grammar-box:hover {
             box-shadow: 0 8px 25px rgba(0,0,0,0.1);
@@ -1087,53 +993,6 @@
             div.textContent = text;
             return div.innerHTML;
         }
-
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                    // Optional: unobserve after animation to improve performance
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        // Observe all animated elements
-        document.addEventListener('DOMContentLoaded', () => {
-            // Observe sections
-            document.querySelectorAll('.section').forEach(section => {
-                observer.observe(section);
-            });
-
-            // Observe feature cards
-            document.querySelectorAll('.feature-card').forEach(card => {
-                observer.observe(card);
-            });
-
-            // Observe vocabulary items
-            document.querySelectorAll('.vocab-item').forEach(item => {
-                observer.observe(item);
-            });
-
-            // Observe grammar boxes
-            document.querySelectorAll('.grammar-box').forEach(box => {
-                observer.observe(box);
-            });
-
-            // Animate first section immediately on page load
-            const firstSection = document.querySelector('.section');
-            if (firstSection) {
-                setTimeout(() => {
-                    firstSection.classList.add('animate');
-                }, 300);
-            }
-        });
     </script>
 </body>
 </html>
