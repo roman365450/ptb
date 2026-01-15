@@ -283,77 +283,6 @@
             right: 0;
         }
 
-        /* Features Section */
-        .features {
-            background: #fff;
-            padding: 80px 40px;
-        }
-
-        .features-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .features h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
-            text-align: center;
-            margin-bottom: 60px;
-            color: #212121;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-        }
-
-        .feature-card {
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 8px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid #f5f5f5;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            border-color: #FFD54F;
-        }
-
-        .feature-icon {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .feature-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            color: #212121;
-        }
-
-        .feature-card p {
-            color: #666;
-            line-height: 1.8;
-        }
-
-        /* Footer */
-        footer {
-            background: #212121;
-            color: #fff;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        footer p {
-            margin-bottom: 10px;
-        }
-
         /* Responsive */
         @media (max-width: 1024px) {
             .hero-container {
@@ -414,10 +343,6 @@
             .hero-subtitle::before,
             .hero-subtitle::after {
                 width: 50px;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -509,41 +434,6 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="features-container">
-            <h2>Why Choose PTOB?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <span class="feature-icon">🎓</span>
-                    <h3>Expert Teachers</h3>
-                    <p>Learn from experienced native English speakers with years of teaching experience.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">💬</span>
-                    <h3>Interactive Lessons</h3>
-                    <p>Engage in dynamic, conversation-focused lessons that build confidence.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">📚</span>
-                    <h3>Comprehensive Courses</h3>
-                    <p>From beginner to advanced, we have courses tailored to your level.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">⏰</span>
-                    <h3>Flexible Schedule</h3>
-                    <p>Learn at your own pace with 24/7 access to materials and 1:1 lessons.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 PTOB - Past Tense of Banana</p>
-        <p>English Support Online | Making Learning Fun!</p>
-    </footer>
-
     <script>
         // Mobile menu toggle
         const mobileToggle = document.querySelector('.mobile-menu-toggle');
@@ -567,28 +457,6 @@
                     });
                 }
             });
-        });
-
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.feature-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(30px)';
-            card.style.transition = 'all 0.6s ease';
-            observer.observe(card);
         });
     </script>
 </body>
