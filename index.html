@@ -153,12 +153,14 @@
         .hero-image {
             position: relative;
             animation: fadeInLeft 1s ease;
+            background: transparent;
         }
 
         .hero-image img {
             width: 100%;
-            max-width: 500px;
+            max-width: 700px;
             height: auto;
+            background: transparent;
         }
 
         @keyframes fadeInLeft {
@@ -177,6 +179,7 @@
             justify-content: center;
             align-items: center;
             animation: fadeInRight 1s ease;
+            background: transparent;
         }
 
         @keyframes fadeInRight {
@@ -194,6 +197,7 @@
             max-width: 500px;
             width: 100%;
             height: auto;
+            background: transparent;
         }
 
         /* Responsive */
@@ -208,6 +212,10 @@
                 order: 2;
                 display: flex;
                 justify-content: center;
+            }
+
+            .hero-image img {
+                max-width: 500px;
             }
 
             .hero-content {
@@ -226,6 +234,10 @@
 
             .logo img {
                 height: 60px;
+            }
+
+            .hero-image img {
+                max-width: 400px;
             }
 
             .hero-logo-image {
