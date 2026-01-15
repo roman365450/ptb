@@ -142,8 +142,9 @@
         .hero-container {
             max-width: 1400px;
             width: 100%;
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
             align-items: center;
             z-index: 1;
             position: relative;
@@ -263,9 +264,32 @@
 
         /* Responsive */
         @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                text-align: center;
+            }
+
             .hero-image {
+                order: 2;
                 display: flex;
                 justify-content: center;
+            }
+
+            .hero-content {
+                order: 1;
+            }
+
+            .hero-logo {
+                font-size: 6em;
+            }
+
+            .hero-title {
+                font-size: 2.5em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4em;
             }
         }
 
@@ -276,6 +300,24 @@
 
             .logo img {
                 height: 60px;
+            }
+
+            .hero-logo {
+                font-size: 4em;
+            }
+
+            .hero-title {
+                font-size: 2em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2em;
+                padding: 0 60px;
+            }
+
+            .hero-subtitle::before,
+            .hero-subtitle::after {
+                width: 50px;
             }
         }
 
@@ -352,6 +394,13 @@
         <div class="hero-container">
             <div class="hero-image">
                 <img src="GARI web 2.png" alt="English Teacher" onerror="this.src='banana_naked.png'">
+            </div>
+            <div class="hero-content">
+                <div class="hero-logo">
+                    PT<span class="banana-o">O<img src="banana_naked.png" alt="Banana"></span>B
+                </div>
+                <h2 class="hero-title">Past Tense of Banana</h2>
+                <p class="hero-subtitle">English Support Online</p>
             </div>
         </div>
     </section>
