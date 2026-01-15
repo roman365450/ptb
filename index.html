@@ -21,12 +21,12 @@
 
         /* Navigation */
         nav {
-            background: #fff;
+            background: #efefef;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 15px 0;
+            padding: 20px 0;
         }
 
         .nav-container {
@@ -150,7 +150,7 @@
 
         /* Hero Section */
         .hero {
-            background: #f5f5f5;
+            background: #c9c9c9;
             min-height: calc(100vh - 110px);
             display: flex;
             align-items: center;
@@ -158,17 +158,6 @@
             padding: 60px 40px;
             position: relative;
             overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(255, 213, 79, 0.1) 0%, rgba(255, 245, 157, 0.1) 100%);
-            z-index: 0;
         }
 
         .hero-container {
@@ -191,8 +180,6 @@
             width: 100%;
             max-width: 500px;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
         }
 
         @keyframes fadeInLeft {
@@ -260,20 +247,21 @@
 
         .hero-title {
             font-family: 'Playfair Display', serif;
-            font-size: 3.5em;
-            font-weight: 700;
+            font-size: 3em;
+            font-weight: 400;
             color: #212121;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             line-height: 1.2;
         }
 
         .hero-subtitle {
-            font-size: 1.8em;
-            color: #666;
+            font-size: 1.6em;
+            color: #5a5a5a;
             margin-bottom: 15px;
             position: relative;
             display: inline-block;
-            padding: 0 60px;
+            padding: 0 80px;
+            font-weight: 400;
         }
 
         .hero-subtitle::before,
@@ -281,9 +269,10 @@
             content: '';
             position: absolute;
             top: 50%;
-            width: 50px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #FFD54F);
+            transform: translateY(-50%);
+            width: 70px;
+            height: 3px;
+            background: #D4AF37;
         }
 
         .hero-subtitle::before {
@@ -292,7 +281,6 @@
 
         .hero-subtitle::after {
             right: 0;
-            background: linear-gradient(90deg, #FFD54F, transparent);
         }
 
         /* Features Section */
@@ -420,12 +408,12 @@
 
             .hero-subtitle {
                 font-size: 1.2em;
-                padding: 0 40px;
+                padding: 0 60px;
             }
 
             .hero-subtitle::before,
             .hero-subtitle::after {
-                width: 30px;
+                width: 50px;
             }
 
             .features-grid {
