@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTOB - Past Tense of Banana - English Support Online</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+            background: #f5f5f5;
+        }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 80px;
+            width: auto;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 900;
+            color: #212121;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .logo-text p {
+            font-size: 0.7em;
+            color: #666;
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: #2d3436;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #FFD54F;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #FFD54F;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .cart-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #ff6b6b;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .search-icon {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .search-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #f5f5f5;
+            min-height: calc(100vh - 110px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255, 213, 79, 0.1) 0%, rgba(255, 245, 157, 0.1) 100%);
+            z-index: 0;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            z-index: 1;
+            position: relative;
+        }
+
+        .hero-image {
+            position: relative;
+            animation: fadeInLeft 1s ease;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-content {
+            text-align: center;
+            animation: fadeInRight 1s ease;
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 8em;
+            font-weight: 900;
+            color: #212121;
+            margin-bottom: 20px;
+            line-height: 1;
+            letter-spacing: -2px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-logo .banana-o {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-logo .banana-o img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%;
+            height: auto;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translate(-50%, -50%) translateY(0);
+            }
+            50% {
+                transform: translate(-50%, -50%) translateY(-10px);
+            }
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            font-weight: 700;
+            color: #212121;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8em;
+            color: #666;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            padding: 0 60px;
+        }
+
+        .hero-subtitle::before,
+        .hero-subtitle::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #FFD54F);
+        }
+
+        .hero-subtitle::before {
+            left: 0;
+        }
+
+        .hero-subtitle::after {
+            right: 0;
+            background: linear-gradient(90deg, #FFD54F, transparent);
+        }
+
+        /* Features Section */
+        .features {
+            background: #fff;
+            padding: 80px 40px;
+        }
+
+        .features-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .features h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #212121;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid #f5f5f5;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            border-color: #FFD54F;
+        }
+
+        .feature-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #212121;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: #212121;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                text-align: center;
+            }
+
+            .hero-image {
+                order: 2;
+                display: flex;
+                justify-content: center;
+            }
+
+            .hero-content {
+                order: 1;
+            }
+
+            .hero-logo {
+                font-size: 6em;
+            }
+
+            .hero-title {
+                font-size: 2.5em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.4em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .logo img {
+                height: 60px;
+            }
+
+            .logo-text h1 {
+                font-size: 1.4em;
+            }
+
+            .hero-logo {
+                font-size: 4em;
+            }
+
+            .hero-title {
+                font-size: 2em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2em;
+                padding: 0 40px;
+            }
+
+            .hero-subtitle::before,
+            .hero-subtitle::after {
+                width: 30px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #212121;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo ptob 4.png" alt="PTOB Logo">
+                <div class="logo-text">
+                    <h1>PTOB</h1>
+                    <p>English Support Online</p>
+                </div>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#level-test">LEVEL TEST</a></li>
+                <li><a href="#blog">BLOG</a></li>
+                <li><a href="#courses">OUR COURSES</a></li>
+                <li><a href="#academy">ACADEMY</a></li>
+                <li><a href="#intensive">INTENSIVE COURSES</a></li>
+                <li><a href="#lesson">LESSON 1:1</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#account">MY ACCOUNT</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <div class="cart-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d3436" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="search-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d3436" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-image">
+                <img src="gari 32.png" alt="English Teacher" onerror="this.src='banana_naked.png'">
+            </div>
+            <div class="hero-content">
+                <div class="hero-logo">
+                    PT<span class="banana-o">O<img src="banana_naked.png" alt="Banana"></span>B
+                </div>
+                <h2 class="hero-title">Past Tense of Banana</h2>
+                <p class="hero-subtitle">English Support Online</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <h2>Why Choose PTOB?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">🎓</span>
+                    <h3>Expert Teachers</h3>
+                    <p>Learn from experienced native English speakers with years of teaching experience.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">💬</span>
+                    <h3>Interactive Lessons</h3>
+                    <p>Engage in dynamic, conversation-focused lessons that build confidence.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">📚</span>
+                    <h3>Comprehensive Courses</h3>
+                    <p>From beginner to advanced, we have courses tailored to your level.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">⏰</span>
+                    <h3>Flexible Schedule</h3>
+                    <p>Learn at your own pace with 24/7 access to materials and 1:1 lessons.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 PTOB - Past Tense of Banana</p>
+        <p>English Support Online | Making Learning Fun!</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
