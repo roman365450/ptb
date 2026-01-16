@@ -261,6 +261,42 @@
             color: #2d3436;
         }
 
+        /* About Section */
+        .about-section {
+            background: #ffffff;
+            padding: 100px 40px;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .about-content h2 {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.2em;
+            font-weight: 400;
+            color: #2d3436;
+            margin-bottom: 30px;
+        }
+
+        .about-content p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #5a5a5a;
+            margin-bottom: 20px;
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .hero-container {
@@ -291,6 +327,19 @@
                 grid-template-columns: repeat(2, 1fr);
                 gap: 40px;
             }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image {
+                text-align: center;
+            }
+
+            .about-image img {
+                max-width: 350px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -317,6 +366,18 @@
 
             .social-stats h2 {
                 font-size: 1.8em;
+            }
+
+            .about-content h2 {
+                font-size: 1.8em;
+            }
+
+            .about-content p {
+                font-size: 1em;
+            }
+
+            .about-image img {
+                max-width: 300px;
             }
         }
 
@@ -435,6 +496,20 @@
                     </svg>
                 </div>
                 <div class="stat-number">72K</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="GARI c v 4.png" alt="Gari - English Teacher">
+            </div>
+            <div class="about-content">
+                <h2>Why did I create Past tense of Banana?</h2>
+                <p>Hi, my name is Gari. I'm a native English speaker from the England, a professional English teacher, and a writer. After more than 30 years teaching advanced English to professionals worldwide, I became dissatisfied with traditional methods that focus on rules but ignore the nuances that make English natural and effective.</p>
+                <p>So I created my own online system, based on decades of experience teaching elite students and training teachers. It develops instinctive understanding, sharp communication, and real confidence — without abandoning grammar, structure, or accuracy. No tricks, no magic method. Just a proven approach, and it works.</p>
             </div>
         </div>
     </section>
