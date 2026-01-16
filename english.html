@@ -177,12 +177,10 @@
 
         .hero-content {
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             animation: fadeInRight 1s ease;
             background: transparent;
-            text-align: center;
         }
 
         @keyframes fadeInRight {
@@ -196,53 +194,13 @@
             }
         }
 
-        .hero-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 6em;
-            font-weight: 700;
-            color: #2d3436;
-            margin-bottom: 10px;
-            line-height: 1;
-            letter-spacing: 5px;
-        }
-
-        .hero-logo .banana-o {
-            position: relative;
-            display: inline-block;
-            margin: 0 -5px;
-        }
-
-        .hero-logo .banana-o img {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 45%;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translate(-50%, -50%) translateY(0); }
-            50% { transform: translate(-50%, -50%) translateY(-10px); }
-        }
-
-        .hero-title {
-            font-family: 'Lato', sans-serif;
-            font-size: 1.1em;
-            font-weight: 400;
-            color: #2d3436;
-            margin-bottom: 8px;
-            text-transform: none;
-            letter-spacing: 1px;
-        }
-
-        .hero-subtitle {
-            font-family: 'Lato', sans-serif;
-            font-size: 0.75em;
-            color: #666;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 400;
+        .hero-logo-image {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            background: #ffffff;
+            padding: 20px;
+            box-sizing: border-box;
         }
 
         /* Responsive */
@@ -365,11 +323,7 @@
                 <img src="gari web 3.png" alt="English Teacher" onerror="this.src='banana_naked.png'">
             </div>
             <div class="hero-content">
-                <div class="hero-logo">
-                    PT<span class="banana-o">O<img src="banana_naked.png" alt="Banana"></span>B
-                </div>
-                <h2 class="hero-title">Past Tense of Banana</h2>
-                <p class="hero-subtitle">English Support Online</p>
+                <img src="logo new 1.png" alt="PTOB - Past Tense of Banana" class="hero-logo-image">
             </div>
         </div>
     </section>
