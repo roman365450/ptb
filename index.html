@@ -374,6 +374,116 @@
             color: #2d3436;
         }
 
+        /* Newsletter Section */
+        .newsletter-section {
+            background: #f5f5f5;
+            padding: 80px 40px;
+        }
+
+        .newsletter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter-container h2 {
+            font-family: 'Lato', sans-serif;
+            font-size: 3em;
+            font-weight: 400;
+            color: #2d3436;
+            margin-bottom: 50px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .newsletter-form input {
+            padding: 15px 20px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 280px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .newsletter-form button {
+            padding: 15px 40px;
+            font-size: 1em;
+            font-weight: 700;
+            background: #5B8FDB;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background: #4A7AC9;
+        }
+
+        .newsletter-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .newsletter-icon {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .newsletter-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .newsletter-logo {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: auto;
+            z-index: 10;
+        }
+
+        .newsletter-benefits {
+            text-align: left;
+        }
+
+        .newsletter-benefits ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .newsletter-benefits li {
+            font-size: 1.2em;
+            color: #2d3436;
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .newsletter-benefits li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+            color: #2d3436;
+        }
+
         /* Responsive */
         @media (max-width: 1024px) {
             .hero-container {
@@ -478,6 +588,15 @@
             }
 
             .event-header h2 {
+                font-size: 2em;
+            }
+
+            .newsletter-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .newsletter-container h2 {
                 font-size: 2em;
             }
         }
@@ -646,6 +765,43 @@
                 <div class="event-column">
                     <h3>How much is it?</h3>
                     <p>It is only <strong>£40 for the entire Four4Four event</strong>. Payment can be made using Stripe or International Bank Transfer. Payment can be made in British pounds or your local currency. Please check exchange rates before you pay.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <h2>Sign up for our newsletter!</h2>
+
+            <form class="newsletter-form">
+                <input type="text" placeholder="First name" required>
+                <input type="email" placeholder="E-mail" required>
+                <button type="submit">CLICK HERE!</button>
+            </form>
+
+            <div class="newsletter-content">
+                <div class="newsletter-icon">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Envelope -->
+                        <path d="M20 60 L100 110 L180 60 L180 140 L20 140 Z" fill="#5B8FDB"/>
+                        <path d="M20 60 L100 110 L180 60" fill="none" stroke="#4A7AC9" stroke-width="2"/>
+                        <path d="M20 60 L20 140 L100 110 Z" fill="#7BA5E8"/>
+                        <path d="M180 60 L180 140 L100 110 Z" fill="#7BA5E8"/>
+                        <!-- Envelope flap -->
+                        <path d="M20 60 L100 20 L180 60 L100 110 Z" fill="#4A7AC9"/>
+                    </svg>
+                    <img src="logo new 1.png" alt="PTOB Logo" class="newsletter-logo">
+                </div>
+
+                <div class="newsletter-benefits">
+                    <ul>
+                        <li>An English lesson every week</li>
+                        <li>A PDF file</li>
+                        <li>Tips and tricks</li>
+                        <li>Our promotions and new products!</li>
+                    </ul>
                 </div>
             </div>
         </div>
