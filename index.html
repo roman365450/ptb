@@ -87,6 +87,52 @@
             width: 100%;
         }
 
+        .nav-menu li {
+            position: relative;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fffef0;
+            min-width: 220px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1000;
+            margin-top: 10px;
+            border-radius: 4px;
+            padding: 10px 0;
+        }
+
+        .dropdown-content a {
+            color: #2d3436;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.85em;
+            font-weight: 600;
+            text-transform: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-content a::after {
+            display: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #FFD54F;
+            color: #2d3436;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         .nav-icons {
             display: flex;
             align-items: center;
@@ -628,7 +674,16 @@
             <ul class="nav-menu">
                 <li><a href="#four4four">FOUR4FOUR</a></li>
                 <li><a href="#home">HOME</a></li>
-                <li><a href="#courses">COURSES</a></li>
+                <li class="dropdown">
+                    <a href="#courses">COURSES</a>
+                    <div class="dropdown-content">
+                        <a href="#fixed-sessions">Fixed Sessions</a>
+                        <a href="#english-courses">English Courses</a>
+                        <a href="#university-application">University Application</a>
+                        <a href="#exam-preparation">Exam Preparation</a>
+                        <a href="#micro-sessions">Micro Sessions</a>
+                    </div>
+                </li>
                 <li><a href="#about">ABOUT PTOB</a></li>
                 <li><a href="#contact">CONTACT US</a></li>
                 <li><a href="#reviews">REVIEWS</a></li>
