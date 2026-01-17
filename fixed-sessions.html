@@ -711,6 +711,225 @@
                 display: flex;
             }
         }
+
+        /* Courses Header Section - Styled like French Courses Page */
+        .courses-header-section {
+            background: #ffffff;
+            padding: 100px 40px 80px 40px;
+        }
+
+        .courses-header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .courses-main-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.8em;
+            font-weight: 400;
+            color: #2d3436;
+            margin-bottom: 40px;
+            line-height: 1.3;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .courses-intro-text {
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: #2d3436;
+            margin-bottom: 25px;
+        }
+
+        .courses-intro-text strong {
+            font-weight: 700;
+            color: #2d3436;
+        }
+
+        .courses-subtext {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #2d3436;
+            margin-top: 30px;
+        }
+
+        /* Method Section - Two-tone Title like "THE GENERAL METHOD" */
+        .method-section {
+            background: #ffffff;
+            padding: 80px 40px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .method-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .method-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 3em;
+            font-weight: 400;
+            color: #2d3436;
+            margin-bottom: 35px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .method-title-highlight {
+            color: #5B8FDB;
+            font-weight: 400;
+        }
+
+        .method-description {
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: #2d3436;
+            max-width: 900px;
+        }
+
+        /* Session Details Grid - Card Layout */
+        .session-details-section {
+            background: #f5f5f5;
+            padding: 100px 40px;
+        }
+
+        .session-details-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+
+        .detail-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .detail-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .detail-icon {
+            width: 60px;
+            height: 60px;
+            background: #5B8FDB;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: #ffffff;
+        }
+
+        .detail-icon svg {
+            width: 30px;
+            height: 30px;
+            stroke: #ffffff;
+        }
+
+        .detail-card h3 {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.6em;
+            font-weight: 600;
+            color: #2d3436;
+            margin-bottom: 18px;
+        }
+
+        .detail-card p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #5a5a5a;
+        }
+
+        .detail-card p strong {
+            font-weight: 700;
+            color: #2d3436;
+        }
+
+        /* Showcase Section */
+        .showcase-section {
+            background: #ffffff;
+            padding: 80px 40px;
+        }
+
+        .showcase-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .showcase-container img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive Adjustments for New Sections */
+        @media (max-width: 1024px) {
+            .session-details-container {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .courses-main-title {
+                font-size: 2.2em;
+            }
+
+            .method-title {
+                font-size: 2.3em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .courses-header-section {
+                padding: 60px 30px 50px 30px;
+            }
+
+            .courses-main-title {
+                font-size: 1.8em;
+            }
+
+            .courses-intro-text,
+            .courses-subtext {
+                font-size: 1em;
+            }
+
+            .method-section {
+                padding: 60px 30px;
+            }
+
+            .method-title {
+                font-size: 1.9em;
+            }
+
+            .method-description {
+                font-size: 1em;
+            }
+
+            .session-details-section {
+                padding: 60px 30px;
+            }
+
+            .detail-card {
+                padding: 30px;
+            }
+
+            .detail-card h3 {
+                font-size: 1.4em;
+            }
+
+            .showcase-section {
+                padding: 60px 30px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -766,19 +985,90 @@
         </div>
     </nav>
 
-    <!-- Fixed Session Section -->
-    <section id="fixed-sessions" class="fixed-session-section" style="padding: 120px 40px;">
-        <div class="fixed-session-container">
-            <div class="fixed-session-content">
-                <h2>About the Fixed Session</h2>
-                <p>We work with school-aged students in groups of no more than four students for a minimum period of ten weeks.</p>
-                <p>Students are placed in groups according to age and level. However, all students are taught all aspects of grammar. Our sessions don't follow a pre-determined pathway of learning. Students are encouraged to practice using vocabulary and all forms of grammar regardless of age and level. This gives students the maximum amount of time and opportunities to recognise and develop aspects of English they find challenging.</p>
-                <p>We don't use books. Instead, we use the experiences and interests of our students as the foundation of our teaching material. Our teachers use AI, modular, and online activities to teach aspects of English in a dynamic and engaging way.</p>
-                <p>In addition, students are encouraged to keep an online portfolio, which will allow students to see their progress and be a revision tool. Parents can have access to their child's portfolio.</p>
+    <!-- Fixed Session Header Section -->
+    <section class="courses-header-section">
+        <div class="courses-header-container">
+            <h1 class="courses-main-title">OUR FIXED SESSIONS AVAILABLE ON OUR PLATFORM</h1>
+
+            <p class="courses-intro-text">
+                These sessions are designed for school-aged students in small groups, using dynamic teaching methods and personalized approaches. <strong>Once enrolled, the session structure is yours for life</strong>. You'll also have access to a supportive community where you can share progress, ask questions, and participate in regular online meetings organized by our academy. Each session leads to a <strong>certificate</strong>.
+            </p>
+
+            <p class="courses-subtext">
+                Choose the session structure that best suits your child's level and goals, then enroll to begin their learning journey.
+            </p>
+        </div>
+    </section>
+
+    <!-- Fixed Session Method Section -->
+    <section class="method-section">
+        <div class="method-container">
+            <h2 class="method-title"><span class="method-title-highlight">THE FIXED SESSION</span> APPROACH</h2>
+
+            <p class="method-description">
+                This is our most comprehensive session structure. That is to say, students will experience all aspects of English grammar, vocabulary, pronunciation, with a huge number of exercises, lots of different learning approaches, and of course our teachers guiding everything in the sessions.
+            </p>
+        </div>
+    </section>
+
+    <!-- Session Details Grid -->
+    <section class="session-details-section">
+        <div class="session-details-container">
+            <div class="detail-card">
+                <div class="detail-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h3>Small Groups</h3>
+                <p>We work with school-aged students in groups of <strong>no more than four students</strong> for a minimum period of ten weeks.</p>
             </div>
-            <div class="fixed-session-image">
-                <img src="Gari c version 3.png" alt="Fixed Session">
+
+            <div class="detail-card">
+                <div class="detail-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                </div>
+                <h3>Personalized Learning</h3>
+                <p>Students are placed in groups according to age and level. However, all students are taught <strong>all aspects of grammar</strong>. Our sessions don't follow a pre-determined pathway of learning.</p>
             </div>
+
+            <div class="detail-card">
+                <div class="detail-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Dynamic Materials</h3>
+                <p>We don't use books. Instead, we use the experiences and interests of our students as the foundation. Our teachers use <strong>AI, modular, and online activities</strong> to teach in a dynamic and engaging way.</p>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                </div>
+                <h3>Online Portfolio</h3>
+                <p>Students are encouraged to keep an <strong>online portfolio</strong>, which allows them to see their progress and serves as a revision tool. Parents can have access to their child's portfolio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Showcase -->
+    <section class="showcase-section">
+        <div class="showcase-container">
+            <img src="Gari c version 3.png" alt="Fixed Session Learning Environment">
         </div>
     </section>
 
