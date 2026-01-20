@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Gari a Question for £5 - PTOB - Past Tense of Banana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 20px 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 80px;
+            width: auto;
+            background: #ffffff;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: #2d3436;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #FFD54F;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #FFD54F;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            min-width: 240px;
+            box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);
+            z-index: 1000;
+            margin-top: 15px;
+            border-radius: 0;
+            padding: 20px 0;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .dropdown-content a {
+            color: #999999;
+            padding: 14px 30px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.95em;
+            font-weight: 400;
+            text-transform: none;
+            transition: color 0.2s ease;
+            letter-spacing: 0;
+        }
+
+        .dropdown-content a::after {
+            display: none;
+        }
+
+        .dropdown-content a:hover {
+            color: #2d3436;
+            background-color: transparent;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .cart-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #ff6b6b;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .search-icon {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .search-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #212121;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .logo img {
+                height: 60px;
+            }
+        }
+
+        /* Header Section */
+        .header-section {
+            background: #ffffff;
+            padding: 100px 40px 80px 40px;
+        }
+
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .main-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 3.5em;
+            font-weight: 400;
+            color: #2d3436;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .title-highlight {
+            color: #5B8FDB;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: #5a5a5a;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Content Section */
+        .content-section {
+            background: #f5f5f5;
+            padding: 100px 40px;
+        }
+
+        .content-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.5em;
+            font-weight: 400;
+            color: #2d3436;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .content-text {
+            font-size: 1.15em;
+            line-height: 1.9;
+            color: #2d3436;
+            margin-bottom: 25px;
+        }
+
+        /* How It Works Grid */
+        .how-it-works-section {
+            background: #ffffff;
+            padding: 100px 40px;
+        }
+
+        .how-it-works-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 30px 20px;
+            background: #f5f5f5;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: #5B8FDB;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8em;
+            font-weight: 700;
+            margin: 0 auto 20px auto;
+        }
+
+        .step-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #2d3436;
+            margin-bottom: 15px;
+        }
+
+        .step-description {
+            font-size: 1em;
+            line-height: 1.7;
+            color: #5a5a5a;
+        }
+
+        /* Features Section */
+        .features-section {
+            background: #f5f5f5;
+            padding: 100px 40px;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 50px;
+            margin-top: 60px;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: #FFD54F;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2em;
+        }
+
+        .feature-title {
+            font-size: 1.6em;
+            font-weight: 600;
+            color: #2d3436;
+            margin-bottom: 18px;
+        }
+
+        .feature-description {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #5a5a5a;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: #5B8FDB;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .cta-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .cta-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 3em;
+            font-weight: 400;
+            color: #ffffff;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        .cta-text {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #ffffff;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 50px;
+            font-size: 1.2em;
+            font-weight: 700;
+            font-family: 'Lato', sans-serif;
+            background: #ffffff;
+            color: #5B8FDB;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* Guarantee Section */
+        .guarantee-section {
+            background: #ffffff;
+            padding: 80px 40px;
+        }
+
+        .guarantee-container {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            background: #f5f5f5;
+            padding: 60px 50px;
+            border-radius: 10px;
+            border-left: 5px solid #5B8FDB;
+        }
+
+        .guarantee-badge {
+            width: 100px;
+            height: 100px;
+            background: #FFD54F;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px auto;
+            font-size: 3em;
+        }
+
+        .guarantee-title {
+            font-size: 2.2em;
+            font-weight: 600;
+            color: #2d3436;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-text {
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #5a5a5a;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3436;
+            color: #ffffff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-section {
+                padding: 60px 30px 50px 30px;
+            }
+
+            .main-title {
+                font-size: 2.2em;
+            }
+
+            .subtitle {
+                font-size: 1.1em;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .cta-title {
+                font-size: 2.2em;
+            }
+
+            .guarantee-container {
+                padding: 40px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <img src="trans logo 12.png" alt="PTOB Logo">
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html#four4four">FOUR4FOUR</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#courses">COURSES</a>
+                    <div class="dropdown-content">
+                        <a href="30min-session.html">Gari 30 min session</a>
+                        <a href="60min-session.html">Gari 60 min session</a>
+                        <a href="ask-gari.html">ask Gari a question for £5</a>
+                        <a href="#video-courses">Video Courses</a>
+                    </div>
+                </li>
+                <li><a href="index.html#about">ABOUT PTOB</a></li>
+                <li><a href="index.html#contact">CONTACT US</a></li>
+                <li><a href="index.html#reviews">REVIEWS</a></li>
+                <li><a href="index.html#socials">SOCIALS</a></li>
+                <li><a href="index.html#faqs">FAQS</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <div class="cart-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d3436" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="search-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d3436" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="header-section">
+        <div class="header-container">
+            <h1 class="main-title">Quick Question? Get an Answer for <span class="title-highlight">£5</span></h1>
+            <p class="subtitle">If you don't need a full session but have a specific problem you need solved, this is for you. You can ask Gari absolutely any question—even if it isn't strictly related to English.</p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section">
+        <div class="how-it-works-container">
+            <h2 class="section-title">How it works</h2>
+            <p class="content-text" style="text-align: center; max-width: 800px; margin: 0 auto 20px auto;">
+                You don't need to book a time or wait for a meeting. Just send your question through the site, and Gari will take care of it.
+            </p>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Click the Message Circle</h3>
+                    <p class="step-description">Find the message icon in the bottom right corner of your screen</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Type Your Question</h3>
+                    <p class="step-description">Ask anything and keep it interesting</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Pay £5</h3>
+                    <p class="step-description">Simple, secure payment</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Get Your Answer</h3>
+                    <p class="step-description">Receive your answer directly from Gari</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="features-container">
+            <h2 class="section-title">What You Get</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3 class="feature-title">Ask Anything</h3>
+                    <p class="feature-description">Whether it's a grammar doubt, a sentence check, or something else entirely. No question is off limits.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3 class="feature-title">48-Hour Guarantee</h3>
+                    <p class="feature-description">Gari will reply personally within 48 hours. If he doesn't reply in that time, you get your money back.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3 class="feature-title">Win a Free Session!</h3>
+                    <p class="feature-description">If your question is particularly witty or interesting and gets featured on our official channel, you'll win a free 30-minute session with Gari.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="guarantee-container">
+            <div class="guarantee-badge">✓</div>
+            <h3 class="guarantee-title">The Guarantee</h3>
+            <p class="guarantee-text">Gari will reply personally within 48 hours. If he doesn't reply in that time, you get your money back. No questions asked.</p>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2 class="cta-title">Ready to Get Your Answer?</h2>
+            <p class="cta-text">It's the fastest way to get the clarity you need while getting a chance to win more time with Gari.</p>
+            <a href="#" class="cta-button" onclick="alert('Click the Message Circle in the bottom right corner to get started!'); return false;">Ask Your Question Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Past Tense of Banana. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
