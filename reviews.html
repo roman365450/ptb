@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - PToB - Past Tense of Banana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 20px 0;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 80px;
+            width: auto;
+            background: #ffffff;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: #2d3436;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #FFD54F;
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #FFD54F;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            min-width: 240px;
+            box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);
+            z-index: 1000;
+            margin-top: 0;
+            border-radius: 0;
+            padding: 20px 0;
+            padding-top: 15px;
+            border-top: 2px solid #e0e0e0;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s ease, visibility 0s linear 0.2s;
+        }
+
+        .dropdown-content::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: 0;
+            right: 0;
+            height: 15px;
+        }
+
+        .dropdown-content a {
+            color: #999999;
+            padding: 14px 30px;
+            text-decoration: none;
+            display: block;
+            font-size: 0.95em;
+            font-weight: 400;
+            text-transform: none;
+            transition: color 0.2s ease;
+            letter-spacing: 0;
+        }
+
+        .dropdown-content a::after {
+            display: none;
+        }
+
+        .dropdown-content a:hover {
+            color: #2d3436;
+            background-color: transparent;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .cart-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #ff6b6b;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+        .search-icon {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .search-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #212121;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .logo img {
+                height: 60px;
+            }
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: #f5f5f5;
+            padding: 100px 40px 80px 40px;
+            text-align: center;
+        }
+
+        .hero-heading {
+            font-family: 'Lato', sans-serif;
+            font-size: 3em;
+            font-weight: 300;
+            color: #2d3436;
+            margin-bottom: 20px;
+        }
+
+        .hero-subheading {
+            font-size: 1.2em;
+            color: #5a5a5a;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            background: #ffffff;
+            padding: 100px 40px;
+        }
+
+        .reviews-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px;
+        }
+
+        .review-card {
+            background: #f5f5f5;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .review-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .review-content {
+            padding: 35px;
+        }
+
+        .review-name {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.4em;
+            font-weight: 700;
+            color: #2d3436;
+            margin-bottom: 20px;
+        }
+
+        .review-text {
+            font-size: 1em;
+            line-height: 1.8;
+            color: #5a5a5a;
+            font-style: italic;
+        }
+
+        .quote-icon {
+            font-size: 3em;
+            color: #FFD54F;
+            opacity: 0.3;
+            line-height: 0;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3436;
+            color: #ffffff;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .reviews-container {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .review-card {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .hero-heading {
+                font-size: 2.5em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 30px 50px 30px;
+            }
+
+            .hero-heading {
+                font-size: 2em;
+            }
+
+            .hero-subheading {
+                font-size: 1.1em;
+            }
+
+            .reviews-section {
+                padding: 60px 30px;
+            }
+
+            .review-content {
+                padding: 25px;
+            }
+
+            .review-image {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-heading {
+                font-size: 1.6em;
+            }
+
+            .hero-subheading {
+                font-size: 1em;
+            }
+
+            .review-content {
+                padding: 20px;
+            }
+
+            .review-name {
+                font-size: 1.2em;
+            }
+
+            .review-text {
+                font-size: 0.95em;
+            }
+
+            .review-image {
+                height: 250px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .review-card {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .review-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .review-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .review-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="trans logo 12.png" alt="PToB Logo"></a>
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="english.html#four4four">FOUR4FOUR</a></li>
+                <li><a href="english.html#home">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#courses">1 TO 1 SESSION</a>
+                    <div class="dropdown-content">
+                        <a href="30min-session.html">30 min fix</a>
+                        <a href="60min-session.html">60 min fix</a>
+                    </div>
+                </li>
+                <li><a href="ask-gari.html">ASK ME ANYTHING</a></li>
+                <li><a href="about-gari.html">ABOUT GARI</a></li>
+                <li><a href="why-ptob.html">WHY PT<span style="text-transform: none;">o</span>B?</a></li>
+                <li><a href="contact-us.html">CONTACT</a></li>
+                <li><a href="reviews.html">REVIEWS</a></li>
+                <li><a href="english.html#socials">SOCIALS</a></li>
+                <li><a href="english.html#faqs">FAQS</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <div class="cart-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d3436" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="search-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d3436" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-heading">What Our Students Say</h1>
+        <p class="hero-subheading">Hear from students who have transformed their English skills with Gari's expert teaching.</p>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="reviews-container">
+            <!-- Review 1: Ali Jebari -->
+            <div class="review-card">
+                <img src="Ali Jebari.jpg" alt="Ali Jebari" class="review-image">
+                <div class="review-content">
+                    <div class="quote-icon">"</div>
+                    <h3 class="review-name">Ali Jebari</h3>
+                    <p class="review-text">Gari Sullivan is the best instructor I have had. Thanks to Gari, my English has improved to the point that I felt comfortable applying to some of the best institutions of higher education in the world. I have attended Harvard University and the University of Cambridge, and majored in Philosophy and Social Studies, subjects that require an advanced command of the English language. I owe to Gari the knowledge and confidence that put me on this path, and I highly recommend him to anyone who is considering him as an instructor.</p>
+                </div>
+            </div>
+
+            <!-- Review 2: Lamyae Bouanani -->
+            <div class="review-card">
+                <img src="Lamyae.jpg" alt="Lamyae Bouanani" class="review-image">
+                <div class="review-content">
+                    <div class="quote-icon">"</div>
+                    <h3 class="review-name">Lamyae Bouanani</h3>
+                    <p class="review-text">I recommend Gari! He is an excellent English teacher specializing in teaching teenagers and preparing for exams (TOEFL, IELTS, Cambridge, SAT, etc.) required by universities.</p>
+                </div>
+            </div>
+
+            <!-- Review 3: Othmane Hachad -->
+            <div class="review-card">
+                <img src="Othmane Hachad.jpg" alt="Othmane Hachad" class="review-image">
+                <div class="review-content">
+                    <div class="quote-icon">"</div>
+                    <h3 class="review-name">Othmane Hachad</h3>
+                    <p class="review-text">Having Gari as a teacher meant learning by doing and acquiring, very early, a deep and complex understanding of the English language. Because of him, talking English was done through my very own instinct, helping me pass the CAE exam at 14-years-old. His pedagogy, engaging personally with his students and building with them a relationship beyond professional, is the main reason I loved learning English and was not embarrassed to practice it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Past Tense of Banana. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

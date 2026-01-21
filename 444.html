@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>444 - Four4Four Event | PToB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+            background-color: #ffffff;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #ffffff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: #2d3436;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #5B8FDB;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            top: 100%;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #2d3436;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .nav-icons i {
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #2d3436;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: #2d3436;
+            margin: 3px 0;
+        }
+
+        /* Testimonial Section */
+        .testimonial {
+            background-color: #ffffff;
+            padding: 80px 40px 60px;
+            text-align: center;
+        }
+
+        .testimonial-quote {
+            font-size: 1.4em;
+            font-style: italic;
+            color: #5a5a5a;
+            max-width: 1000px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .testimonial-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 5px solid #FFD54F;
+            margin: 0 auto 20px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .testimonial-author {
+            font-size: 1em;
+            color: #2d3436;
+            font-style: italic;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #ffffff;
+            padding: 60px 40px 80px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Lato', sans-serif;
+            font-size: 3.8em;
+            color: #2d3436;
+            font-weight: 400;
+            line-height: 1.3;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        /* Info Grid Section */
+        .info-section {
+            background-color: #ffffff;
+            padding: 0 40px 100px;
+        }
+
+        .info-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 60px;
+        }
+
+        .info-column h2 {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.8em;
+            color: #2d3436;
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+
+        .info-column p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #5a5a5a;
+            text-align: left;
+        }
+
+        .info-column strong {
+            font-weight: 700;
+            color: #2d3436;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer a {
+            color: #FFD54F;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 50px;
+            }
+
+            .hero h1 {
+                font-size: 3em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .hero h1 {
+                font-size: 2.2em;
+            }
+
+            .testimonial-quote {
+                font-size: 1.2em;
+            }
+
+            .info-column h2 {
+                font-size: 1.5em;
+            }
+
+            .testimonial {
+                padding: 60px 30px 40px;
+            }
+
+            .hero {
+                padding: 40px 30px 60px;
+            }
+
+            .info-section {
+                padding: 0 30px 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                height: 50px;
+            }
+
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            .testimonial-avatar {
+                width: 75px;
+                height: 75px;
+            }
+
+            .testimonial-quote {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="trans logo 12.png" alt="PToB Logo"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#four4four">FOUR4FOUR</a></li>
+                <li><a href="index.html#home">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#">1 TO 1 SESSION</a>
+                    <div class="dropdown-content">
+                        <a href="30min-session.html">30 min fix</a>
+                        <a href="60min-session.html">60 min fix</a>
+                    </div>
+                </li>
+                <li><a href="ask-gari.html">ASK ME ANYTHING</a></li>
+                <li><a href="about-gari.html">ABOUT GARI</a></li>
+                <li><a href="why-ptob.html">WHY PT<span style="text-transform: none;">o</span>B?</a></li>
+                <li><a href="contact-us.html">CONTACT</a></li>
+                <li><a href="reviews.html">REVIEWS</a></li>
+                <li><a href="index.html#socials">SOCIALS</a></li>
+                <li><a href="index.html#faqs">FAQS</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial">
+        <p class="testimonial-quote">"Four4Four is thoughtful, fresh, and unlike any other English session I've attended. I wholeheartedly recommend it."</p>
+        <img src="valeria.jpg" alt="Valeria" class="testimonial-avatar">
+        <p class="testimonial-author">Valeria - Sao Paulo Sessions - April 2025</p>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Wait! What <em>is</em> the Four4Four Event - <em>exactly</em>?</h1>
+    </section>
+
+    <!-- Info Grid Section -->
+    <section class="info-section">
+        <div class="info-grid">
+            <div class="info-column">
+                <h2>When is it?</h2>
+                <p><strong>Every Thursday</strong> for four weeks in <strong>February</strong>. Each <strong>one-hour session will begin at 18:00</strong> in four time zones, so no matter where you are, you can join in. Mark your calendar and get ready to improve your English in a fun, real-world way!</p>
+            </div>
+
+            <div class="info-column">
+                <h2>Who will be there?</h2>
+                <p>Four4Four is all about quality interaction. There are <strong>only 4 people per group</strong>, ensuring a focused and supportive environment. It's a chance to improve your English in small, friendly groups with learners from your part of the world.</p>
+            </div>
+
+            <div class="info-column">
+                <h2>What will we do?</h2>
+                <p>Each session is focused on interactive, conversation-based learning. We'll use a variety of topics connected to local and global events and your experiences and interests. This allows you to <strong>practice English in natural, real-world situations</strong>.</p>
+            </div>
+
+            <div class="info-column">
+                <h2>How much is it?</h2>
+                <p>It is only <strong>£40 for the entire Four4Four event</strong>. Payment can be made using Stripe or International Bank Transfer. Payment can be made in British pounds or your local currency. Please check exchange rates before you pay.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Past Tense of Banana. All rights reserved.</p>
+        <p><a href="contact-us.html">Contact Us</a> | <a href="reviews.html">Reviews</a></p>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

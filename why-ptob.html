@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Past Tense of Banana? | PToB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+            background-color: #f5f5f5;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #ffffff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: #2d3436;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #5B8FDB;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            top: 100%;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #2d3436;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .nav-icons i {
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #2d3436;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: #2d3436;
+            margin: 3px 0;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #FFD54F 0%, #FFA726 100%);
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #2d3436;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #5a5a5a;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        /* Content Section */
+        .content {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .content-inner {
+            padding: 60px 80px;
+        }
+
+        .content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #2d3436;
+            margin-bottom: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .content h2:first-child {
+            margin-top: 0;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #5a5a5a;
+            margin-bottom: 1.5rem;
+        }
+
+        .content strong {
+            color: #2d3436;
+            font-weight: 700;
+        }
+
+        .signature {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #2d3436;
+            margin-top: 3rem;
+            text-align: right;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer a {
+            color: #FFD54F;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .content-inner {
+                padding: 50px 60px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .content-inner {
+                padding: 40px 30px;
+            }
+
+            .content h2 {
+                font-size: 1.6rem;
+            }
+
+            .content p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                height: 50px;
+            }
+
+            .content-inner {
+                padding: 30px 20px;
+            }
+
+            .hero {
+                padding: 60px 20px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="trans logo 12.png" alt="PToB Logo"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#four4four">FOUR4FOUR</a></li>
+                <li><a href="index.html#home">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#">1 TO 1 SESSION</a>
+                    <div class="dropdown-content">
+                        <a href="30min-session.html">30 min fix</a>
+                        <a href="60min-session.html">60 min fix</a>
+                    </div>
+                </li>
+                <li><a href="ask-gari.html">ASK ME ANYTHING</a></li>
+                <li><a href="about-gari.html">ABOUT GARI</a></li>
+                <li><a href="why-ptob.html">WHY PT<span style="text-transform: none;">o</span>B?</a></li>
+                <li><a href="contact-us.html">CONTACT</a></li>
+                <li><a href="reviews.html">REVIEWS</a></li>
+                <li><a href="index.html#socials">SOCIALS</a></li>
+                <li><a href="index.html#faqs">FAQS</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Why Past Tense of Banana?</h1>
+        <p>Rethinking how we learn languages</p>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content">
+        <div class="content-inner">
+            <p>For a long time, I was frustrated with how English is being taught in the age of the Internet. The days of liner teaching are over and have been for some time. Gone are the days of starting at unit one beginner level and progressing in a classroom until you reach Unit 10 only to start the entire process again at intermediate level and then advanced level.</p>
+
+            <p>In the age of streaming and video gaming, teachers no longer have total control over the vocabulary and grammar that students are exposed to, but teachers still think they are in control; even if they are teaching online.</p>
+
+            <p>I started Past Tense of Banana to bring the structure and understanding of English teaching into the modern world. Gone are the beliefs that learners are beginners, intermediates and advanced. There is no reason why those just starting their English learning journey cannot be shown complex grammar structures. It is not the level of the student that should be measured, but the expectation.</p>
+
+            <p>At Past Tense of Banana, we teach inexperienced students future perfect continuous and the third conditional. We don't hold anything back, because we know they will come across these grammar structures on the Internet. We teach complex English, but don't expect the student to fully grasp it until they are more skilled.</p>
+
+            <p>In the same way, young native speakers are shown complex grammar and vocabulary. Equally, there is no expectation on them to fully grasp the language until they are older.</p>
+
+            <p>If you want to learn English like truly a native with all that the 21st century has at our disposal, you need Past Tense of Banana.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Past Tense of Banana. All rights reserved.</p>
+        <p><a href="contact-us.html">Contact Us</a> | <a href="reviews.html">Reviews</a></p>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
