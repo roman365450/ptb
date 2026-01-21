@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>444 - Four4Four Event | PToB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: #2d3436;
+            background-color: #f5f5f5;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #ffffff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            color: #2d3436;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #5B8FDB;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 200px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            z-index: 1;
+            border-radius: 4px;
+            top: 100%;
+            margin-top: 0.5rem;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #2d3436;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .nav-icons i {
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #2d3436;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: #2d3436;
+            margin: 3px 0;
+        }
+
+        /* Testimonial Section */
+        .testimonial {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .testimonial-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #2d3436;
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 4px solid #FFD54F;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+        }
+
+        .testimonial-author {
+            font-size: 1rem;
+            color: #5a5a5a;
+            font-style: italic;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #ffffff;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #2d3436;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+        }
+
+        /* Info Grid Section */
+        .info-grid {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .info-card {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+        .info-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #2d3436;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #FFD54F;
+            padding-bottom: 0.5rem;
+        }
+
+        .info-card p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #5a5a5a;
+            margin-bottom: 1rem;
+        }
+
+        .info-card strong {
+            color: #2d3436;
+            font-weight: 700;
+        }
+
+        .info-card .highlight {
+            background-color: #FFF9E6;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        footer a {
+            color: #FFD54F;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonial-quote {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .testimonial-quote {
+                font-size: 1.1rem;
+            }
+
+            .info-card {
+                padding: 30px 20px;
+            }
+
+            .info-card h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo img {
+                height: 50px;
+            }
+
+            .hero {
+                padding: 40px 20px 30px;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .testimonial {
+                padding: 40px 20px;
+            }
+
+            .testimonial-avatar {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="trans logo 12.png" alt="PToB Logo"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#four4four">FOUR4FOUR</a></li>
+                <li><a href="index.html#home">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#">1 TO 1 SESSION</a>
+                    <div class="dropdown-content">
+                        <a href="30min-session.html">30 min fix</a>
+                        <a href="60min-session.html">60 min fix</a>
+                    </div>
+                </li>
+                <li><a href="ask-gari.html">ASK ME ANYTHING</a></li>
+                <li><a href="about-gari.html">ABOUT GARI</a></li>
+                <li><a href="why-ptob.html">WHY PT<span style="text-transform: none;">o</span>B?</a></li>
+                <li><a href="contact-us.html">CONTACT</a></li>
+                <li><a href="reviews.html">REVIEWS</a></li>
+                <li><a href="index.html#socials">SOCIALS</a></li>
+                <li><a href="index.html#faqs">FAQS</a></li>
+            </ul>
+            <div class="nav-icons">
+                <i class="fas fa-shopping-cart"></i>
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial">
+        <p class="testimonial-quote">"Four4Four is thoughtful, fresh, and unlike any other English session I've attended. I wholeheartedly recommend it."</p>
+        <img src="gari hat 2.png" alt="Valeria" class="testimonial-avatar">
+        <p class="testimonial-author">Valeria - Sao Paulo Sessions - April 2025</p>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Wait! What <em>is</em> the Four4Four Event - <em>exactly</em>?</h1>
+    </section>
+
+    <!-- Info Grid Section -->
+    <section class="info-grid">
+        <div class="info-card">
+            <h2>When is it?</h2>
+            <p><strong>Every Thursday</strong> for four weeks in <strong>February</strong>. Each <strong>one-hour session will begin at 18:00</strong> in four time zones, so no matter where you are, you can join in. Mark your calendar and get ready to improve your English in a fun, real-world way!</p>
+        </div>
+
+        <div class="info-card">
+            <h2>Who will be there?</h2>
+            <p>Four4Four is all about quality interaction. There are <strong class="highlight">only 4 people per group</strong>, ensuring a focused and supportive environment. It's a chance to improve your English in small, friendly groups with learners from your part of the world.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>What will we do?</h2>
+            <p>Each session is focused on interactive, conversation-based learning. We'll use a variety of topics connected to local and global events and your experiences and interests. This allows you to <strong>practice English in natural, real-world situations</strong>.</p>
+        </div>
+
+        <div class="info-card">
+            <h2>How much is it?</h2>
+            <p>It is only <strong class="highlight">£40 for the entire Four4Four event</strong>. Payment can be made using Stripe or International Bank Transfer. Payment can be made in British pounds or your local currency. Please check exchange rates before you pay.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Past Tense of Banana. All rights reserved.</p>
+        <p><a href="contact-us.html">Contact Us</a> | <a href="reviews.html">Reviews</a></p>
+    </footer>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        mobileToggle.addEventListener('click', () => {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
