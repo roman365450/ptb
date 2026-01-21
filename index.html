@@ -487,16 +487,19 @@
             font-size: 1.1em;
             color: #2d3436;
             margin-bottom: 18px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.4;
         }
 
         .newsletter-benefits li::before {
-            content: '•';
-            font-size: 1.5em;
+            content: '●';
+            position: absolute;
+            left: 0;
+            font-size: 1.3em;
             color: #2d3436;
-            flex-shrink: 0;
+            top: 0;
+            line-height: 1.4;
         }
 
         /* Responsive */
