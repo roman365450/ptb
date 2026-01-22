@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>444 - Four4Four Event | PToB</title>
+    <title>What Makes Us Unique | PToB - Past Tense of Banana</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
             font-family: 'Lato', sans-serif;
             line-height: 1.6;
             color: #2d3436;
-            background-color: #ffffff;
+            background-color: #f5f5f5;
         }
 
         /* Navigation Styles */
@@ -114,93 +114,73 @@
             margin: 3px 0;
         }
 
-        /* Testimonial Section */
-        .testimonial {
-            background-color: #ffffff;
-            padding: 80px 40px 60px;
-            text-align: center;
-        }
-
-        .testimonial-quote {
-            font-size: 1.4em;
-            font-style: italic;
-            color: #5a5a5a;
-            max-width: 1000px;
-            margin: 0 auto 40px;
-            line-height: 1.7;
-            font-weight: 300;
-        }
-
-        .testimonial-avatar {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            border: 5px solid #FFD54F;
-            margin: 0 auto 20px;
-            display: block;
-            object-fit: cover;
-        }
-
-        .testimonial-author {
-            font-size: 1em;
-            color: #2d3436;
-            font-style: italic;
-        }
-
         /* Hero Section */
         .hero {
-            background-color: #ffffff;
-            padding: 60px 40px 80px;
+            background: linear-gradient(135deg, #FFD54F 0%, #FFA726 100%);
+            padding: 80px 20px 60px;
             text-align: center;
         }
 
         .hero h1 {
-            font-family: 'Lato', sans-serif;
-            font-size: 3.8em;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
             color: #2d3436;
-            font-weight: 400;
-            line-height: 1.3;
-            max-width: 1200px;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #5a5a5a;
+            max-width: 700px;
             margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
         }
 
-        .hero h1 em {
-            font-style: italic;
-            font-weight: 400;
-        }
-
-        /* Info Grid Section */
-        .info-section {
+        /* Content Section */
+        .content {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
             background-color: #ffffff;
-            padding: 0 40px 100px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-        .info-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 60px;
+        .content-inner {
+            padding: 60px 80px;
         }
 
-        .info-column h2 {
-            font-family: 'Lato', sans-serif;
-            font-size: 1.8em;
+        .content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
             color: #2d3436;
-            margin-bottom: 30px;
-            font-weight: 400;
+            margin-bottom: 1.5rem;
+            margin-top: 0;
         }
 
-        .info-column p {
-            font-size: 1.05em;
+        .content p {
+            font-size: 1.1rem;
             line-height: 1.8;
             color: #5a5a5a;
-            text-align: left;
+            margin-bottom: 1.5rem;
         }
 
-        .info-column strong {
-            font-weight: 700;
+        .content strong {
             color: #2d3436;
+            font-weight: 700;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Footer */
@@ -226,14 +206,13 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 1200px) {
-            .info-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 50px;
+        @media (max-width: 1024px) {
+            .content-inner {
+                padding: 50px 60px;
             }
 
             .hero h1 {
-                font-size: 3em;
+                font-size: 2.5rem;
             }
         }
 
@@ -246,33 +225,24 @@
                 display: flex;
             }
 
-            .info-grid {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-
             .hero h1 {
-                font-size: 2.2em;
+                font-size: 2rem;
             }
 
-            .testimonial-quote {
-                font-size: 1.2em;
+            .hero p {
+                font-size: 1rem;
             }
 
-            .info-column h2 {
-                font-size: 1.5em;
+            .content-inner {
+                padding: 40px 30px;
             }
 
-            .testimonial {
-                padding: 60px 30px 40px;
+            .content h2 {
+                font-size: 1.6rem;
             }
 
-            .hero {
-                padding: 40px 30px 60px;
-            }
-
-            .info-section {
-                padding: 0 30px 80px;
+            .content p {
+                font-size: 1rem;
             }
         }
 
@@ -281,17 +251,12 @@
                 height: 50px;
             }
 
-            .hero h1 {
-                font-size: 1.8em;
+            .content-inner {
+                padding: 30px 20px;
             }
 
-            .testimonial-avatar {
-                width: 75px;
-                height: 75px;
-            }
-
-            .testimonial-quote {
-                font-size: 1.1em;
+            .hero {
+                padding: 60px 20px 40px;
             }
         }
     </style>
@@ -320,7 +285,6 @@
                 <li><a href="contact-us.html">CONTACT</a></li>
                 <li><a href="reviews.html">REVIEWS</a></li>
                 <li><a href="socials.html">SOCIALS</a></li>
-                <li><a href="english.html#faqs">FAQS</a></li>
             </ul>
             <div class="nav-icons">
                 <i class="fas fa-shopping-cart"></i>
@@ -334,40 +298,15 @@
         </div>
     </nav>
 
-    <!-- Testimonial Section -->
-    <section class="testimonial">
-        <p class="testimonial-quote">"Four4Four is thoughtful, fresh, and unlike any other English session I've attended. I wholeheartedly recommend it."</p>
-        <img src="valeria.jpg" alt="Valeria" class="testimonial-avatar">
-        <p class="testimonial-author">Valeria - Sao Paulo Sessions - April 2025</p>
-    </section>
-
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Wait! What <em>is</em> the Four4Four Event - <em>exactly</em>?</h1>
+        <h1>What makes us stand out from other English language centres?</h1>
     </section>
 
-    <!-- Info Grid Section -->
-    <section class="info-section">
-        <div class="info-grid">
-            <div class="info-column">
-                <h2>When is it?</h2>
-                <p><strong>Every Thursday</strong> for four weeks in <strong>February</strong>. Each <strong>one-hour session will begin at 18:00</strong> in four time zones, so no matter where you are, you can join in. Mark your calendar and get ready to improve your English in a fun, real-world way!</p>
-            </div>
-
-            <div class="info-column">
-                <h2>Who will be there?</h2>
-                <p>Four4Four is all about quality interaction. There are <strong>only 4 people per group</strong>, ensuring a focused and supportive environment. It's a chance to improve your English in small, friendly groups with learners from your part of the world.</p>
-            </div>
-
-            <div class="info-column">
-                <h2>What will we do?</h2>
-                <p>Each session is focused on interactive, conversation-based learning. We'll use a variety of topics connected to local and global events and your experiences and interests. This allows you to <strong>practice English in natural, real-world situations</strong>.</p>
-            </div>
-
-            <div class="info-column">
-                <h2>How much is it?</h2>
-                <p>It is only <strong>£40 for the entire Four4Four event</strong>. Payment can be made using Stripe or International Bank Transfer. Payment can be made in British pounds or your local currency. Please check exchange rates before you pay.</p>
-            </div>
+    <!-- Content Section -->
+    <section class="content">
+        <div class="content-inner">
+            <p>The era of linear, unit-by-unit English instruction is over. In a world of streaming and gaming, learners are constantly exposed to complex language that traditional "beginner-to-advanced" models ignore. Past Tense of Banana rejects these outdated labels, teaching "advanced" structures like the third conditional and future perfect continuous to everyone from day one. By mirroring how native speakers naturally acquire language—exposure without immediate pressure for perfection—we align our teaching with how the modern world actually communicates.</p>
         </div>
     </section>
 
