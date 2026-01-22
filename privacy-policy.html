@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Past Tense of Banana</title>
+    <title>Privacy Policy - Past Tense of Banana</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -29,9 +29,9 @@
         }
 
         .nav-container {
-            max-width: 1400px;
+            max-width: 1700px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 20px 0 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -52,7 +52,7 @@
         .nav-menu {
             display: flex;
             align-items: center;
-            gap: 35px;
+            gap: 25px;
             list-style: none;
         }
 
@@ -191,255 +191,70 @@
             transform: scale(1.1);
         }
 
-        /* Blog Hero Section */
-        .blog-hero {
-            background: #f0f0f0;
-            padding: 80px 40px 60px 40px;
-            text-align: center;
-        }
-
-        .blog-hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
-            font-weight: 700;
-            color: #2d3436;
-            margin-bottom: 20px;
-        }
-
-        /* Blog Article Section */
-        .blog-article {
+        /* Privacy Policy Content */
+        .privacy-section {
             background: #ffffff;
-            padding: 60px 40px;
+            padding: 80px 40px 120px 40px;
         }
 
-        .article-container {
+        .privacy-container {
             max-width: 900px;
             margin: 0 auto;
         }
 
-        .article-image {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-            border-radius: 10px;
-            margin: 0 auto 40px auto;
-            display: block;
-        }
-
-        .article-content {
-            font-size: 1.1em;
-            line-height: 1.9;
-            color: #2d3436;
-        }
-
-        .article-content p {
-            margin-bottom: 25px;
-            text-align: justify;
-        }
-
-        .article-content p:first-of-type::first-letter {
-            font-size: 3.5em;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            float: left;
-            line-height: 0.9;
-            margin: 5px 10px 0 0;
-            color: #2d3436;
-        }
-
-        /* Subscription Section */
-        .subscribe-section {
-            background: #f5f5f5;
-            padding: 60px 40px;
-            margin-top: 40px;
-            border-radius: 10px;
-        }
-
-        .subscribe-container {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .subscribe-container h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2em;
+        .privacy-container h1 {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.8em;
             font-weight: 700;
             color: #2d3436;
             margin-bottom: 20px;
+            text-align: center;
         }
 
-        .subscribe-container p {
-            font-size: 1.1em;
+        .privacy-container .last-updated {
+            text-align: center;
             color: #5a5a5a;
-            margin-bottom: 30px;
-        }
-
-        .subscribe-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .subscribe-form input {
-            padding: 15px 20px;
             font-size: 1em;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            margin-bottom: 60px;
+        }
+
+        .privacy-container h2 {
             font-family: 'Lato', sans-serif;
-        }
-
-        .subscribe-form button {
-            padding: 15px 40px;
-            font-size: 1em;
-            font-weight: 700;
-            background: #5B8FDB;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: 'Lato', sans-serif;
-            text-transform: uppercase;
-            transition: background 0.3s ease;
-        }
-
-        .subscribe-form button:hover {
-            background: #4A7AC9;
-        }
-
-        /* Comments Section */
-        .comments-section {
-            background: #ffffff;
-            padding: 60px 40px;
-        }
-
-        .comments-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .comments-container h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2em;
+            font-size: 1.5em;
             font-weight: 700;
             color: #2d3436;
-            margin-bottom: 30px;
-        }
-
-        .login-notice {
-            background: #fff9e6;
-            border-left: 4px solid #FFD54F;
-            padding: 20px;
-            margin-bottom: 30px;
-            border-radius: 5px;
-        }
-
-        .login-notice p {
-            color: #2d3436;
-            font-size: 1em;
-            margin: 0;
-        }
-
-        .login-notice a {
-            color: #5B8FDB;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .login-notice a:hover {
-            text-decoration: underline;
-        }
-
-        .comment-form {
-            background: #f5f5f5;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 40px;
-        }
-
-        .comment-form textarea {
-            width: 100%;
-            padding: 15px;
-            font-size: 1em;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-family: 'Lato', sans-serif;
-            resize: vertical;
-            min-height: 120px;
-            margin-bottom: 15px;
-        }
-
-        .comment-form button {
-            padding: 12px 30px;
-            font-size: 1em;
-            font-weight: 700;
-            background: #5B8FDB;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: 'Lato', sans-serif;
-            text-transform: uppercase;
-            transition: background 0.3s ease;
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        .comments-list {
             margin-top: 40px;
-        }
-
-        .comment-item {
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
             margin-bottom: 20px;
         }
 
-        .comment-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .privacy-container p {
+            font-size: 1em;
+            line-height: 1.8;
+            color: #5a5a5a;
+            margin-bottom: 20px;
+        }
+
+        .privacy-container ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .privacy-container ul li {
+            font-size: 1em;
+            line-height: 1.8;
+            color: #5a5a5a;
             margin-bottom: 10px;
         }
 
-        .comment-author {
-            font-weight: 700;
-            color: #2d3436;
+        .privacy-container a {
+            color: #5B8FDB;
+            text-decoration: none;
+            transition: color 0.3s ease;
         }
 
-        .comment-date {
-            font-size: 0.9em;
-            color: #999999;
-        }
-
-        .comment-text {
-            color: #5a5a5a;
-            line-height: 1.6;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .logo img {
-                height: 60px;
-            }
-
-            .blog-hero h1 {
-                font-size: 2em;
-            }
-
-            .article-content {
-                font-size: 1em;
-            }
-
-            .subscribe-container h2,
-            .comments-container h2 {
-                font-size: 1.8em;
-            }
+        .privacy-container a:hover {
+            color: #4A7AC9;
+            text-decoration: underline;
         }
 
         /* Mobile Menu Toggle */
@@ -460,8 +275,24 @@
         }
 
         @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
             .mobile-menu-toggle {
                 display: flex;
+            }
+
+            .logo img {
+                height: 60px;
+            }
+
+            .privacy-container h1 {
+                font-size: 2em;
+            }
+
+            .privacy-container h2 {
+                font-size: 1.3em;
             }
         }
 
@@ -642,6 +473,7 @@
                 </li>
                 <li><a href="blog.html">BLOG</a></li>
                 <li><a href="contact-us.html">CONTACT</a></li>
+                <li><a href="#more">MORE</a></li>
             </ul>
 
             <div class="nav-icons">
@@ -669,68 +501,69 @@
         </div>
     </nav>
 
-    <!-- Blog Hero -->
-    <section class="blog-hero">
-        <h1>Blog</h1>
-    </section>
+    <!-- Privacy Policy Content -->
+    <section class="privacy-section">
+        <div class="privacy-container">
+            <h1>PRIVACY POLICY: PAST TENSE OF BANANA</h1>
+            <p class="last-updated">Last Updated: January 23, 2026</p>
 
-    <!-- Blog Article -->
-    <section class="blog-article">
-        <div class="article-container">
-            <img src="boy learn english blog.jpg" alt="Learning English" class="article-image">
+            <p>At Past Tense of Banana, we are committed to protecting and respecting your privacy. This policy sets out the basis on which any personal data we collect will be processed by us. Please read this privacy policy carefully to understand our views and practices regarding your personal data. By visiting our website or using our services, you are accepting and consenting to the practices described in this policy.</p>
 
-            <div class="article-content">
-                <p>English is an ever-evolving language, a living entity that constantly absorbs, discards, and reshapes itself. Unlike French, which has the Académie Française to dictate linguistic standards, English has no central authority. Instead, it exists in a paradox: while many champion its fluidity and resistance to rigid rules, we still look to dictionaries and institutions to tell us what words mean and how they should be used. We argue with each other on the right definition of words and for the right of words to have no set definition. Who, then, should we trust when learning English?</p>
+            <h2>1. WHO WE ARE</h2>
+            <p>Our website address is: <a href="https://PastTenseOfBanana.com">https://PastTenseOfBanana.com</a>. Gari Sullivan ("us", "we", or "our") operates the <a href="https://PastTenseOfBanana.com">https://PastTenseOfBanana.com</a> website (the "Site").</p>
+            <p>For further information, you can contact us by email at: contact@PastTenseOfBanana.com</p>
 
-                <p>Linguists and educators often argue against prescriptive English—the idea that there is one "correct" form of the language. This resistance stems from the reality that English has always been shaped by its speakers, borrowing and bending according to need. Regional dialects, evolving slang, and new technological terms challenge the notion of fixed rules. Even grammar, once seen as a rigid structure, is increasingly viewed as flexible, shaped by usage rather than imposed regulations.</p>
+            <h2>2. WHAT PERSONAL DATA WE COLLECT AND WHY WE COLLECT IT</h2>
+            <p>We collect and process the following data about you:</p>
+            <p><strong>Information you give us:</strong> This is information about you that you give us by filling in forms on our site or by corresponding with us by email or otherwise. It includes any communication that you send to us whether that be through contact or opt-in forms on our website, through email, text, social media messaging, social media posting or any other communication that you send us. The information you give us may include your name, address, email address, age, location and financial information in the event of a purchase.</p>
+            <p><strong>Information we collect from your use of our site:</strong> With regard to each of your visits to our site we will automatically collect technical information, such as the Internet protocol (IP) address used to connect your device to the Internet, location data, and information about your browser and length of visit to pages on our website.</p>
+            <p><strong>Information we collect throughout our relationship with you:</strong> This is information relating to products (free or paid) that you download or purchase from us.</p>
+            <p><strong>Marketing Information:</strong> This includes data about your preferences in receiving marketing from us and our third parties and your communication preferences.</p>
 
-                <p>Despite this championing of descriptivism - the opposing view of prescriptivism - learners seek clear guidance, and for good reason. If English has no governing body, how can one distinguish between an acceptable linguistic evolution and a simple mistake? Can we dismiss "irregardless" as incorrect when major dictionaries now recognise it? Should we only use 'literally' in a literal sense? When does informal speech become standard English?</p>
+            <h2>3. WHY DO WE COLLECT THIS INFORMATION?</h2>
+            <p>We use this information in the following ways:</p>
+            <p><strong>Information you give to us:</strong> We process this data for the purposes of communication with you, for record keeping and administration, and for the establishment, pursuance or defence of legal claims. Our lawful ground for processing this information is our legitimate interests, which in this case are to reply to communications sent to us by you and to perform our contract with you.</p>
+            <p><strong>Information we collect from your use of the site:</strong> We process this data to analyse your use of our website and other online services, to administer and protect our business and website, and to deliver relevant and interesting website content and advertisements to you.</p>
+            <p><strong>Information we collect throughout our relationship:</strong> We process this data to supply the goods and/or services you have purchased from us and to keep records of such transactions.</p>
 
-                <p>While this may seem to be a paradoxical challenge for English language students, their teachers adopt a more cognitive dissonance approach. English language teachers often promote the idea of linguistic fluidity outside the classroom, celebrating its adaptability and organic evolution. Yet, inside the classroom—particularly when teaching children—they willingly accept payment to enforce specific rules, correct deviations, and uphold the very structures they critique; they see no contradiction in supporting these two opposing views. For learners of English, this presents a dilemma. They are encouraged to embrace the language's adaptability while also being advised to adhere to certain conventions and look to certain institutions for guidance.</p>
+            <h2>4. HOW DO WE USE YOUR DATA FOR MARKETING COMMUNICATIONS?</h2>
+            <p>Our lawful ground for processing your personal data to send you marketing communications is either your consent or our legitimate interests. Under the Privacy and Electronic Communications Regulations, we may send you marketing communications from us if you purchased or asked for information from us about our goods or services, or you agreed to receive marketing communications and you have not opted out. You can ask us to stop sending you marketing messages at any time by following the opt-out links on any marketing email or by emailing us at contact@PastTenseOfBanana.com.</p>
 
-                <p>While English lacks a desire for a single regulatory body, we still need to turn to institutions such as the Oxford English Dictionary (OED) and Merriam-Webster for authoritative definitions. However, these dictionaries, Merriam-Webster in particular, do not dictate language; they document it. They reflect English as it is used rather than as it "should" be used. They track the way words are used and decide which ones warrant inclusion based only on frequency and longevity of usage. A twist on the adage of nazi propagandist, Joseph Goebbels: Give a word an incorrect meaning for long enough and people will start to use it. It gains "normalcy".</p>
+            <h2>5. HOW LONG WE RETAIN YOUR DATA</h2>
+            <p>We will keep information about you for a maximum of 6 years after the end of our relationship with you unless obligations to our regulators require otherwise. If you leave a comment, the comment and its metadata are retained indefinitely.</p>
 
-                <p>Standard English exists not to restrict expression but to ensure clarity and effective communication. The existence of rules does not necessarily threaten slang, dialects, or accents. Despite Académie Française, there is still French slang, a creative use of French and international variations. French has survived despite the formal structures and informal use. In fact, one could argue that understanding the rules and deliberately playing or choosing to ignore them fosters creativity and linguistic diversity. Writers, poets, and speakers often bend grammatical conventions for effect, making English richer rather than more constrained.</p>
+            <h2>6. WHO MIGHT WE SHARE YOUR INFORMATION WITH</h2>
+            <p>We may have to share your personal data with:</p>
+            <ul>
+                <li>Service providers who provide IT and system administration services.</li>
+                <li>Professional advisers including lawyers, bankers, auditors and insurers.</li>
+                <li>Government bodies that require us to report on our processing activities.</li>
+                <li>Third parties to whom we sell, transfer, or merge parts of our business or our assets.</li>
+            </ul>
+            <p>We require all third parties to whom we transfer your data to respect the security of your personal information and to treat it in accordance with the law.</p>
 
-                <p>All languages need rules. Without shared agreement on meaning, communication would break down. How would we conduct trade if "buy" and "sell" were interchangeable? How would Americans ever stay alive if "Don't shoot" didn't always remain the negative of "Yeah, go ahead, pull the trigger"? Structure provides stability, allowing flexibility to exist within a comprehensible framework. Language standards may have always fluctuated, but there are still institutions that have historically served as gatekeepers.</p>
+            <h2>7. HOW IS YOUR DATA STORED AND KEPT SECURE?</h2>
+            <p>We take your safety and security very seriously and we are committed to protecting your personal and financial information. We have in place security measures to prevent your personal data from being accidentally lost, used, altered, disclosed, or accessed without authorisation.</p>
 
-                <p>The BBC was once the respected authority of British English Pronunciation. We knew how a word should be said because that's how BBC news presenters said it. The BBC has relaxed its stance, allowing a broader range of accents and regional variations. Whilst becoming richer in variety, it has lost its direction and weakened its purpose. In times past, the OED gave us the standard spelling of words and correct, absolute definition of meaning. Now those times are gone. Universities, style guides, and even social media influencers contribute to shaping English, yet none hold absolute authority. What is considered "correct" depends on context - academic writing demands one standard, casual conversation another - but ultimately it's down to the individual. Each of we get 2 decide the rools! So, unlike in French, the rules will disappear and the structure of the language along with it.</p>
+            <h2>8. TRANSFERRING YOUR DATA OUTSIDE OF THE EUROPEAN ECONOMIC AREA (EEA)</h2>
+            <p>Many of our third-party service providers are based outside the EEA. In such cases where it is necessary for us to transfer your personal data out of the EEA, we ensure a similar degree of security by ensuring at least one of the following safeguards is in place:</p>
+            <ul>
+                <li>Transferring to countries approved by the European Commission.</li>
+                <li>Using specific contracts approved by the European Commission (Standard Contractual Clauses).</li>
+                <li>Using recognized data privacy frameworks for US-based providers.</li>
+            </ul>
 
-                <p>There is no clear resolution to this English language paradox. We want English to be what suits us: Free and constrained, fixed and fluid, an evolving contradiction that no single authority dares fully capture and no one wants them to, except when providing evidence that our chosen use of English is the rite version. The question of who to trust when learning English is, perhaps, one that won't not never be settled!</p>
-            </div>
+            <h2>9. WHAT RIGHTS DO YOU HAVE OVER YOUR DATA?</h2>
+            <p>You have the right to request from us a copy of personal information held about you; to ask for the information we hold about you to be rectified if it is inaccurate; to ask for data to be erased; to ask for the processing of that information to be restricted; or to object to processing. To exercise these rights, please contact us at contact@PastTenseOfBanana.com.</p>
 
-            <!-- Subscribe Section -->
-            <div class="subscribe-section">
-                <div class="subscribe-container">
-                    <h2>Subscribe to Our Blog</h2>
-                    <p>Get the latest articles delivered straight to your inbox!</p>
-                    <form class="subscribe-form" id="subscribe-form">
-                        <input type="text" placeholder="First name" required>
-                        <input type="email" placeholder="Email address" required>
-                        <button type="submit">SUBSCRIBE NOW</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+            <h2>10. THIRD-PARTY LINKS</h2>
+            <p>Our website may include links to third-party websites, plug-ins and applications. Clicking on such links may allow third parties to collect or share data about you. We do not control these third-party websites and are not responsible for their privacy policies.</p>
 
-    <!-- Comments Section -->
-    <section class="comments-section">
-        <div class="comments-container">
-            <h2>Comments</h2>
+            <h2>11. COOKIES</h2>
+            <p>Our website uses cookies to distinguish you from other users. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site. By using our site, you agree to our use of cookies as described in this policy. You can set your browser to refuse all or some browser cookies, but this may affect the functionality of the site.</p>
 
-            <div class="login-notice">
-                <p>Please <a href="#login">log in</a> or <a href="#register">create an account</a> to leave a comment.</p>
-            </div>
-
-            <div class="comment-form">
-                <textarea placeholder="Share your thoughts..." disabled></textarea>
-                <button disabled>POST COMMENT</button>
-            </div>
-
-            <div class="comments-list">
-                <p style="color: #999999; text-align: center; padding: 40px 0;">No comments yet. Be the first to share your thoughts!</p>
-            </div>
+            <h2>12. QUESTIONS ABOUT OUR PRIVACY POLICY</h2>
+            <p>If you have any questions about our privacy notice, please contact us at contact@PastTenseOfBanana.com.</p>
         </div>
     </section>
 
@@ -778,10 +611,12 @@
                     </div>
 
                     <div class="footer-column">
-                        <h3>1 to 1 Session</h3>
+                        <h3>Our Courses</h3>
                         <ul>
-                            <li><a href="30min-session.html">30 min</a></li>
-                            <li><a href="60min-session.html">60 min</a></li>
+                            <li><a href="30min-session.html">Gari 30 min session</a></li>
+                            <li><a href="60min-session.html">Gari 60 min session</a></li>
+                            <li><a href="ask-gari.html">ask Gari a question for £5</a></li>
+                            <li><a href="#video-courses">Video Courses</a></li>
                         </ul>
                     </div>
                 </div>
@@ -810,15 +645,19 @@
             });
         }
 
-        // Subscribe form handler
-        const subscribeForm = document.getElementById('subscribe-form');
-        if (subscribeForm) {
-            subscribeForm.addEventListener('submit', function(e) {
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                alert('Thank you for subscribing! You will receive updates about new blog posts.');
-                this.reset();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
-        }
+        });
     </script>
 </body>
 </html>
