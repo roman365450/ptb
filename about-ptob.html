@@ -191,86 +191,6 @@
             transform: scale(1.1);
         }
 
-        /* Hero Section */
-        .hero {
-            background: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 80px 40px 0 40px;
-            position: relative;
-            overflow: hidden;
-            border-bottom: 0;
-            min-height: 600px;
-        }
-
-        .hero-container {
-            max-width: 1400px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 100px;
-            align-items: center;
-            z-index: 1;
-            position: relative;
-            padding-bottom: 0;
-        }
-
-        .hero-image {
-            position: relative;
-            animation: fadeInLeft 1s ease;
-            background: transparent;
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero-image img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            background: transparent;
-        }
-
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .hero-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: fadeInRight 1s ease;
-            background: transparent;
-            padding-left: 40px;
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .hero-logo-image {
-            max-width: 450px;
-            width: 100%;
-            height: auto;
-            background: transparent;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         /* Mission Section */
         .mission-section {
             background: #ffffff;
@@ -477,30 +397,6 @@
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 60px;
-                text-align: center;
-            }
-
-            .hero-image {
-                order: 2;
-                display: flex;
-                justify-content: center;
-            }
-
-            .hero-image img {
-                max-width: 500px;
-            }
-
-            .hero-content {
-                order: 1;
-            }
-
-            .hero-logo-image {
-                max-width: 400px;
-            }
-
             .about-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -535,14 +431,6 @@
 
             .logo img {
                 height: 60px;
-            }
-
-            .hero-image img {
-                max-width: 400px;
-            }
-
-            .hero-logo-image {
-                max-width: 300px;
             }
 
             .mission-container h2 {
@@ -804,18 +692,6 @@
             </div>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-image">
-                <img src="Gari version 123.png" alt="English Teacher" onerror="this.src='banana_naked.png'">
-            </div>
-            <div class="hero-content">
-                <img src="trans logo 12.png" alt="PToB - Past Tense of Banana" class="hero-logo-image">
-            </div>
-        </div>
-    </section>
 
     <!-- Mission Section -->
     <section class="mission-section">
