@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PToB - Past Tense of Banana - English Support Online</title>
+    <title>Blog - Past Tense of Banana</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -191,253 +191,105 @@
             transform: scale(1.1);
         }
 
-        /* Hero Section */
-        .hero {
+        /* Blog Hero Section */
+        .blog-hero {
             background: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 80px 40px 0 40px;
-            position: relative;
-            overflow: hidden;
-            border-bottom: 0;
-            min-height: 600px;
-        }
-
-        .hero-container {
-            max-width: 1400px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 100px;
-            align-items: center;
-            z-index: 1;
-            position: relative;
-            padding-bottom: 0;
-        }
-
-        .hero-image {
-            position: relative;
-            animation: fadeInLeft 1s ease;
-            background: transparent;
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero-image img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            background: transparent;
-        }
-
-        @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .hero-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            animation: fadeInRight 1s ease;
-            background: transparent;
-            padding-left: 40px;
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .hero-logo-image {
-            max-width: 450px;
-            width: 100%;
-            height: auto;
-            background: transparent;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Social Stats Section */
-        .social-stats {
-            background: #ffffff;
-            padding: 60px 40px 120px 40px;
+            padding: 80px 40px 60px 40px;
             text-align: center;
         }
 
-        .social-stats h2 {
-            font-family: 'Lato', sans-serif;
-            font-size: 2.5em;
-            font-weight: 400;
-            color: #2d3436;
-            margin-bottom: 60px;
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 60px;
-            align-items: center;
-        }
-
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .stat-icon {
-            width: 80px;
-            height: 80px;
-            background: #2d3436;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s ease;
-        }
-
-        .stat-icon:hover {
-            transform: scale(1.1);
-        }
-
-        .stat-icon svg {
-            width: 40px;
-            height: 40px;
-            fill: #ffffff;
-        }
-
-        .stat-number {
-            font-size: 2em;
+        .blog-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
             font-weight: 700;
             color: #2d3436;
+            margin-bottom: 20px;
         }
 
-        /* About Section */
-        .about-section {
-            background: #f5f5f5;
-            padding: 50px 40px;
+        /* Blog Article Section */
+        .blog-article {
+            background: #ffffff;
+            padding: 60px 40px;
         }
 
-        .about-container {
-            max-width: 1200px;
+        .article-container {
+            max-width: 900px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 400px 1fr;
-            gap: 80px;
-            align-items: center;
         }
 
-        .about-image img {
+        .article-image {
             width: 100%;
+            max-width: 800px;
             height: auto;
+            border-radius: 10px;
+            margin: 0 auto 40px auto;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1em;
+            line-height: 1.9;
+            color: #2d3436;
+        }
+
+        .article-content p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .article-content p:first-of-type::first-letter {
+            font-size: 3.5em;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            float: left;
+            line-height: 0.9;
+            margin: 5px 10px 0 0;
+            color: #2d3436;
+        }
+
+        /* Subscription Section */
+        .subscribe-section {
+            background: #f5f5f5;
+            padding: 60px 40px;
+            margin-top: 40px;
             border-radius: 10px;
         }
 
-        .about-content h2 {
-            font-family: 'Lato', sans-serif;
-            font-size: 2.2em;
-            font-weight: 400;
-            color: #2d3436;
-            margin-bottom: 30px;
-        }
-
-        .about-content p {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #5a5a5a;
-            margin-bottom: 20px;
-        }
-
-        /* Fixed Session Section */
-        .fixed-session-section {
-            background: #ffffff;
-            padding: 100px 40px;
-        }
-
-        .fixed-session-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 400px;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .fixed-session-content h2 {
-            font-family: 'Lato', sans-serif;
-            font-size: 2.5em;
-            font-weight: 400;
-            color: #2d3436;
-            margin-bottom: 30px;
-        }
-
-        .fixed-session-content p {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: #5a5a5a;
-            margin-bottom: 20px;
-        }
-
-        .fixed-session-image img {
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        /* Newsletter Section */
-        .newsletter-section {
-            background: #ffffff;
-            padding: 80px 40px;
-        }
-
-        .newsletter-container {
-            max-width: 1200px;
+        .subscribe-container {
+            max-width: 600px;
             margin: 0 auto;
             text-align: center;
         }
 
-        .newsletter-container h2 {
-            font-family: 'Lato', sans-serif;
-            font-size: 3em;
-            font-weight: 400;
+        .subscribe-container h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            font-weight: 700;
             color: #2d3436;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
         }
 
-        .newsletter-form {
+        .subscribe-container p {
+            font-size: 1.1em;
+            color: #5a5a5a;
+            margin-bottom: 30px;
+        }
+
+        .subscribe-form {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             gap: 15px;
-            margin-bottom: 60px;
-            flex-wrap: wrap;
         }
 
-        .newsletter-form input {
+        .subscribe-form input {
             padding: 15px 20px;
             font-size: 1em;
             border: 1px solid #ddd;
             border-radius: 5px;
-            width: 280px;
             font-family: 'Lato', sans-serif;
         }
 
-        .newsletter-form button {
+        .subscribe-form button {
             padding: 15px 40px;
             font-size: 1em;
             font-weight: 700;
@@ -451,118 +303,122 @@
             transition: background 0.3s ease;
         }
 
-        .newsletter-form button:hover {
+        .subscribe-form button:hover {
             background: #4A7AC9;
         }
 
-        .newsletter-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 80px;
+        /* Comments Section */
+        .comments-section {
+            background: #ffffff;
+            padding: 60px 40px;
+        }
+
+        .comments-container {
             max-width: 900px;
             margin: 0 auto;
         }
 
-        .newsletter-icon {
-            width: 300px;
-            height: auto;
-            background: #ffffff;
+        .comments-container h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #2d3436;
+            margin-bottom: 30px;
+        }
+
+        .login-notice {
+            background: #fff9e6;
+            border-left: 4px solid #FFD54F;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .login-notice p {
+            color: #2d3436;
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .login-notice a {
+            color: #5B8FDB;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-notice a:hover {
+            text-decoration: underline;
+        }
+
+        .comment-form {
+            background: #f5f5f5;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Lato', sans-serif;
+            resize: vertical;
+            min-height: 120px;
+            margin-bottom: 15px;
+        }
+
+        .comment-form button {
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: 700;
+            background: #5B8FDB;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .comments-list {
+            margin-top: 40px;
+        }
+
+        .comment-item {
+            background: #f9f9f9;
             padding: 20px;
             border-radius: 8px;
+            margin-bottom: 20px;
         }
 
-        .newsletter-icon img {
-            width: 100%;
-            height: auto;
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
         }
 
-        .newsletter-benefits {
-            text-align: left;
-        }
-
-        .newsletter-benefits ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .newsletter-benefits li {
-            font-size: 1.1em;
+        .comment-author {
+            font-weight: 700;
             color: #2d3436;
-            margin-bottom: 18px;
-            padding-left: 30px;
-            position: relative;
-            line-height: 1.4;
         }
 
-        .newsletter-benefits li::before {
-            content: '●';
-            position: absolute;
-            left: 0;
-            font-size: 1.3em;
-            color: #2d3436;
-            top: 0;
-            line-height: 1.4;
+        .comment-date {
+            font-size: 0.9em;
+            color: #999999;
+        }
+
+        .comment-text {
+            color: #5a5a5a;
+            line-height: 1.6;
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 60px;
-                text-align: center;
-            }
-
-            .hero-image {
-                order: 2;
-                display: flex;
-                justify-content: center;
-            }
-
-            .hero-image img {
-                max-width: 500px;
-            }
-
-            .hero-content {
-                order: 1;
-            }
-
-            .hero-logo-image {
-                max-width: 400px;
-            }
-
-            .stats-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
-            }
-
-            .about-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .about-image {
-                text-align: center;
-            }
-
-            .about-image img {
-                max-width: 350px;
-            }
-
-            .fixed-session-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .fixed-session-image {
-                text-align: center;
-            }
-
-            .fixed-session-image img {
-                max-width: 350px;
-            }
-        }
-
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
@@ -572,44 +428,17 @@
                 height: 60px;
             }
 
-            .hero-image img {
-                max-width: 400px;
+            .blog-hero h1 {
+                font-size: 2em;
             }
 
-            .hero-logo-image {
-                max-width: 300px;
-            }
-
-            .stats-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .social-stats h2 {
-                font-size: 1.8em;
-            }
-
-            .about-content h2 {
-                font-size: 1.8em;
-            }
-
-            .about-content p {
+            .article-content {
                 font-size: 1em;
             }
 
-            .about-image img {
-                max-width: 300px;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .newsletter-content {
-                flex-direction: column;
-                gap: 40px;
-            }
-
-            .newsletter-container h2 {
-                font-size: 2em;
+            .subscribe-container h2,
+            .comments-container h2 {
+                font-size: 1.8em;
             }
         }
 
@@ -792,7 +621,7 @@
             </div>
 
             <ul class="nav-menu">
-                <li><a href="#home">HOME</a></li>
+                <li><a href="english.html">HOME</a></li>
                 <li class="dropdown">
                     <a href="#courses">1 TO 1 SESSION</a>
                     <div class="dropdown-content">
@@ -840,94 +669,67 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-image">
-                <img src="Gari version 123.png" alt="English Teacher" onerror="this.src='banana_naked.png'">
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <h1>Blog</h1>
+    </section>
+
+    <!-- Blog Article -->
+    <section class="blog-article">
+        <div class="article-container">
+            <img src="boy learn english blog.jpg" alt="Learning English" class="article-image">
+
+            <div class="article-content">
+                <p>English is an ever-evolving language, a living entity that constantly absorbs, discards, and reshapes itself. Unlike French, which has the Académie Française to dictate linguistic standards, English has no central authority. Instead, it exists in a paradox: while many champion its fluidity and resistance to rigid rules, we still look to dictionaries and institutions to tell us what words mean and how they should be used. We argue with each other on the right definition of words and for the right of words to have no set definition. Who, then, should we trust when learning English?</p>
+
+                <p>Linguists and educators often argue against prescriptive English—the idea that there is one "correct" form of the language. This resistance stems from the reality that English has always been shaped by its speakers, borrowing and bending according to need. Regional dialects, evolving slang, and new technological terms challenge the notion of fixed rules. Even grammar, once seen as a rigid structure, is increasingly viewed as flexible, shaped by usage rather than imposed regulations.</p>
+
+                <p>Despite this championing of descriptivism - the opposing view of prescriptivism - learners seek clear guidance, and for good reason. If English has no governing body, how can one distinguish between an acceptable linguistic evolution and a simple mistake? Can we dismiss "irregardless" as incorrect when major dictionaries now recognise it? Should we only use 'literally' in a literal sense? When does informal speech become standard English?</p>
+
+                <p>While this may seem to be a paradoxical challenge for English language students, their teachers adopt a more cognitive dissonance approach. English language teachers often promote the idea of linguistic fluidity outside the classroom, celebrating its adaptability and organic evolution. Yet, inside the classroom—particularly when teaching children—they willingly accept payment to enforce specific rules, correct deviations, and uphold the very structures they critique; they see no contradiction in supporting these two opposing views. For learners of English, this presents a dilemma. They are encouraged to embrace the language's adaptability while also being advised to adhere to certain conventions and look to certain institutions for guidance.</p>
+
+                <p>While English lacks a desire for a single regulatory body, we still need to turn to institutions such as the Oxford English Dictionary (OED) and Merriam-Webster for authoritative definitions. However, these dictionaries, Merriam-Webster in particular, do not dictate language; they document it. They reflect English as it is used rather than as it "should" be used. They track the way words are used and decide which ones warrant inclusion based only on frequency and longevity of usage. A twist on the adage of nazi propagandist, Joseph Goebbels: Give a word an incorrect meaning for long enough and people will start to use it. It gains "normalcy".</p>
+
+                <p>Standard English exists not to restrict expression but to ensure clarity and effective communication. The existence of rules does not necessarily threaten slang, dialects, or accents. Despite Académie Française, there is still French slang, a creative use of French and international variations. French has survived despite the formal structures and informal use. In fact, one could argue that understanding the rules and deliberately playing or choosing to ignore them fosters creativity and linguistic diversity. Writers, poets, and speakers often bend grammatical conventions for effect, making English richer rather than more constrained.</p>
+
+                <p>All languages need rules. Without shared agreement on meaning, communication would break down. How would we conduct trade if "buy" and "sell" were interchangeable? How would Americans ever stay alive if "Don't shoot" didn't always remain the negative of "Yeah, go ahead, pull the trigger"? Structure provides stability, allowing flexibility to exist within a comprehensible framework. Language standards may have always fluctuated, but there are still institutions that have historically served as gatekeepers.</p>
+
+                <p>The BBC was once the respected authority of British English Pronunciation. We knew how a word should be said because that's how BBC news presenters said it. The BBC has relaxed its stance, allowing a broader range of accents and regional variations. Whilst becoming richer in variety, it has lost its direction and weakened its purpose. In times past, the OED gave us the standard spelling of words and correct, absolute definition of meaning. Now those times are gone. Universities, style guides, and even social media influencers contribute to shaping English, yet none hold absolute authority. What is considered "correct" depends on context - academic writing demands one standard, casual conversation another - but ultimately it's down to the individual. Each of we get 2 decide the rools! So, unlike in French, the rules will disappear and the structure of the language along with it.</p>
+
+                <p>There is no clear resolution to this English language paradox. We want English to be what suits us: Free and constrained, fixed and fluid, an evolving contradiction that no single authority dares fully capture and no one wants them to, except when providing evidence that our chosen use of English is the rite version. The question of who to trust when learning English is, perhaps, one that won't not never be settled!</p>
             </div>
-            <div class="hero-content">
-                <img src="trans logo 12.png" alt="PToB - Past Tense of Banana" class="hero-logo-image">
+
+            <!-- Subscribe Section -->
+            <div class="subscribe-section">
+                <div class="subscribe-container">
+                    <h2>Subscribe to Our Blog</h2>
+                    <p>Get the latest articles delivered straight to your inbox!</p>
+                    <form class="subscribe-form" id="subscribe-form">
+                        <input type="text" placeholder="First name" required>
+                        <input type="email" placeholder="Email address" required>
+                        <button type="submit">SUBSCRIBE NOW</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Social Stats Section -->
-    <section class="social-stats">
-        <h2>We have helped thousands of students!</h2>
-        <div class="stats-container">
-            <a href="https://www.youtube.com/@PastTenseofBanana" target="_blank" rel="noopener noreferrer" class="stat-item">
-                <div class="stat-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                    </svg>
-                </div>
-                <div class="stat-number">16K</div>
-            </a>
-            <a href="https://www.tiktok.com/@pasttenseofbanana?_r=1&_t=ZN-93GWAAxRASE" target="_blank" rel="noopener noreferrer" class="stat-item">
-                <div class="stat-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                    </svg>
-                </div>
-                <div class="stat-number">200K</div>
-            </a>
-            <a href="https://www.instagram.com/pasttenseofbanana/" target="_blank" rel="noopener noreferrer" class="stat-item">
-                <div class="stat-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
-                    </svg>
-                </div>
-                <div class="stat-number">90K</div>
-            </a>
-            <a href="https://www.facebook.com/pasttensebanana" target="_blank" rel="noopener noreferrer" class="stat-item">
-                <div class="stat-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
-                </div>
-                <div class="stat-number">72K</div>
-            </a>
-        </div>
-    </section>
+    <!-- Comments Section -->
+    <section class="comments-section">
+        <div class="comments-container">
+            <h2>Comments</h2>
 
-    <!-- About Section -->
-    <section class="about-section" id="about">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="BANANA NKD TRS.png" alt="Gari - English Teacher">
+            <div class="login-notice">
+                <p>Please <a href="#login">log in</a> or <a href="#register">create an account</a> to leave a comment.</p>
             </div>
-            <div class="about-content">
-                <h2>You are in a right place if...</h2>
 
-                <p>....you are a student starting your journey, a fellow teacher looking for a fresh perspective, or someone simply curious about the quirks of British culture, Past Tense of Banana is for you. We provide the structure needed to navigate the 21st-century digital landscape, focusing on high expectations rather than restrictive levels. Join us to experience a more authentic, sophisticated, and curiosity-driven way to master the English language.</p>
+            <div class="comment-form">
+                <textarea placeholder="Share your thoughts..." disabled></textarea>
+                <button disabled>POST COMMENT</button>
             </div>
-        </div>
-    </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="newsletter-container">
-            <h2>Sign up for our newsletter!</h2>
-
-            <form class="newsletter-form">
-                <input type="text" placeholder="First name" required>
-                <input type="email" placeholder="E-mail" required>
-                <button type="submit">CLICK HERE!</button>
-            </form>
-
-            <div class="newsletter-content">
-                <div class="newsletter-icon">
-                    <img src="PTOB envelope 2.png" alt="PToB Newsletter">
-                </div>
-                <div class="newsletter-benefits">
-                    <ul>
-                        <li>Weekly new video</li>
-                        <li>English advice</li>
-                        <li>Tips and tricks</li>
-                        <li>Our promotions and new products!</li>
-                    </ul>
-                </div>
+            <div class="comments-list">
+                <p style="color: #999999; text-align: center; padding: 40px 0;">No comments yet. Be the first to share your thoughts!</p>
             </div>
         </div>
     </section>
@@ -969,9 +771,9 @@
                         <h3>Quick Links</h3>
                         <ul>
                             <li><a href="444.html">Four4Four Event</a></li>
-                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="contact-us.html">Contact Us</a></li>
                             <li><a href="#reviews">Testimonials</a></li>
-                            <li><a href="#about">About PT<span style="text-transform: none;">o</span>B</a></li>
+                            <li><a href="about-ptob.html">About PT<span style="text-transform: none;">o</span>B</a></li>
                         </ul>
                     </div>
 
@@ -1008,19 +810,15 @@
             });
         }
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+        // Subscribe form handler
+        const subscribeForm = document.getElementById('subscribe-form');
+        if (subscribeForm) {
+            subscribeForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                alert('Thank you for subscribing! You will receive updates about new blog posts.');
+                this.reset();
             });
-        });
+        }
     </script>
 </body>
 </html>
