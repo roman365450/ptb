@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Gari - PToB - Past Tense of Banana</title>
+    <title>Blog - Past Tense of Banana</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -191,6 +191,257 @@
             transform: scale(1.1);
         }
 
+        /* Blog Hero Section */
+        .blog-hero {
+            background: #f0f0f0;
+            padding: 80px 40px 60px 40px;
+            text-align: center;
+        }
+
+        .blog-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            font-weight: 700;
+            color: #2d3436;
+            margin-bottom: 20px;
+        }
+
+        /* Blog Article Section */
+        .blog-article {
+            background: #ffffff;
+            padding: 60px 40px;
+        }
+
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .article-image {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 10px;
+            margin: 0 auto 40px auto;
+            display: block;
+        }
+
+        .article-content {
+            font-size: 1.1em;
+            line-height: 1.9;
+            color: #2d3436;
+        }
+
+        .article-content p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .article-content p:first-of-type::first-letter {
+            font-size: 3.5em;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            float: left;
+            line-height: 0.9;
+            margin: 5px 10px 0 0;
+            color: #2d3436;
+        }
+
+        /* Subscription Section */
+        .subscribe-section {
+            background: #f5f5f5;
+            padding: 60px 40px;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+
+        .subscribe-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .subscribe-container h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #2d3436;
+            margin-bottom: 20px;
+        }
+
+        .subscribe-container p {
+            font-size: 1.1em;
+            color: #5a5a5a;
+            margin-bottom: 30px;
+        }
+
+        .subscribe-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .subscribe-form input {
+            padding: 15px 20px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .subscribe-form button {
+            padding: 15px 40px;
+            font-size: 1em;
+            font-weight: 700;
+            background: #5B8FDB;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+
+        .subscribe-form button:hover {
+            background: #4A7AC9;
+        }
+
+        /* Comments Section */
+        .comments-section {
+            background: #ffffff;
+            padding: 60px 40px;
+        }
+
+        .comments-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .comments-container h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            font-weight: 700;
+            color: #2d3436;
+            margin-bottom: 30px;
+        }
+
+        .login-notice {
+            background: #fff9e6;
+            border-left: 4px solid #FFD54F;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+
+        .login-notice p {
+            color: #2d3436;
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .login-notice a {
+            color: #5B8FDB;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-notice a:hover {
+            text-decoration: underline;
+        }
+
+        .comment-form {
+            background: #f5f5f5;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Lato', sans-serif;
+            resize: vertical;
+            min-height: 120px;
+            margin-bottom: 15px;
+        }
+
+        .comment-form button {
+            padding: 12px 30px;
+            font-size: 1em;
+            font-weight: 700;
+            background: #5B8FDB;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .comments-list {
+            margin-top: 40px;
+        }
+
+        .comment-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .comment-author {
+            font-weight: 700;
+            color: #2d3436;
+        }
+
+        .comment-date {
+            font-size: 0.9em;
+            color: #999999;
+        }
+
+        .comment-text {
+            color: #5a5a5a;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .logo img {
+                height: 60px;
+            }
+
+            .blog-hero h1 {
+                font-size: 2em;
+            }
+
+            .article-content {
+                font-size: 1em;
+            }
+
+            .subscribe-container h2,
+            .comments-container h2 {
+                font-size: 1.8em;
+            }
+        }
+
         /* Mobile Menu Toggle */
         .mobile-menu-toggle {
             display: none;
@@ -211,98 +462,6 @@
         @media (max-width: 768px) {
             .mobile-menu-toggle {
                 display: flex;
-            }
-
-            .nav-menu {
-                display: none;
-            }
-
-            .logo img {
-                height: 60px;
-            }
-        }
-
-        /* Main Content Section */
-        .about-section {
-            background: #ffffff;
-            padding: 100px 40px 80px 40px;
-        }
-
-        .about-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .about-image-container {
-            position: sticky;
-            top: 120px;
-        }
-
-        .about-image {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-content h1 {
-            font-family: 'Lato', sans-serif;
-            font-size: 2.8em;
-            font-weight: 400;
-            color: #2d3436;
-            margin-bottom: 40px;
-            line-height: 1.3;
-        }
-
-        .about-content p {
-            font-size: 1.15em;
-            line-height: 1.9;
-            color: #2d3436;
-            margin-bottom: 25px;
-        }
-
-        /* Footer */
-        footer {
-            background: #2d3436;
-            color: #ffffff;
-            padding: 40px;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.95em;
-        }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .about-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .about-image-container {
-                position: relative;
-                top: 0;
-                max-width: 300px;
-                margin: 0 auto;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .about-section {
-                padding: 60px 30px 50px 30px;
-            }
-
-            .about-content h1 {
-                font-size: 2em;
-            }
-
-            .about-content p {
-                font-size: 1em;
             }
         }
 
@@ -451,7 +610,6 @@
                 align-items: flex-start;
             }
         }
-
     </style>
 </head>
 <body>
@@ -463,7 +621,7 @@
             </div>
 
             <ul class="nav-menu">
-                <li><a href="english.html#home">HOME</a></li>
+                <li><a href="english.html">HOME</a></li>
                 <li class="dropdown">
                     <a href="#courses">1 TO 1 SESSION</a>
                     <div class="dropdown-content">
@@ -511,16 +669,67 @@
         </div>
     </nav>
 
-    <!-- Main Content Section -->
-    <section class="about-section">
-        <div class="about-container">
-            <div class="about-content">
-                <h1>About Gari</h1>
-                <p>I am a native English teacher and writer with over thirty years of teaching English to students and teachers. I started teaching English to natives with low English levels. This unusual start has given me a unique insight into how a language is learnt and taught. As well as teaching, I have written books and plays. This experience has shown me the importance of English and how it can be used with skill and creativity.</p>
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <h1>Blog</h1>
+    </section>
+
+    <!-- Blog Article -->
+    <section class="blog-article">
+        <div class="article-container">
+            <img src="boy learn english blog.jpg" alt="Learning English" class="article-image">
+
+            <div class="article-content">
+                <p>English is an ever-evolving language, a living entity that constantly absorbs, discards, and reshapes itself. Unlike French, which has the Académie Française to dictate linguistic standards, English has no central authority. Instead, it exists in a paradox: while many champion its fluidity and resistance to rigid rules, we still look to dictionaries and institutions to tell us what words mean and how they should be used. We argue with each other on the right definition of words and for the right of words to have no set definition. Who, then, should we trust when learning English?</p>
+
+                <p>Linguists and educators often argue against prescriptive English—the idea that there is one "correct" form of the language. This resistance stems from the reality that English has always been shaped by its speakers, borrowing and bending according to need. Regional dialects, evolving slang, and new technological terms challenge the notion of fixed rules. Even grammar, once seen as a rigid structure, is increasingly viewed as flexible, shaped by usage rather than imposed regulations.</p>
+
+                <p>Despite this championing of descriptivism - the opposing view of prescriptivism - learners seek clear guidance, and for good reason. If English has no governing body, how can one distinguish between an acceptable linguistic evolution and a simple mistake? Can we dismiss "irregardless" as incorrect when major dictionaries now recognise it? Should we only use 'literally' in a literal sense? When does informal speech become standard English?</p>
+
+                <p>While this may seem to be a paradoxical challenge for English language students, their teachers adopt a more cognitive dissonance approach. English language teachers often promote the idea of linguistic fluidity outside the classroom, celebrating its adaptability and organic evolution. Yet, inside the classroom—particularly when teaching children—they willingly accept payment to enforce specific rules, correct deviations, and uphold the very structures they critique; they see no contradiction in supporting these two opposing views. For learners of English, this presents a dilemma. They are encouraged to embrace the language's adaptability while also being advised to adhere to certain conventions and look to certain institutions for guidance.</p>
+
+                <p>While English lacks a desire for a single regulatory body, we still need to turn to institutions such as the Oxford English Dictionary (OED) and Merriam-Webster for authoritative definitions. However, these dictionaries, Merriam-Webster in particular, do not dictate language; they document it. They reflect English as it is used rather than as it "should" be used. They track the way words are used and decide which ones warrant inclusion based only on frequency and longevity of usage. A twist on the adage of nazi propagandist, Joseph Goebbels: Give a word an incorrect meaning for long enough and people will start to use it. It gains "normalcy".</p>
+
+                <p>Standard English exists not to restrict expression but to ensure clarity and effective communication. The existence of rules does not necessarily threaten slang, dialects, or accents. Despite Académie Française, there is still French slang, a creative use of French and international variations. French has survived despite the formal structures and informal use. In fact, one could argue that understanding the rules and deliberately playing or choosing to ignore them fosters creativity and linguistic diversity. Writers, poets, and speakers often bend grammatical conventions for effect, making English richer rather than more constrained.</p>
+
+                <p>All languages need rules. Without shared agreement on meaning, communication would break down. How would we conduct trade if "buy" and "sell" were interchangeable? How would Americans ever stay alive if "Don't shoot" didn't always remain the negative of "Yeah, go ahead, pull the trigger"? Structure provides stability, allowing flexibility to exist within a comprehensible framework. Language standards may have always fluctuated, but there are still institutions that have historically served as gatekeepers.</p>
+
+                <p>The BBC was once the respected authority of British English Pronunciation. We knew how a word should be said because that's how BBC news presenters said it. The BBC has relaxed its stance, allowing a broader range of accents and regional variations. Whilst becoming richer in variety, it has lost its direction and weakened its purpose. In times past, the OED gave us the standard spelling of words and correct, absolute definition of meaning. Now those times are gone. Universities, style guides, and even social media influencers contribute to shaping English, yet none hold absolute authority. What is considered "correct" depends on context - academic writing demands one standard, casual conversation another - but ultimately it's down to the individual. Each of we get 2 decide the rools! So, unlike in French, the rules will disappear and the structure of the language along with it.</p>
+
+                <p>There is no clear resolution to this English language paradox. We want English to be what suits us: Free and constrained, fixed and fluid, an evolving contradiction that no single authority dares fully capture and no one wants them to, except when providing evidence that our chosen use of English is the rite version. The question of who to trust when learning English is, perhaps, one that won't not never be settled!</p>
             </div>
 
-            <div class="about-image-container">
-                <img src="gari hat 2.png" alt="Gari" class="about-image">
+            <!-- Subscribe Section -->
+            <div class="subscribe-section">
+                <div class="subscribe-container">
+                    <h2>Subscribe to Our Blog</h2>
+                    <p>Get the latest articles delivered straight to your inbox!</p>
+                    <form class="subscribe-form" id="subscribe-form">
+                        <input type="text" placeholder="First name" required>
+                        <input type="email" placeholder="Email address" required>
+                        <button type="submit">SUBSCRIBE NOW</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comments Section -->
+    <section class="comments-section">
+        <div class="comments-container">
+            <h2>Comments</h2>
+
+            <div class="login-notice">
+                <p>Please <a href="#login">log in</a> or <a href="#register">create an account</a> to leave a comment.</p>
+            </div>
+
+            <div class="comment-form">
+                <textarea placeholder="Share your thoughts..." disabled></textarea>
+                <button disabled>POST COMMENT</button>
+            </div>
+
+            <div class="comments-list">
+                <p style="color: #999999; text-align: center; padding: 40px 0;">No comments yet. Be the first to share your thoughts!</p>
             </div>
         </div>
     </section>
@@ -590,5 +799,26 @@
         </div>
     </footer>
 
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Subscribe form handler
+        const subscribeForm = document.getElementById('subscribe-form');
+        if (subscribeForm) {
+            subscribeForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Thank you for subscribing! You will receive updates about new blog posts.');
+                this.reset();
+            });
+        }
+    </script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Gari - PToB - Past Tense of Banana</title>
+    <title>Privacy Policy - Past Tense of Banana</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -29,9 +29,9 @@
         }
 
         .nav-container {
-            max-width: 1400px;
+            max-width: 1700px;
             margin: 0 auto;
-            padding: 0 40px;
+            padding: 0 20px 0 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -52,7 +52,7 @@
         .nav-menu {
             display: flex;
             align-items: center;
-            gap: 35px;
+            gap: 25px;
             list-style: none;
         }
 
@@ -191,6 +191,72 @@
             transform: scale(1.1);
         }
 
+        /* Privacy Policy Content */
+        .privacy-section {
+            background: #ffffff;
+            padding: 80px 40px 120px 40px;
+        }
+
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .privacy-container h1 {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.8em;
+            font-weight: 700;
+            color: #2d3436;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .privacy-container .last-updated {
+            text-align: center;
+            color: #5a5a5a;
+            font-size: 1em;
+            margin-bottom: 60px;
+        }
+
+        .privacy-container h2 {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #2d3436;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .privacy-container p {
+            font-size: 1em;
+            line-height: 1.8;
+            color: #5a5a5a;
+            margin-bottom: 20px;
+        }
+
+        .privacy-container ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        .privacy-container ul li {
+            font-size: 1em;
+            line-height: 1.8;
+            color: #5a5a5a;
+            margin-bottom: 10px;
+        }
+
+        .privacy-container a {
+            color: #5B8FDB;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .privacy-container a:hover {
+            color: #4A7AC9;
+            text-decoration: underline;
+        }
+
         /* Mobile Menu Toggle */
         .mobile-menu-toggle {
             display: none;
@@ -209,100 +275,24 @@
         }
 
         @media (max-width: 768px) {
-            .mobile-menu-toggle {
-                display: flex;
-            }
-
             .nav-menu {
                 display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
             }
 
             .logo img {
                 height: 60px;
             }
-        }
 
-        /* Main Content Section */
-        .about-section {
-            background: #ffffff;
-            padding: 100px 40px 80px 40px;
-        }
-
-        .about-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 300px;
-            gap: 60px;
-            align-items: start;
-        }
-
-        .about-image-container {
-            position: sticky;
-            top: 120px;
-        }
-
-        .about-image {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-content h1 {
-            font-family: 'Lato', sans-serif;
-            font-size: 2.8em;
-            font-weight: 400;
-            color: #2d3436;
-            margin-bottom: 40px;
-            line-height: 1.3;
-        }
-
-        .about-content p {
-            font-size: 1.15em;
-            line-height: 1.9;
-            color: #2d3436;
-            margin-bottom: 25px;
-        }
-
-        /* Footer */
-        footer {
-            background: #2d3436;
-            color: #ffffff;
-            padding: 40px;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.95em;
-        }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .about-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .about-image-container {
-                position: relative;
-                top: 0;
-                max-width: 300px;
-                margin: 0 auto;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .about-section {
-                padding: 60px 30px 50px 30px;
-            }
-
-            .about-content h1 {
+            .privacy-container h1 {
                 font-size: 2em;
             }
 
-            .about-content p {
-                font-size: 1em;
+            .privacy-container h2 {
+                font-size: 1.3em;
             }
         }
 
@@ -451,7 +441,6 @@
                 align-items: flex-start;
             }
         }
-
     </style>
 </head>
 <body>
@@ -463,7 +452,7 @@
             </div>
 
             <ul class="nav-menu">
-                <li><a href="english.html#home">HOME</a></li>
+                <li><a href="english.html">HOME</a></li>
                 <li class="dropdown">
                     <a href="#courses">1 TO 1 SESSION</a>
                     <div class="dropdown-content">
@@ -484,6 +473,7 @@
                 </li>
                 <li><a href="blog.html">BLOG</a></li>
                 <li><a href="contact-us.html">CONTACT</a></li>
+                <li><a href="#more">MORE</a></li>
             </ul>
 
             <div class="nav-icons">
@@ -511,17 +501,69 @@
         </div>
     </nav>
 
-    <!-- Main Content Section -->
-    <section class="about-section">
-        <div class="about-container">
-            <div class="about-content">
-                <h1>About Gari</h1>
-                <p>I am a native English teacher and writer with over thirty years of teaching English to students and teachers. I started teaching English to natives with low English levels. This unusual start has given me a unique insight into how a language is learnt and taught. As well as teaching, I have written books and plays. This experience has shown me the importance of English and how it can be used with skill and creativity.</p>
-            </div>
+    <!-- Privacy Policy Content -->
+    <section class="privacy-section">
+        <div class="privacy-container">
+            <h1>PRIVACY POLICY: PAST TENSE OF BANANA</h1>
+            <p class="last-updated">Last Updated: January 23, 2026</p>
 
-            <div class="about-image-container">
-                <img src="gari hat 2.png" alt="Gari" class="about-image">
-            </div>
+            <p>At Past Tense of Banana, we are committed to protecting and respecting your privacy. This policy sets out the basis on which any personal data we collect will be processed by us. Please read this privacy policy carefully to understand our views and practices regarding your personal data. By visiting our website or using our services, you are accepting and consenting to the practices described in this policy.</p>
+
+            <h2>1. WHO WE ARE</h2>
+            <p>Our website address is: <a href="https://PastTenseOfBanana.com">https://PastTenseOfBanana.com</a>. Gari Sullivan ("us", "we", or "our") operates the <a href="https://PastTenseOfBanana.com">https://PastTenseOfBanana.com</a> website (the "Site").</p>
+            <p>For further information, you can contact us by email at: contact@PastTenseOfBanana.com</p>
+
+            <h2>2. WHAT PERSONAL DATA WE COLLECT AND WHY WE COLLECT IT</h2>
+            <p>We collect and process the following data about you:</p>
+            <p><strong>Information you give us:</strong> This is information about you that you give us by filling in forms on our site or by corresponding with us by email or otherwise. It includes any communication that you send to us whether that be through contact or opt-in forms on our website, through email, text, social media messaging, social media posting or any other communication that you send us. The information you give us may include your name, address, email address, age, location and financial information in the event of a purchase.</p>
+            <p><strong>Information we collect from your use of our site:</strong> With regard to each of your visits to our site we will automatically collect technical information, such as the Internet protocol (IP) address used to connect your device to the Internet, location data, and information about your browser and length of visit to pages on our website.</p>
+            <p><strong>Information we collect throughout our relationship with you:</strong> This is information relating to products (free or paid) that you download or purchase from us.</p>
+            <p><strong>Marketing Information:</strong> This includes data about your preferences in receiving marketing from us and our third parties and your communication preferences.</p>
+
+            <h2>3. WHY DO WE COLLECT THIS INFORMATION?</h2>
+            <p>We use this information in the following ways:</p>
+            <p><strong>Information you give to us:</strong> We process this data for the purposes of communication with you, for record keeping and administration, and for the establishment, pursuance or defence of legal claims. Our lawful ground for processing this information is our legitimate interests, which in this case are to reply to communications sent to us by you and to perform our contract with you.</p>
+            <p><strong>Information we collect from your use of the site:</strong> We process this data to analyse your use of our website and other online services, to administer and protect our business and website, and to deliver relevant and interesting website content and advertisements to you.</p>
+            <p><strong>Information we collect throughout our relationship:</strong> We process this data to supply the goods and/or services you have purchased from us and to keep records of such transactions.</p>
+
+            <h2>4. HOW DO WE USE YOUR DATA FOR MARKETING COMMUNICATIONS?</h2>
+            <p>Our lawful ground for processing your personal data to send you marketing communications is either your consent or our legitimate interests. Under the Privacy and Electronic Communications Regulations, we may send you marketing communications from us if you purchased or asked for information from us about our goods or services, or you agreed to receive marketing communications and you have not opted out. You can ask us to stop sending you marketing messages at any time by following the opt-out links on any marketing email or by emailing us at contact@PastTenseOfBanana.com.</p>
+
+            <h2>5. HOW LONG WE RETAIN YOUR DATA</h2>
+            <p>We will keep information about you for a maximum of 6 years after the end of our relationship with you unless obligations to our regulators require otherwise. If you leave a comment, the comment and its metadata are retained indefinitely.</p>
+
+            <h2>6. WHO MIGHT WE SHARE YOUR INFORMATION WITH</h2>
+            <p>We may have to share your personal data with:</p>
+            <ul>
+                <li>Service providers who provide IT and system administration services.</li>
+                <li>Professional advisers including lawyers, bankers, auditors and insurers.</li>
+                <li>Government bodies that require us to report on our processing activities.</li>
+                <li>Third parties to whom we sell, transfer, or merge parts of our business or our assets.</li>
+            </ul>
+            <p>We require all third parties to whom we transfer your data to respect the security of your personal information and to treat it in accordance with the law.</p>
+
+            <h2>7. HOW IS YOUR DATA STORED AND KEPT SECURE?</h2>
+            <p>We take your safety and security very seriously and we are committed to protecting your personal and financial information. We have in place security measures to prevent your personal data from being accidentally lost, used, altered, disclosed, or accessed without authorisation.</p>
+
+            <h2>8. TRANSFERRING YOUR DATA OUTSIDE OF THE EUROPEAN ECONOMIC AREA (EEA)</h2>
+            <p>Many of our third-party service providers are based outside the EEA. In such cases where it is necessary for us to transfer your personal data out of the EEA, we ensure a similar degree of security by ensuring at least one of the following safeguards is in place:</p>
+            <ul>
+                <li>Transferring to countries approved by the European Commission.</li>
+                <li>Using specific contracts approved by the European Commission (Standard Contractual Clauses).</li>
+                <li>Using recognized data privacy frameworks for US-based providers.</li>
+            </ul>
+
+            <h2>9. WHAT RIGHTS DO YOU HAVE OVER YOUR DATA?</h2>
+            <p>You have the right to request from us a copy of personal information held about you; to ask for the information we hold about you to be rectified if it is inaccurate; to ask for data to be erased; to ask for the processing of that information to be restricted; or to object to processing. To exercise these rights, please contact us at contact@PastTenseOfBanana.com.</p>
+
+            <h2>10. THIRD-PARTY LINKS</h2>
+            <p>Our website may include links to third-party websites, plug-ins and applications. Clicking on such links may allow third parties to collect or share data about you. We do not control these third-party websites and are not responsible for their privacy policies.</p>
+
+            <h2>11. COOKIES</h2>
+            <p>Our website uses cookies to distinguish you from other users. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site. By using our site, you agree to our use of cookies as described in this policy. You can set your browser to refuse all or some browser cookies, but this may affect the functionality of the site.</p>
+
+            <h2>12. QUESTIONS ABOUT OUR PRIVACY POLICY</h2>
+            <p>If you have any questions about our privacy notice, please contact us at contact@PastTenseOfBanana.com.</p>
         </div>
     </section>
 
@@ -590,5 +632,30 @@
         </div>
     </footer>
 
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.querySelector('.mobile-menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
