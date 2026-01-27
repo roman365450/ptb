@@ -458,6 +458,26 @@
             background: #4A7AC9;
         }
 
+        .newsletter-button {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 1em;
+            font-weight: 700;
+            background: #5B8FDB;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .newsletter-button:hover {
+            background: #4A7AC9;
+        }
+
         .newsletter-content {
             display: flex;
             justify-content: center;
@@ -928,7 +948,7 @@
             <form class="newsletter-form">
                 <input type="text" placeholder="First name" required>
                 <input type="email" placeholder="E-mail" required>
-                <button type="submit">CLICK HERE!</button>
+                <a href="mailto:contact@PastTenseOfBanana.com?subject=Newsletter%20Subscription%20Request&body=Hello%2C%0A%0AI%20would%20like%20to%20subscribe%20to%20your%20newsletter.%0A%0AName%3A%20%0AEmail%3A%20%0A%0AThank%20you!" class="newsletter-button">CLICK HERE!</a>
             </form>
 
             <div class="newsletter-content">
