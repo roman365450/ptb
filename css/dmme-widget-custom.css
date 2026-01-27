@@ -3,6 +3,8 @@
 /* Hide the default DMME widget button if it exists */
 #dmme-widget-launcher,
 .dmme-widget-button,
+.dmme-bubble-bg,
+.dmme-icon-avatar,
 [class*="dmme-"] button[class*="launcher"] {
     display: none !important;
 }
