@@ -6,6 +6,7 @@
     <title>PToB - Past Tense of Banana - English Support Online</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/dmme-widget-custom.css">
+    <script src="https://dmme.ee/widget/dmme-widget.js" data-creator="pub" data-simulate="true" data-hide-icon="true"></script>
     <style>
         * {
             margin: 0;
@@ -30,9 +31,9 @@
         }
 
         .nav-container {
-            max-width: 1700px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px 0 60px;
+            padding: 0 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -53,7 +54,7 @@
         .nav-menu {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 35px;
             list-style: none;
         }
 
@@ -194,14 +195,15 @@
 
         /* Hero Section */
         .hero {
-            background: #ffffff;
+            background: #f0f0f0;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             justify-content: center;
-            padding: 60px 40px 0 40px;
+            padding: 80px 40px 0 40px;
             position: relative;
             overflow: hidden;
-            border-bottom: 80px solid #ffffff;
+            border-bottom: 0;
+            min-height: 600px;
         }
 
         .hero-container {
@@ -209,8 +211,8 @@
             width: 100%;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: flex-end;
+            gap: 100px;
+            align-items: center;
             z-index: 1;
             position: relative;
             padding-bottom: 0;
@@ -220,11 +222,13 @@
             position: relative;
             animation: fadeInLeft 1s ease;
             background: transparent;
+            display: flex;
+            justify-content: center;
         }
 
         .hero-image img {
             width: 100%;
-            max-width: 700px;
+            max-width: 600px;
             height: auto;
             background: transparent;
         }
@@ -246,6 +250,7 @@
             align-items: center;
             animation: fadeInRight 1s ease;
             background: transparent;
+            padding-left: 40px;
         }
 
         @keyframes fadeInRight {
@@ -260,18 +265,18 @@
         }
 
         .hero-logo-image {
-            max-width: 500px;
+            max-width: 450px;
             width: 100%;
             height: auto;
             background: transparent;
-            padding: 20px;
+            padding: 0;
             box-sizing: border-box;
         }
 
         /* Social Stats Section */
         .social-stats {
             background: #ffffff;
-            padding: 80px 40px 120px 40px;
+            padding: 60px 40px 120px 40px;
             text-align: center;
         }
 
@@ -331,7 +336,7 @@
         /* About Section */
         .about-section {
             background: #f5f5f5;
-            padding: 100px 40px;
+            padding: 50px 40px;
         }
 
         .about-container {
@@ -399,11 +404,10 @@
             border-radius: 8px;
         }
 
-
         /* Newsletter Section */
         .newsletter-section {
             background: #ffffff;
-            padding: 100px 40px;
+            padding: 80px 40px;
         }
 
         .newsletter-container {
@@ -417,14 +421,14 @@
             font-size: 3em;
             font-weight: 400;
             color: #2d3436;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .newsletter-form {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 100px;
+            margin-bottom: 60px;
             flex-wrap: wrap;
         }
 
@@ -459,8 +463,8 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 100px;
-            max-width: 1000px;
+            gap: 80px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -604,7 +608,6 @@
             .about-image img {
                 max-width: 300px;
             }
-
         }
 
         @media (max-width: 640px) {
@@ -793,11 +796,11 @@
     <nav>
         <div class="nav-container">
             <div class="logo">
-                <a href="english.html"><img src="img/trans logo 12.png" alt="PToB Logo"></a>
+                <a href="index.html"><img src="img/trans logo 12.png" alt="PToB Logo"></a>
             </div>
 
             <ul class="nav-menu">
-                <li><a href="english.html">HOME</a></li>
+                <li><a href="#home">HOME</a></li>
                 <li class="dropdown">
                     <a href="#courses">1 TO 1 SESSION</a>
                     <div class="dropdown-content">
@@ -818,7 +821,6 @@
                 </li>
                 <li><a href="blog.html">BLOG</a></li>
                 <li><a href="contact-us.html">CONTACT</a></li>
-                <li><a href="#more">MORE</a></li>
             </ul>
 
             <div class="nav-icons">
@@ -906,23 +908,18 @@
     </section>
 
     <!-- About Section -->
-    <section class="about-section">
+    <section class="about-section" id="about">
         <div class="about-container">
             <div class="about-image">
                 <img src="img/BANANA NKD TRS.png" alt="Gari - English Teacher">
             </div>
             <div class="about-content">
-                <h2>Why did I create Past Tense of Banana?</h2>
-                <p>For a long time, I was frustrated with how English is being taught in the age of the Internet. The days of liner teaching are over and have been for some time. Gone are the days of starting at unit one beginner level and progressing in a classroom until you reach Unit 10 only to start the entire process again at intermediate level and then advanced level.</p>
-                <p>In the age of streaming and video gaming, teachers no longer have total control over the vocabulary and grammar that students are exposed to, but teachers still think they are in control; even if they are teaching online.</p>
-                <p>I started Past Tense of Banana to bring the structure and understanding of English teaching into the modern world. Gone are the beliefs that learners are beginners, intermediates and advanced. There is no reason why those just starting their English learning journey cannot be shown complex grammar structures. It is not the level of the student that should be measured, but the expectation.</p>
-                <p>At Past Tense of Banana, we teach inexperienced students future perfect continuous and the third conditional. We don't hold anything back, because we know they will come across these grammar structures on the Internet. We teach complex English, but don't expect the student to fully grasp it until they are more skilled.</p>
-                <p>In the same way, young native speakers are shown complex grammar and vocabulary. Equally, there is no expectation on them to fully grasp the language until they are older.</p>
-                <p>If you want to learn English like truly a native with all that the 21st century has at our disposal, you need Past Tense of Banana.</p>
+                <h2>You are in a right place if...</h2>
+
+                <p>....you are a student starting your journey, a fellow teacher looking for a fresh perspective, or someone simply curious about the quirks of British culture, Past Tense of Banana is for you. We provide the structure needed to navigate the 21st-century digital landscape, focusing on high expectations rather than restrictive levels. Join us to experience a more authentic, sophisticated, and curiosity-driven way to master the English language.</p>
             </div>
         </div>
     </section>
-
 
     <!-- Newsletter Section -->
     <section class="newsletter-section">
@@ -1048,12 +1045,10 @@
             <img src="img/Gari hero trns.png" alt="Ask Gari">
         </div>
         <div class="gari-widget-text">
-            ask me a question for just £5!
+            ask me a for just £5!
         </div>
     </div>
 
-    <!-- DMME Widget Script -->
-    <script src="https://dmme.ee/widget/dmme-widget.js" data-creator="demo-creator" data-simulate="true"></script>
     <script>
         // Make custom button trigger DMME widget
         document.addEventListener('DOMContentLoaded', function() {
