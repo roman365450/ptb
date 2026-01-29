@@ -666,44 +666,27 @@
     <!-- Contact Section -->
     <section class="contact-section">
         <div class="contact-container">
-            <!-- Contact Form -->
+            <!-- Contact Info -->
             <div class="contact-form-wrapper">
-                <h1 class="contact-heading">Hello! How can we help you? Use the form below.</h1>
+                <h1 class="contact-heading">Contact</h1>
+                <p style="font-size: 1.1em; color: #2d3436; margin-bottom: 40px;">
+                    For all inquiries, please email: <a href="mailto:contact@PastTenseOfBanana.com" style="color: #5B8FDB; text-decoration: none; font-weight: 600;">contact@PastTenseOfBanana.com</a>
+                </p>
 
-                <form action="#" method="POST" id="contact-form">
-                    <!-- Subject Selection -->
-                    <div class="form-group">
-                        <select id="subject" name="subject" required>
-                            <option value="" disabled selected>Working with us, partnerships, schools and universities.</option>
-                            <option value="" disabled class="dropdown-header">👉 CHOOSE YOUR CASE:</option>
-                            <option value="course-information">I would like some information about your English courses.</option>
-                            <option value="purchased-course">I have already purchased a course (pack, academy, intensive course) and I have a question or a problem.</option>
-                            <option value="suggestions">Suggestions and other cases.</option>
-                            <option value="partnerships">Working with us, partnerships, schools and universities.</option>
-                        </select>
-                    </div>
+                <h2 style="font-family: 'Lato', sans-serif; font-size: 1.5em; font-weight: 600; color: #2d3436; margin-bottom: 15px;">Booking a 1-on-1 Session</h2>
+                <p style="font-size: 1.1em; color: #2d3436; margin-bottom: 40px;">
+                    If you would like to book a 1-on-1 Personalized English Session with Gari, please <a href="60min-session.html" style="color: #5B8FDB; text-decoration: underline;">click this link</a> to get started.
+                </p>
 
-                    <!-- Email Address -->
-                    <div class="form-group">
-                        <label for="email">Your email address *</label>
-                        <input type="email" id="email" name="email" placeholder="E-mail" required>
-                    </div>
-
-                    <!-- Confirm Email Address -->
-                    <div class="form-group">
-                        <label for="confirm-email">Your email address *</label>
-                        <input type="email" id="confirm-email" name="confirm_email" placeholder="Confirm email" required>
-                    </div>
-
-                    <!-- Message -->
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your message..." maxlength="500" required></textarea>
-                        <div class="character-limit">(max. 500 characters!)</div>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit" class="submit-btn">Send</button>
-                </form>
+                <h2 style="font-family: 'Lato', sans-serif; font-size: 1.5em; font-weight: 600; color: #2d3436; margin-bottom: 15px;">Choose Your Case</h2>
+                <p style="font-size: 1.1em; color: #2d3436; margin-bottom: 20px;">
+                    To help me get back to you faster, please specify your case in your email:
+                </p>
+                <ul style="font-size: 1.1em; color: #2d3436; padding-left: 25px; line-height: 2.2;">
+                    <li>I would like some information about your English courses.</li>
+                    <li>Suggestions and other cases.</li>
+                    <li>Working with us, partnerships, sponsorships, schools, and universities.</li>
+                </ul>
             </div>
 
             <!-- Social Media Section -->
@@ -742,41 +725,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Past Tense of Banana. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Form validation - check if emails match
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            const email = document.getElementById('email').value;
-            const confirmEmail = document.getElementById('confirm-email').value;
-
-            if (email !== confirmEmail) {
-                e.preventDefault();
-                alert('Email addresses do not match. Please check and try again.');
-                document.getElementById('confirm-email').focus();
-                return false;
-            }
-        });
-
-        // Character counter for textarea
-        const textarea = document.getElementById('message');
-        const charLimit = document.querySelector('.character-limit');
-
-        textarea.addEventListener('input', function() {
-            const remaining = 500 - this.value.length;
-            if (remaining < 100) {
-                charLimit.textContent = `(${remaining} characters remaining)`;
-                charLimit.style.color = remaining < 50 ? '#ff6b6b' : '#5a5a5a';
-            } else {
-                charLimit.textContent = '(max. 500 characters!)';
-                charLimit.style.color = '#5a5a5a';
-            }
-        });
-    </script>
 
     <!-- Footer -->
     <footer>
