@@ -443,8 +443,19 @@
             color: #2d3436;
         }
 
-        .footer-spacer {
-            flex: 1;
+        .footer-powered {
+            color: #5a5a5a;
+            font-size: 0.9em;
+        }
+
+        .footer-powered a {
+            color: #5B8FDB;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-powered a:hover {
+            color: #2d3436;
         }
 
         @media (max-width: 1024px) {
@@ -580,7 +591,9 @@
                 <div class="footer-legal">
                     <a href="privacy-policy.html">Privacy and Cookie Policy</a>
                 </div>
-                <div class="footer-spacer"></div>
+                <div class="footer-powered">
+                    Powered by <a href="https://dmme.ee/" target="_blank" rel="noopener noreferrer">dmme</a>
+                </div>
             </div>
         </div>
     </footer>
