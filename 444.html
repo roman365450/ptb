@@ -246,8 +246,8 @@
         }
 
         @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
+            .nav-container {
+                flex-wrap: wrap;
             }
 
             .mobile-menu-toggle {
@@ -257,6 +257,31 @@
 
             .logo {
                 order: 1;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                order: 2;
+                background: #ffffff;
+                padding: 20px 0;
+                gap: 0;
+                align-items: flex-start;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                width: 100%;
+            }
+
+            .nav-menu a {
+                display: block;
+                padding: 12px 0;
+                font-size: 1em;
             }
 
             .info-grid {
