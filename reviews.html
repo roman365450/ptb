@@ -10,6 +10,131 @@
     <link rel="apple-touch-icon" sizes="180x180" href="img/BANANA NKD TRS.png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
+        /* Preview Toggle Bar */
+        .preview-toggle-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #1a1a2e;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            z-index: 10000;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .preview-toggle-bar span {
+            color: #ffffff;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+
+        .preview-toggle-bar button {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .preview-toggle-bar button.active {
+            background: #FFD54F;
+            color: #1a1a2e;
+        }
+
+        .preview-toggle-bar button:not(.active) {
+            background: #333;
+            color: #fff;
+        }
+
+        .preview-toggle-bar button:hover:not(.active) {
+            background: #444;
+        }
+
+        body {
+            padding-top: 50px;
+        }
+
+        body.mobile-preview {
+            background: #e0e0e0;
+        }
+
+        .preview-wrapper {
+            transition: all 0.3s ease;
+        }
+
+        body.mobile-preview .preview-wrapper {
+            max-width: 375px;
+            margin: 20px auto;
+            box-shadow: 0 0 30px rgba(0,0,0,0.3);
+            overflow-x: hidden;
+            background: #ffffff;
+        }
+
+        /* Force mobile styles when in mobile preview mode */
+        body.mobile-preview .nav-container {
+            flex-wrap: wrap;
+        }
+
+        body.mobile-preview .mobile-menu-toggle {
+            display: flex;
+            order: -1;
+        }
+
+        body.mobile-preview .logo {
+            order: 1;
+        }
+
+        body.mobile-preview .nav-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            order: 2;
+            background: #ffffff;
+            padding: 20px 0;
+            gap: 0;
+            align-items: flex-start;
+        }
+
+        body.mobile-preview .nav-menu.active {
+            display: flex;
+        }
+
+        body.mobile-preview .nav-menu li {
+            width: 100%;
+        }
+
+        body.mobile-preview .nav-menu a {
+            display: block;
+            padding: 12px 0;
+            font-size: 1em;
+        }
+
+        body.mobile-preview .logo img {
+            height: 60px;
+        }
+
+        body.mobile-preview .footer-content {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        body.mobile-preview .footer-links {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        body.mobile-preview .footer-bottom {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+
         * {
             margin: 0;
             padding: 0;
@@ -617,6 +742,16 @@
     </style>
 </head>
 <body>
+
+    <!-- Preview Toggle Bar -->
+    <div class="preview-toggle-bar">
+        <span>Preview:</span>
+        <button id="desktop-btn" class="active" onclick="setDesktopView()">Desktop</button>
+        <button id="mobile-btn" onclick="setMobileView()">Mobile (375px)</button>
+    </div>
+
+    <div class="preview-wrapper">
+
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
@@ -757,6 +892,22 @@
             </div>
         </div>
     </footer>
+
+    </div>
+
+    <script>
+        function setMobileView() {
+            document.body.classList.add('mobile-preview');
+            document.getElementById('mobile-btn').classList.add('active');
+            document.getElementById('desktop-btn').classList.remove('active');
+        }
+
+        function setDesktopView() {
+            document.body.classList.remove('mobile-preview');
+            document.getElementById('desktop-btn').classList.add('active');
+            document.getElementById('mobile-btn').classList.remove('active');
+        }
+    </script>
 
 </body>
 </html>
