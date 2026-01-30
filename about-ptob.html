@@ -152,6 +152,14 @@
             transition: opacity 0.2s ease;
         }
 
+        .dropdown:hover > a {
+            color: #FFD54F;
+        }
+
+        .dropdown:hover > a::after {
+            width: 100%;
+        }
+
         .nav-icons {
             display: flex;
             align-items: center;
@@ -684,7 +692,13 @@
 
             <ul class="nav-menu">
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="60min-session.html">1 TO 1 SESSION</a></li>
+                <li class="dropdown">
+                    <a href="60min-session.html">1 TO 1 SESSION</a>
+                    <div class="dropdown-content">
+                        <a href="60min-session.html">30 min</a>
+                        <a href="60min-session.html">60 min</a>
+                    </div>
+                </li>
                 <li><a href="ask-gari.html">Quick Question?</a></li>
                 <li><a href="about-gari.html">ABOUT GARI</a></li>
                 <li><a href="about-ptob.html">ABOUT PToB</a></li>
