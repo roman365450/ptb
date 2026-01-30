@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ask Gari a Question for $5 - PToB - Past Tense of Banana</title>
+    <title>Ask Gari a Question for £5 - PToB - Past Tense of Banana</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/dmme-widget-custom.css">
     <script src="https://dmme.ee/widget/dmme-widget.js" data-creator="pub" data-simulate="true" data-hide-icon="true"></script>
@@ -152,6 +152,14 @@
             transition: opacity 0.2s ease;
         }
 
+        .dropdown:hover > a {
+            color: #FFD54F;
+        }
+
+        .dropdown:hover > a::after {
+            width: 100%;
+        }
+
         .nav-icons {
             display: flex;
             align-items: center;
@@ -288,7 +296,7 @@
         /* How It Works Grid */
         .how-it-works-section {
             background: #ffffff;
-            padding: 100px 40px;
+            padding: 50px 40px;
         }
 
         .how-it-works-container {
@@ -346,7 +354,7 @@
         /* Features Section */
         .features-section {
             background: #f5f5f5;
-            padding: 100px 40px;
+            padding: 50px 40px;
         }
 
         .features-container {
@@ -357,8 +365,8 @@
         .features-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 50px;
-            margin-top: 60px;
+            gap: 40px;
+            margin-top: 30px;
         }
 
         .feature-card {
@@ -453,7 +461,7 @@
         /* Guarantee Section */
         .guarantee-section {
             background: #ffffff;
-            padding: 80px 40px;
+            padding: 50px 40px;
         }
 
         .guarantee-container {
@@ -566,6 +574,7 @@
             display: flex;
             flex-direction: column;
             gap: 30px;
+            align-items: flex-start;
         }
 
         .footer-logo img {
@@ -577,6 +586,7 @@
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .footer-social a {
@@ -602,7 +612,7 @@
 
         .footer-links {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 60px;
         }
 
@@ -647,6 +657,7 @@
         .footer-copyright {
             color: #5a5a5a;
             font-size: 0.9em;
+            flex: 1;
         }
 
         .footer-legal {
@@ -664,6 +675,10 @@
 
         .footer-legal a:hover {
             color: #2d3436;
+        }
+
+        .footer-spacer {
+            flex: 1;
         }
 
         @media (max-width: 1024px) {
@@ -701,7 +716,12 @@
 
             <ul class="nav-menu">
                 <li><a href="index.html#home">HOME</a></li>
-                <li><a href="60min-session.html">1 TO 1 SESSION</a></li>
+                <li class="dropdown">
+                    <a href="60min-session.html">1 TO 1 SESSION</a>
+                    <div class="dropdown-content">
+                        <a href="60min-session.html">60 min</a>
+                    </div>
+                </li>
                 <li><a href="ask-gari.html">Quick Question?</a></li>
                 <li><a href="about-gari.html">ABOUT GARI</a></li>
                 <li><a href="about-ptob.html">ABOUT PToB</a></li>
@@ -727,7 +747,7 @@
     <!-- Header Section -->
     <section class="header-section">
         <div class="header-container">
-            <h1 class="main-title">Quick Question? Get an Answer for <span class="title-highlight">$5</span></h1>
+            <h1 class="main-title">Quick Question? Get an Answer for <span class="title-highlight">£5</span></h1>
             <p class="subtitle">If you don't need a full session but have a specific English problem you need solved, this is for you. You can ask Gari any question specifically related to the English language—whether it's a confusing phrase, a pronunciation quirk, or a strange expression you heard in a movie.</p>
         </div>
     </section>
@@ -815,8 +835,8 @@
                         <h3>Quick Links</h3>
                         <ul>
                             <li><a href="about-ptob.html">About PToB</a></li>
-                            <li><a href="ask-gari.html">Quick Question?</a></li>
-                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="about-gari.html">About Gari</a></li>
+                            <li><a href="yet-to-come.html">Courses</a></li>
                             <li><a href="contact-us.html">Contact</a></li>
                         </ul>
                     </div>
@@ -825,6 +845,14 @@
                         <h3>1 to 1 Session</h3>
                         <ul>
                             <li><a href="60min-session.html">60 min</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>More</h3>
+                        <ul>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="ask-gari.html">Got a quick question? Click here!</a></li>
                         </ul>
                     </div>
                 </div>
@@ -837,6 +865,7 @@
                 <div class="footer-legal">
                     <a href="privacy-policy.html">Privacy and Cookie Policy</a>
                 </div>
+                <div class="footer-spacer"></div>
             </div>
         </div>
     </footer>
@@ -873,7 +902,7 @@
             <img src="img/Gari hero trns.png" alt="Ask Gari">
         </div>
         <div class="gari-widget-text">
-            ask me a for just $5!
+            ask me for just £5!
         </div>
     </div>
 
