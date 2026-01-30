@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yet to Come - PToB</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dmme-widget-custom.css">
+    <script src="https://dmme.ee/widget/dmme-widget.js" data-creator="pub" data-simulate="true" data-hide-icon="true"></script>
     <style>
         * {
             margin: 0;
@@ -611,12 +613,7 @@
 
             <ul class="nav-menu">
                 <li><a href="index.html">HOME</a></li>
-                <li class="dropdown">
-                    <a href="#courses">1 TO 1 SESSION</a>
-                    <div class="dropdown-content">
-                        <a href="60min-session.html">60 min</a>
-                    </div>
-                </li>
+                <li><a href="60min-session.html">1 TO 1 SESSION</a></li>
                 <li><a href="ask-gari.html">Quick Question?</a></li>
                 <li><a href="about-gari.html">ABOUT GARI</a></li>
                 <li><a href="about-ptob.html">ABOUT PToB</a></li>
@@ -740,6 +737,44 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- Custom Gari Widget Launcher -->
+    <div class="gari-widget-launcher" id="gari-launcher">
+        <div class="gari-widget-circle">
+            <img src="img/Gari hero trns.png" alt="Ask Gari">
+        </div>
+        <div class="gari-widget-text">
+            ask me a for just $5!
+        </div>
+    </div>
+
+    <script>
+        // Make custom button trigger DMME widget
+        document.addEventListener('DOMContentLoaded', function() {
+            const customLauncher = document.getElementById('gari-launcher');
+
+            function triggerDmmeWidget() {
+                const dmmeButton = document.querySelector('[data-dmme-open], .dmme-widget-button, #dmme-widget-launcher, [class*="dmme-"] button');
+                if (dmmeButton) {
+                    dmmeButton.click();
+                } else {
+                    window.dispatchEvent(new CustomEvent('dmme-open'));
+                }
+            }
+
+            if (customLauncher) {
+                customLauncher.addEventListener('click', triggerDmmeWidget);
+            }
+
+            setTimeout(function() {
+                const dmmeDefaultButtons = document.querySelectorAll('[data-dmme-launcher], .dmme-launcher-button, #dmme-widget-launcher');
+                dmmeDefaultButtons.forEach(function(btn) {
+                    if (btn) btn.style.display = 'none';
+                });
+            }, 1000);
+        });
+    </script>
 
 </body>
 </html>
