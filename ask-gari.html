@@ -108,12 +108,38 @@
             align-items: flex-start;
         }
         
-        body.mobile-preview .nav-about-gari {
+/* Mobile Nav - Reorder menu items */
+        body.mobile-preview .nav-menu li:has(a[href="index.html#home"]),
+        body.mobile-preview .nav-menu li:has(a[href="index.html"]):not(:has(img)) {
+            display: none !important;
+        }
+        
+        body.mobile-preview .nav-menu .dropdown:has(a[href="60min-session.html"]) {
+            order: 1;
+        }
+        
+        body.mobile-preview .nav-menu li:has(a[href="ask-gari.html"]) {
             order: 2;
         }
         
         body.mobile-preview .nav-about-us {
-            order: 1;
+            order: 3 !important;
+        }
+        
+        body.mobile-preview .nav-about-gari {
+            order: 4 !important;
+        }
+        
+        body.mobile-preview .nav-menu .dropdown:has(a[href="#courses"]) {
+            order: 5;
+        }
+        
+        body.mobile-preview .nav-menu li:has(a[href="blog.html"]) {
+            order: 6;
+        }
+        
+        body.mobile-preview .nav-menu li:has(a[href="contact-us.html"]) {
+            order: 7;
         }
 
 
