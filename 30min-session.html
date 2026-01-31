@@ -9,6 +9,8 @@
     <link rel="icon" type="image/png" sizes="128x128" href="img/BANANA NKD TRS.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/BANANA NKD TRS.png">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dmme-widget-custom.css">
+    <script src="https://dmme.ee/widget/dmme-widget.js" data-creator="pub" data-simulate="true" data-hide-icon="true"></script>
     <style>
         /* Preview Toggle Bar */
         .preview-toggle-bar {
@@ -1156,6 +1158,44 @@
             document.getElementById('desktop-btn').classList.add('active');
             document.getElementById('mobile-btn').classList.remove('active');
         }
+    </script>
+
+
+    <!-- Custom Gari Widget Launcher -->
+    <div class="gari-widget-launcher" id="gari-launcher">
+        <div class="gari-widget-circle">
+            <img src="img/Gari hero trns.png" alt="Ask Gari">
+        </div>
+        <div class="gari-widget-text">
+            ask me for just £5!
+        </div>
+    </div>
+
+    <script>
+        // Make custom button trigger DMME widget
+        document.addEventListener('DOMContentLoaded', function() {
+            const customLauncher = document.getElementById('gari-launcher');
+
+            function triggerDmmeWidget() {
+                const dmmeButton = document.querySelector('[data-dmme-open], .dmme-widget-button, #dmme-widget-launcher, [class*="dmme-"] button');
+                if (dmmeButton) {
+                    dmmeButton.click();
+                } else {
+                    window.dispatchEvent(new CustomEvent('dmme-open'));
+                }
+            }
+
+            if (customLauncher) {
+                customLauncher.addEventListener('click', triggerDmmeWidget);
+            }
+
+            setTimeout(function() {
+                const dmmeDefaultButtons = document.querySelectorAll('[data-dmme-launcher], .dmme-launcher-button, #dmme-widget-launcher');
+                dmmeDefaultButtons.forEach(function(btn) {
+                    if (btn) btn.style.display = 'none';
+                });
+            }, 1000);
+        });
     </script>
 
 </body>
