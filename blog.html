@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Past Tense of Banana</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dmme-widget-custom.css">
+    <script src="https://dmme.ee/widget/dmme-widget.js" data-creator="pub" data-simulate="true" data-hide-icon="true"></script>
     <style>
         * {
             margin: 0;
@@ -148,6 +150,14 @@
             opacity: 1;
             visibility: visible;
             transition: opacity 0.2s ease;
+        }
+
+        .dropdown:hover > a {
+            color: #FFD54F;
+        }
+
+        .dropdown:hover > a::after {
+            width: 100%;
         }
 
         .nav-icons {
@@ -488,6 +498,7 @@
             display: flex;
             flex-direction: column;
             gap: 30px;
+            align-items: flex-start;
         }
 
         .footer-logo img {
@@ -499,6 +510,7 @@
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
         .footer-social a {
@@ -524,7 +536,7 @@
 
         .footer-links {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 60px;
         }
 
@@ -569,6 +581,7 @@
         .footer-copyright {
             color: #5a5a5a;
             font-size: 0.9em;
+            flex: 1;
         }
 
         .footer-legal {
@@ -586,6 +599,10 @@
 
         .footer-legal a:hover {
             color: #2d3436;
+        }
+
+        .footer-spacer {
+            flex: 1;
         }
 
         @media (max-width: 1024px) {
@@ -623,7 +640,7 @@
             <ul class="nav-menu">
                 <li><a href="index.html">HOME</a></li>
                 <li class="dropdown">
-                    <a href="#courses">1 TO 1 SESSION</a>
+                    <a href="60min-session.html">1 TO 1 SESSION</a>
                     <div class="dropdown-content">
                         <a href="60min-session.html">60 min</a>
                     </div>
@@ -634,7 +651,6 @@
                 <li class="dropdown">
                     <a href="#courses">COURSES</a>
                     <div class="dropdown-content">
-                        <a href="444.html">Four4Four</a>
                         <a href="yet-to-come.html">for teachers</a>
                         <a href="yet-to-come.html">for students</a>
                     </div>
@@ -642,23 +658,6 @@
                 <li><a href="blog.html">BLOG</a></li>
                 <li><a href="contact-us.html">CONTACT</a></li>
             </ul>
-
-            <div class="nav-icons">
-                <div class="cart-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d3436" stroke-width="2">
-                        <circle cx="9" cy="21" r="1"></circle>
-                        <circle cx="20" cy="21" r="1"></circle>
-                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                    </svg>
-                    <span class="cart-count">0</span>
-                </div>
-                <div class="search-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d3436" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                </div>
-            </div>
 
             <div class="mobile-menu-toggle">
                 <span></span>
@@ -668,68 +667,13 @@
         </div>
     </nav>
 
-    <!-- Blog Hero -->
-    <section class="blog-hero">
-        <h1>Blog</h1>
-    </section>
-
-    <!-- Blog Article -->
     <section class="blog-article">
-        <div class="article-container">
-            <img src="img/boy learn english blog.jpg" alt="Learning English" class="article-image">
-
-            <div class="article-content">
-                <p>English is an ever-evolving language, a living entity that constantly absorbs, discards, and reshapes itself. Unlike French, which has the Académie Française to dictate linguistic standards, English has no central authority. Instead, it exists in a paradox: while many champion its fluidity and resistance to rigid rules, we still look to dictionaries and institutions to tell us what words mean and how they should be used. We argue with each other on the right definition of words and for the right of words to have no set definition. Who, then, should we trust when learning English?</p>
-
-                <p>Linguists and educators often argue against prescriptive English—the idea that there is one "correct" form of the language. This resistance stems from the reality that English has always been shaped by its speakers, borrowing and bending according to need. Regional dialects, evolving slang, and new technological terms challenge the notion of fixed rules. Even grammar, once seen as a rigid structure, is increasingly viewed as flexible, shaped by usage rather than imposed regulations.</p>
-
-                <p>Despite this championing of descriptivism - the opposing view of prescriptivism - learners seek clear guidance, and for good reason. If English has no governing body, how can one distinguish between an acceptable linguistic evolution and a simple mistake? Can we dismiss "irregardless" as incorrect when major dictionaries now recognise it? Should we only use 'literally' in a literal sense? When does informal speech become standard English?</p>
-
-                <p>While this may seem to be a paradoxical challenge for English language students, their teachers adopt a more cognitive dissonance approach. English language teachers often promote the idea of linguistic fluidity outside the classroom, celebrating its adaptability and organic evolution. Yet, inside the classroom—particularly when teaching children—they willingly accept payment to enforce specific rules, correct deviations, and uphold the very structures they critique; they see no contradiction in supporting these two opposing views. For learners of English, this presents a dilemma. They are encouraged to embrace the language's adaptability while also being advised to adhere to certain conventions and look to certain institutions for guidance.</p>
-
-                <p>While English lacks a desire for a single regulatory body, we still need to turn to institutions such as the Oxford English Dictionary (OED) and Merriam-Webster for authoritative definitions. However, these dictionaries, Merriam-Webster in particular, do not dictate language; they document it. They reflect English as it is used rather than as it "should" be used. They track the way words are used and decide which ones warrant inclusion based only on frequency and longevity of usage. A twist on the adage of nazi propagandist, Joseph Goebbels: Give a word an incorrect meaning for long enough and people will start to use it. It gains "normalcy".</p>
-
-                <p>Standard English exists not to restrict expression but to ensure clarity and effective communication. The existence of rules does not necessarily threaten slang, dialects, or accents. Despite Académie Française, there is still French slang, a creative use of French and international variations. French has survived despite the formal structures and informal use. In fact, one could argue that understanding the rules and deliberately playing or choosing to ignore them fosters creativity and linguistic diversity. Writers, poets, and speakers often bend grammatical conventions for effect, making English richer rather than more constrained.</p>
-
-                <p>All languages need rules. Without shared agreement on meaning, communication would break down. How would we conduct trade if "buy" and "sell" were interchangeable? How would Americans ever stay alive if "Don't shoot" didn't always remain the negative of "Yeah, go ahead, pull the trigger"? Structure provides stability, allowing flexibility to exist within a comprehensible framework. Language standards may have always fluctuated, but there are still institutions that have historically served as gatekeepers.</p>
-
-                <p>The BBC was once the respected authority of British English Pronunciation. We knew how a word should be said because that's how BBC news presenters said it. The BBC has relaxed its stance, allowing a broader range of accents and regional variations. Whilst becoming richer in variety, it has lost its direction and weakened its purpose. In times past, the OED gave us the standard spelling of words and correct, absolute definition of meaning. Now those times are gone. Universities, style guides, and even social media influencers contribute to shaping English, yet none hold absolute authority. What is considered "correct" depends on context - academic writing demands one standard, casual conversation another - but ultimately it's down to the individual. Each of we get 2 decide the rools! So, unlike in French, the rules will disappear and the structure of the language along with it.</p>
-
-                <p>There is no clear resolution to this English language paradox. We want English to be what suits us: Free and constrained, fixed and fluid, an evolving contradiction that no single authority dares fully capture and no one wants them to, except when providing evidence that our chosen use of English is the rite version. The question of who to trust when learning English is, perhaps, one that won't not never be settled!</p>
-            </div>
-
-            <!-- Subscribe Section -->
-            <div class="subscribe-section">
-                <div class="subscribe-container">
-                    <h2>Subscribe to Our Blog</h2>
-                    <p>Get the latest articles delivered straight to your inbox!</p>
-                    <form class="subscribe-form" id="subscribe-form">
-                        <input type="text" placeholder="First name" required>
-                        <input type="email" placeholder="Email address" required>
-                        <button type="submit">SUBSCRIBE NOW</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Comments Section -->
-    <section class="comments-section">
-        <div class="comments-container">
-            <h2>Comments</h2>
-
-            <div class="login-notice">
-                <p>Please <a href="#login">log in</a> or <a href="#register">create an account</a> to leave a comment.</p>
-            </div>
-
-            <div class="comment-form">
-                <textarea placeholder="Share your thoughts..." disabled></textarea>
-                <button disabled>POST COMMENT</button>
-            </div>
-
-            <div class="comments-list">
-                <p style="color: #999999; text-align: center; padding: 40px 0;">No comments yet. Be the first to share your thoughts!</p>
-            </div>
+        <div class="article-container" style="text-align: center; padding: 80px 40px;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2em; font-weight: 700; color: #2d3436; margin-bottom: 30px;">Follow Me on Substack</h2>
+            <p style="font-size: 1.2em; color: #5a5a5a; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.8;">
+                I share my thoughts, tips, and insights on Substack — not just about English, but any topic! Join my community to get regular updates delivered straight to your inbox.
+            </p>
+            <a href="https://garisullivan.substack.com/" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 18px 50px; font-size: 1.1em; font-weight: 700; background: #5B8FDB; color: #ffffff; text-decoration: none; border-radius: 5px; text-transform: uppercase; letter-spacing: 0.5px; transition: background 0.3s ease;">Visit My Substack</a>
         </div>
     </section>
 
@@ -770,8 +714,8 @@
                         <h3>Quick Links</h3>
                         <ul>
                             <li><a href="about-ptob.html">About PToB</a></li>
-                            <li><a href="ask-gari.html">Quick Question?</a></li>
-                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="about-gari.html">About Gari</a></li>
+                            <li><a href="yet-to-come.html">Courses</a></li>
                             <li><a href="contact-us.html">Contact</a></li>
                         </ul>
                     </div>
@@ -782,6 +726,14 @@
                             <li><a href="60min-session.html">60 min</a></li>
                         </ul>
                     </div>
+
+                    <div class="footer-column">
+                        <h3>More</h3>
+                        <ul>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="ask-gari.html">Got a quick question? Click here!</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -790,9 +742,9 @@
                     Copyright © 2026 Past Tense of Banana
                 </div>
                 <div class="footer-legal">
-                    <a href="#legal">Legal Notices and Terms and Conditions</a>
                     <a href="privacy-policy.html">Privacy and Cookie Policy</a>
                 </div>
+                <div class="footer-spacer"></div>
             </div>
         </div>
     </footer>
@@ -807,16 +759,44 @@
                 navMenu.classList.toggle('active');
             });
         }
-
-        // Subscribe form handler
-        const subscribeForm = document.getElementById('subscribe-form');
-        if (subscribeForm) {
-            subscribeForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Thank you for subscribing! You will receive updates about new blog posts.');
-                this.reset();
-            });
-        }
     </script>
+
+    <!-- Custom Gari Widget Launcher -->
+    <div class="gari-widget-launcher" id="gari-launcher">
+        <div class="gari-widget-circle">
+            <img src="img/Gari hero trns.png" alt="Ask Gari">
+        </div>
+        <div class="gari-widget-text">
+            ask me a for just $5!
+        </div>
+    </div>
+
+    <script>
+        // Make custom button trigger DMME widget
+        document.addEventListener('DOMContentLoaded', function() {
+            const customLauncher = document.getElementById('gari-launcher');
+
+            function triggerDmmeWidget() {
+                const dmmeButton = document.querySelector('[data-dmme-open], .dmme-widget-button, #dmme-widget-launcher, [class*="dmme-"] button');
+                if (dmmeButton) {
+                    dmmeButton.click();
+                } else {
+                    window.dispatchEvent(new CustomEvent('dmme-open'));
+                }
+            }
+
+            if (customLauncher) {
+                customLauncher.addEventListener('click', triggerDmmeWidget);
+            }
+
+            setTimeout(function() {
+                const dmmeDefaultButtons = document.querySelectorAll('[data-dmme-launcher], .dmme-launcher-button, #dmme-widget-launcher');
+                dmmeDefaultButtons.forEach(function(btn) {
+                    if (btn) btn.style.display = 'none';
+                });
+            }, 1000);
+        });
+    </script>
+
 </body>
 </html>
