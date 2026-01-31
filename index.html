@@ -284,10 +284,145 @@
 
         body.mobile-preview nav {
             padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         body.mobile-preview .nav-container {
             padding: 0 15px;
+        }
+
+        /* Mobile Hero Styles */
+        .mobile-hero-content,
+        .mobile-hero-image {
+            display: none;
+        }
+
+        .desktop-hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+        }
+
+        body.mobile-preview .desktop-hero-content {
+            display: none;
+        }
+
+        body.mobile-preview .mobile-hero-content {
+            display: block;
+            text-align: center;
+            padding: 40px 20px 30px;
+        }
+
+        body.mobile-preview .mobile-hero-title {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #2d3436;
+            margin-bottom: 30px;
+            line-height: 1.3;
+        }
+
+        body.mobile-preview .mobile-hero-subtitle {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #5B8FDB;
+            margin-bottom: 20px;
+        }
+
+        body.mobile-preview .mobile-hero-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        body.mobile-preview .mobile-hero-btn {
+            display: inline-block;
+            padding: 12px 20px;
+            font-size: 0.85em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 25px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            background: #5B8FDB;
+            color: #ffffff;
+        }
+
+        body.mobile-preview .mobile-hero-btn.btn-secondary {
+            background: #FFD54F;
+            color: #2d3436;
+        }
+
+        body.mobile-preview .mobile-hero-image {
+            display: block;
+            text-align: center;
+            padding: 0 20px 20px;
+        }
+
+        body.mobile-preview .mobile-hero-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        body.mobile-preview .hero {
+            padding: 0;
+        }
+
+        body.mobile-preview .hero-container {
+            flex-direction: column;
+            gap: 0;
+        }
+
+        /* Hide social stats and about section on mobile for cleaner look */
+        body.mobile-preview .social-stats {
+            padding: 20px 15px;
+        }
+
+        body.mobile-preview .social-stats h2 {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        body.mobile-preview .stats-container {
+            gap: 15px;
+        }
+
+        body.mobile-preview .stat-item {
+            padding: 10px;
+        }
+
+        body.mobile-preview .stat-number {
+            font-size: 1em;
+        }
+
+        body.mobile-preview .stat-icon svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        body.mobile-preview .about-section {
+            padding: 30px 20px;
+        }
+
+        body.mobile-preview .about-container {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        body.mobile-preview .about-image img {
+            max-width: 150px;
+        }
+
+        body.mobile-preview .about-content h2 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        body.mobile-preview .about-content p {
+            font-size: 0.9em;
+            line-height: 1.6;
         }
 
 
@@ -1169,11 +1304,27 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-container">
-            <div class="hero-image">
-                <img src="img/Gari version 123.png" alt="English Teacher" onerror="this.src='img/banana_naked.png'">
+            <!-- Mobile Hero Content -->
+            <div class="mobile-hero-content">
+                <h1 class="mobile-hero-title">IMPROVE YOUR ENGLISH NOW!</h1>
+                <p class="mobile-hero-subtitle">GET STARTED:</p>
+                <div class="mobile-hero-buttons">
+                    <a href="60min-session.html" class="mobile-hero-btn">1 TO 1 SESSION</a>
+                    <a href="ask-gari.html" class="mobile-hero-btn btn-secondary">QUICK QUESTION</a>
+                </div>
             </div>
-            <div class="hero-content">
-                <img src="img/trans logo 12.png" alt="PToB - Past Tense of Banana" class="hero-logo-image">
+            <!-- Desktop Hero Content -->
+            <div class="desktop-hero-content">
+                <div class="hero-image">
+                    <img src="img/Gari version 123.png" alt="English Teacher" onerror="this.src='img/banana_naked.png'">
+                </div>
+                <div class="hero-content">
+                    <img src="img/trans logo 12.png" alt="PToB - Past Tense of Banana" class="hero-logo-image">
+                </div>
+            </div>
+            <!-- Mobile Hero Image -->
+            <div class="mobile-hero-image">
+                <img src="img/Gari version 123.png" alt="English Teacher" onerror="this.src='img/banana_naked.png'">
             </div>
         </div>
     </section>
