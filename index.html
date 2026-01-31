@@ -113,17 +113,12 @@
         }
         
 /* Mobile Nav - Reorder menu items */
-        body.mobile-preview .nav-menu li:has(a[href="index.html#home"]),
-        body.mobile-preview .nav-menu li:has(a[href="index.html"]):not(:has(img)) {
-            display: none !important;
+        body.mobile-preview .nav-session {
+            order: 1 !important;
         }
         
-        body.mobile-preview .nav-menu .dropdown:has(a[href="60min-session.html"]) {
-            order: 1;
-        }
-        
-        body.mobile-preview .nav-menu li:has(a[href="ask-gari.html"]) {
-            order: 2;
+        body.mobile-preview .nav-question {
+            order: 2 !important;
         }
         
         body.mobile-preview .nav-about-us {
@@ -134,16 +129,16 @@
             order: 4 !important;
         }
         
-        body.mobile-preview .nav-menu .dropdown:has(a[href="#courses"]) {
-            order: 5;
+        body.mobile-preview .nav-courses {
+            order: 5 !important;
         }
         
-        body.mobile-preview .nav-menu li:has(a[href="blog.html"]) {
-            order: 6;
+        body.mobile-preview .nav-blog {
+            order: 6 !important;
         }
         
-        body.mobile-preview .nav-menu li:has(a[href="contact-us.html"]) {
-            order: 7;
+        body.mobile-preview .nav-contact {
+            order: 7 !important;
         }
 
 
@@ -1296,13 +1291,13 @@
 
             <ul class="nav-menu">
                 <li class="nav-home"><a href="#home">HOME</a></li>
-                <li class="dropdown">
+                <li class="dropdown nav-session">
                     <a href="60min-session.html">1 TO 1 SESSION</a>
                     <div class="dropdown-content">
                         <a href="60min-session.html">60 min</a>
                     </div>
                 </li>
-                <li><a href="ask-gari.html">Quick Question?</a></li>
+                <li class="nav-question"><a href="ask-gari.html">Quick Question?</a></li>
                 <li class="nav-about-gari"><a href="about-gari.html">ABOUT GARI</a></li>
                 <li class="nav-about-us"><a href="about-ptob.html"><span class="desktop-text">ABOUT PToB</span><span class="mobile-text">ABOUT US</span></a></li>
                 <li class="dropdown">
@@ -1312,8 +1307,8 @@
                         <a href="yet-to-come.html">for students</a>
                     </div>
                 </li>
-                <li><a href="blog.html">BLOG</a></li>
-                <li><a href="contact-us.html">CONTACT</a></li>
+                <li class="nav-blog"><a href="blog.html">BLOG</a></li>
+                <li class="nav-contact"><a href="contact-us.html">CONTACT</a></li>
             </ul>
 
             <div class="mobile-menu-toggle">
