@@ -226,8 +226,23 @@
         body.mobile-preview .mobile-hero-content {
             display: block;
             text-align: center;
-            padding: 40px 20px 30px;
+            padding: 20px 20px 30px;
             background: #ffffff;
+        }
+
+        .mobile-hero-image-top {
+            display: none;
+        }
+
+        body.mobile-preview .mobile-hero-image-top {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        body.mobile-preview .mobile-hero-image-top img {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
         }
 
         body.mobile-preview .mobile-hero-content h1 {
@@ -327,24 +342,6 @@
         body.mobile-preview .stat-number {
             font-size: 0.9em;
             font-weight: 600;
-        }
-
-        /* Mobile Hero Image */
-        .mobile-hero-image {
-            display: none;
-        }
-
-        body.mobile-preview .mobile-hero-image {
-            display: block;
-            text-align: center;
-            padding: 20px;
-            background: #ffffff;
-        }
-
-        body.mobile-preview .mobile-hero-image img {
-            max-width: 280px;
-            width: 100%;
-            height: auto;
         }
 
         /* About Section - Mobile Index */
@@ -1277,6 +1274,9 @@
         </div>
         <!-- Mobile Hero Content (hidden on desktop) -->
         <div class="mobile-hero-content">
+            <div class="mobile-hero-image-top">
+                <img src="img/Gari version 123.png" alt="Gari - English Teacher" onerror="this.src='img/banana_naked.png'">
+            </div>
             <h1>IMPROVE YOUR ENGLISH NOW!</h1>
             <p class="mobile-hero-subtitle">GET STARTED!</p>
             <div class="mobile-hero-buttons">
@@ -1322,10 +1322,6 @@
                 </div>
                 <div class="stat-number">72K</div>
             </a>
-        </div>
-        <!-- Mobile Hero Image -->
-        <div class="mobile-hero-image">
-            <img src="img/Gari version 123.png" alt="Gari - English Teacher" onerror="this.src='img/banana_naked.png'">
         </div>
     </section>
 
