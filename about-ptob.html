@@ -203,20 +203,21 @@
             padding: 40px 20px;
         }
 
-        body.mobile-preview .mission-container h2 {
+        body.mobile-preview .mission-container {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        body.mobile-preview .mission-content h2 {
             color: #C4956A;
             font-size: 1.5em;
             font-weight: 600;
             margin-bottom: 20px;
         }
 
-        body.mobile-preview .mission-container p {
+        body.mobile-preview .mission-content p {
             font-size: 0.95em;
             line-height: 1.7;
-        }
-
-        body.mobile-preview .mission-image {
-            margin-top: 30px;
         }
 
         body.mobile-preview .mission-image img {
@@ -526,16 +527,19 @@
         .mission-section {
             background: #ffffff;
             padding: 80px 40px;
-            text-align: center;
             border-bottom: 1px solid #e0e0e0;
         }
 
         .mission-container {
             max-width: 1200px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 80px;
+            align-items: center;
         }
 
-        .mission-container h2 {
+        .mission-content h2 {
             font-family: 'Lato', sans-serif;
             font-size: 2.5em;
             font-weight: 400;
@@ -543,21 +547,18 @@
             margin-bottom: 30px;
         }
 
-        .mission-container p {
-            font-size: 1.3em;
+        .mission-content p {
+            font-size: 1.1em;
             line-height: 1.8;
             color: #5a5a5a;
-            max-width: 800px;
-            margin: 0 auto;
         }
 
         .mission-image {
-            margin-top: 40px;
             text-align: center;
         }
 
         .mission-image img {
-            max-width: 300px;
+            max-width: 100%;
             height: auto;
             border-radius: 10px;
         }
@@ -1169,8 +1170,10 @@
     <!-- Mission Section -->
     <section class="mission-section">
         <div class="mission-container">
-            <h2>Mission statement?</h2>
-            <p>Our mission is to help you master English. It's that simple! To do this, we offer you a learning experience that best suits you as an individual in this age of modern technology.</p>
+            <div class="mission-content">
+                <h2>Mission statement?</h2>
+                <p>Our mission is to help you master English. It's that simple! To do this, we offer you a learning experience that best suits you as an individual in this age of modern technology.</p>
+            </div>
             <div class="mission-image">
                 <img src="img/banana naked - Copy.jpeg" alt="Banana mascot">
             </div>
