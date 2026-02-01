@@ -6,7 +6,7 @@
     <title>30 Min 1-on-1 Session - PToB - Past Tense of Banana</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/dmme-widget-custom.css">
-    <script src="https://dmme.ee/widget/dmme-widget.js" data-creator="pub" data-simulate="true" data-hide-icon="true"></script>
+    <script src="https://dmme.ee/widget/dmme-widget.js" data-creator="ptb" data-simulate="true" data-hide-icon="true"></script>
     <style>
         /* Preview Toggle Bar */
         .preview-toggle-bar {
@@ -1138,48 +1138,8 @@
         </div>
     </footer>
 
-    <!-- Custom Gari Widget Launcher -->
-    <div class="gari-widget-launcher" id="gari-launcher">
-        <div class="gari-widget-circle">
-            <img src="img/Gari hero trns.png" alt="Ask Gari">
-        </div>
-        <div class="gari-widget-text">
-            ask me a for just $5!
-        </div>
-    </div>
-
-    <script>
-        // Make custom button trigger DMME widget
-        document.addEventListener('DOMContentLoaded', function() {
-            const customLauncher = document.getElementById('gari-launcher');
-
-            // Function to find and click the DMME widget button
-            function triggerDmmeWidget() {
-                const dmmeButton = document.querySelector('[data-dmme-open], .dmme-widget-button, #dmme-widget-launcher, [class*="dmme-"] button');
-
-                if (dmmeButton) {
-                    dmmeButton.click();
-                } else {
-                    window.dispatchEvent(new CustomEvent('dmme-open'));
-                }
-            }
-
-            // Add click handler to custom launcher
-            if (customLauncher) {
-                customLauncher.addEventListener('click', triggerDmmeWidget);
-            }
-
-            // Wait for DMME widget to load and hide its default launcher
-            setTimeout(function() {
-                const dmmeDefaultButtons = document.querySelectorAll('[data-dmme-launcher], .dmme-launcher-button, #dmme-widget-launcher');
-                dmmeDefaultButtons.forEach(function(btn) {
-                    if (btn) {
-                        btn.style.display = 'none';
-                    }
-                });
-            }, 1000);
-        });
-    </script>
+    <!-- Gari Widget (centralised) -->
+    <script src="js/gari-widget.js"></script>
 
     </div>
 
