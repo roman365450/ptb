@@ -153,3 +153,27 @@
 [class*="dmme-overlay"] {
     z-index: 10000 !important;
 }
+
+/* Hide our hidden trigger element and any DMME elements attached to it */
+#dmme-icon {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    pointer-events: none !important;
+}
+
+/* Hide any DMME input/chat elements when modal is closed */
+#dmme-icon ~ *,
+#dmme-icon > * {
+    display: none !important;
+}
+
+/* Ensure DMME bubble/input doesn't show outside modal */
+[class*="dmme-input"],
+[class*="dmme-chat"]:not([class*="open"]):not([class*="active"]),
+[class*="dmme-bubble"]:not(.dmme-bubble-bg) {
+    display: none !important;
+}
