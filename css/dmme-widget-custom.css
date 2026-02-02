@@ -155,10 +155,21 @@ div[style*="position: fixed"][style*="bottom"]:not(.gari-widget-launcher) {
     }
 }
 
-/* Ensure DMME modal appears on top */
-[class*="dmme-modal"],
-[class*="dmme-overlay"] {
+/* Ensure DMME modal appears on top when open */
+[class*="dmme-modal"].open,
+[class*="dmme-modal"].active,
+[class*="dmme-overlay"].open,
+[class*="dmme-overlay"].active {
     z-index: 10000 !important;
+}
+
+/* Hide modal elements when not active */
+[class*="dmme-modal"]:not(.open):not(.active):not([style*="display: block"]):not([style*="display:block"]),
+[class*="dmme-modal-body"]:not(.open):not(.active) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 /* Hide our hidden trigger element and any DMME elements attached to it */
