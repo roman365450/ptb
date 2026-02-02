@@ -8,56 +8,6 @@
     <link rel="stylesheet" href="css/dmme-widget-custom.css">
     <script src="https://dmme.ee/widget/dmme-widget.js" data-creator="ptb"></script>
     <style>
-        /* Preview Toggle Bar */
-        .preview-toggle-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: #1a1a2e;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            z-index: 10000;
-            font-family: 'Lato', sans-serif;
-        }
-
-        .preview-toggle-bar span {
-            color: #ffffff;
-            font-size: 14px;
-            margin-right: 10px;
-        }
-
-        .preview-toggle-bar button {
-            padding: 8px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .preview-toggle-bar button.active {
-            background: #FFD54F;
-            color: #1a1a2e;
-        }
-
-        .preview-toggle-bar button:not(.active) {
-            background: #333;
-            color: #fff;
-        }
-
-        .preview-toggle-bar button:hover:not(.active) {
-            background: #444;
-        }
-
-        body {
-            padding-top: 50px;
-        }
-
         body.mobile-preview {
             background: #e0e0e0;
         }
@@ -1315,13 +1265,6 @@
     </style>
 </head>
 <body>
-    <!-- Preview Toggle Bar -->
-    <div class="preview-toggle-bar">
-        <span>Preview:</span>
-        <button id="desktop-btn" class="active" onclick="setDesktopView()">Desktop</button>
-        <button id="mobile-btn" onclick="setMobileView()">Mobile (375px)</button>
-    </div>
-
     <div class="preview-wrapper">
 
     <!-- Navigation -->
@@ -1549,18 +1492,5 @@
 
     </div>
 
-    <script>
-        function setMobileView() {
-            document.body.classList.add('mobile-preview');
-            document.getElementById('mobile-btn').classList.add('active');
-            document.getElementById('desktop-btn').classList.remove('active');
-        }
-
-        function setDesktopView() {
-            document.body.classList.remove('mobile-preview');
-            document.getElementById('desktop-btn').classList.add('active');
-            document.getElementById('mobile-btn').classList.remove('active');
-        }
-    </script>
 </body>
 </html>
