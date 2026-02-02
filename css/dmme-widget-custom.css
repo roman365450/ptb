@@ -1,12 +1,19 @@
 /* Custom DMME Widget Styling */
 
-/* Hide the default DMME widget button if it exists */
+/* Hide ALL default DMME widget elements */
 #dmme-widget-launcher,
+#dmme-icon,
 .dmme-widget-button,
 .dmme-bubble-bg,
 .dmme-icon-avatar,
-[class*="dmme-"] button[class*="launcher"] {
+[class*="dmme-"] button[class*="launcher"],
+[id^="dmme-"]:not([class*="modal"]):not([class*="open"]),
+[class^="dmme-"]:not([class*="modal"]):not([class*="open"]):not([class*="overlay"]),
+div[style*="position: fixed"][style*="bottom"]:not(.gari-widget-launcher) {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 /* Custom widget launcher button */
