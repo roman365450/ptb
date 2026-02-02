@@ -51,22 +51,19 @@
         setInterval(hideDmmeResidue, 500);
     }
 
-    // Hide any DMME elements that shouldn't be visible
+    // Hide only specific DMME residue elements (modal body when closed)
     function hideDmmeResidue() {
-        // Find all elements with dmme in class or id
-        document.querySelectorAll('[class*="dmme-"], [id*="dmme-"]').forEach(function(el) {
-            // Skip if it's the modal that's actually open
-            if (el.classList.contains('open') || el.classList.contains('active')) {
+        // Only target specific residue elements - the modal body containers
+        // that remain visible after the chat is closed
+        document.querySelectorAll('.dmme-modal-body, .dmme-bubble-bg').forEach(function(el) {
+            // Skip if it's part of an open modal
+            const parent = el.closest('.open, .active, [style*="display: block"]');
+            if (parent) {
                 return;
             }
-            // Skip our hidden icon
-            if (el.id === 'dmme-icon') {
-                return;
-            }
-            // Hide everything else
+            // Hide residue
             el.style.display = 'none';
             el.style.visibility = 'hidden';
-            el.style.opacity = '0';
         });
     }
 
