@@ -45,6 +45,29 @@
                 hiddenIcon.click();
             }
         });
+
+        // Watch for and hide DMME residue elements
+        hideDmmeResidue();
+        setInterval(hideDmmeResidue, 500);
+    }
+
+    // Hide any DMME elements that shouldn't be visible
+    function hideDmmeResidue() {
+        // Find all elements with dmme in class or id
+        document.querySelectorAll('[class*="dmme-"], [id*="dmme-"]').forEach(function(el) {
+            // Skip if it's the modal that's actually open
+            if (el.classList.contains('open') || el.classList.contains('active')) {
+                return;
+            }
+            // Skip our hidden icon
+            if (el.id === 'dmme-icon') {
+                return;
+            }
+            // Hide everything else
+            el.style.display = 'none';
+            el.style.visibility = 'hidden';
+            el.style.opacity = '0';
+        });
     }
 
     // Initialize when DOM is ready
