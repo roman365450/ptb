@@ -9,7 +9,7 @@
 /* Custom widget launcher button */
 .gari-widget-launcher {
     position: fixed;
-    bottom: 30px;
+    bottom: 15px;
     right: 30px;
     z-index: 9999;
     cursor: pointer;
@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     animation: float 3s ease-in-out infinite;
 }
 
@@ -27,11 +27,11 @@
 
 /* Circular image container */
 .gari-widget-circle {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid #FFD54F;
+    border: 3px solid #FFD54F;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     background: #ffffff;
@@ -110,13 +110,13 @@
 /* Mobile responsive */
 @media (max-width: 768px) {
     .gari-widget-launcher {
-        bottom: 20px;
-        right: 20px;
+        bottom: 10px;
+        right: 15px;
     }
 
     .gari-widget-circle {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         border-width: 3px;
     }
 
@@ -129,13 +129,14 @@
 
 @media (max-width: 480px) {
     .gari-widget-launcher {
-        bottom: 15px;
-        right: 15px;
+        bottom: 8px;
+        right: 10px;
     }
 
     .gari-widget-circle {
-        width: 70px;
-        height: 70px;
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
     }
 
     .gari-widget-text {
