@@ -11,7 +11,7 @@
             <img src="img/Gari hero trns.png" alt="Ask Gari">
         </div>
         <div class="gari-widget-text">
-            ask me a for just £5!
+            ask me a question for just £15!
         </div>
     </div>
     `;
