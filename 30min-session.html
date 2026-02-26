@@ -96,11 +96,11 @@
         .mobile-text {
             display: none;
         }
-        
+
         body.mobile-preview .desktop-text {
             display: none;
         }
-        
+
         body.mobile-preview .mobile-text {
             display: inline;
         }
@@ -108,7 +108,7 @@
             display: none !important;
         }
 
-        
+
         body.mobile-preview .nav-menu {
             display: none;
             flex-direction: column;
@@ -119,32 +119,32 @@
             gap: 0;
             align-items: flex-start;
         }
-        
+
 /* Mobile Nav - Reorder menu items */
         body.mobile-preview .nav-menu .nav-session {
             order: 1 !important;
         }
-        
+
         body.mobile-preview .nav-menu .nav-question {
             order: 2 !important;
         }
-        
+
         body.mobile-preview .nav-menu .nav-about-us {
             order: 3 !important;
         }
-        
+
         body.mobile-preview .nav-menu .nav-about-gari {
             order: 4 !important;
         }
-        
+
         body.mobile-preview .nav-menu .nav-courses {
             order: 5 !important;
         }
-        
+
         body.mobile-preview .nav-menu .nav-blog {
             order: 6 !important;
         }
-        
+
         body.mobile-preview .nav-menu .nav-contact {
             order: 7 !important;
         }
@@ -152,6 +152,79 @@
         body.mobile-preview .dropdown-content {
             display: none !important;
         }
+        /* Mobile Footer - Left align content, center bottom */
+        body.mobile-preview .footer-content {
+            text-align: left;
+        }
+
+        body.mobile-preview .footer-brand {
+            align-items: flex-start;
+        }
+
+        body.mobile-preview .footer-social {
+            justify-content: flex-start;
+        }
+
+        body.mobile-preview .footer-links {
+            text-align: left;
+        }
+
+        body.mobile-preview .footer-column {
+            text-align: left;
+        }
+
+        body.mobile-preview .footer-column h3 {
+            text-align: left;
+        }
+
+        body.mobile-preview .footer-column ul {
+            text-align: left;
+        }
+
+        body.mobile-preview .footer-bottom {
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        body.mobile-preview .footer-copyright,
+        body.mobile-preview .footer-legal,
+        body.mobile-preview .footer-powered {
+            text-align: center !important;
+            width: 100% !important;
+            display: block !important;
+            margin: 0 auto !important;
+        }
+
+        body.mobile-preview .footer-powered {
+            color: #5a5a5a !important;
+        }
+
+        body.mobile-preview .footer-legal a {
+            display: inline-block;
+            text-align: center;
+        }
+
+        /* Gari Widget - Mobile Preview */
+        body.mobile-preview .gari-widget-launcher {
+            position: fixed;
+            bottom: 15px;
+            right: calc(50% - 187.5px + 15px);
+            z-index: 9999;
+        }
+
+        body.mobile-preview .gari-widget-circle {
+            width: 60px;
+            height: 60px;
+            border-width: 3px;
+        }
+
+        body.mobile-preview .gari-widget-text {
+            font-size: 9px;
+            padding: 4px 8px;
+            max-width: 90px;
+        }
+
 
 
 
@@ -272,28 +345,9 @@
             gap: 15px;
         }
 
+
         body.mobile-preview footer {
             padding: 30px 20px 20px;
-        }
-
-        /* Gari Widget - Mobile Preview */
-        body.mobile-preview .gari-widget-launcher {
-            position: fixed;
-            bottom: 15px;
-            right: calc(50% - 187.5px + 15px);
-            z-index: 9999;
-        }
-
-        body.mobile-preview .gari-widget-circle {
-            width: 60px;
-            height: 60px;
-            border-width: 3px;
-        }
-
-        body.mobile-preview .gari-widget-text {
-            font-size: 9px;
-            padding: 4px 8px;
-            max-width: 90px;
         }
 
         body.mobile-preview .steps-grid,
@@ -302,8 +356,7 @@
             gap: 20px;
         }
 
-        body.mobile-preview .calendly-container,
-        body.mobile-preview .calendly-inline-widget {
+        body.mobile-preview #my-cal-inline-micro-sessions {
             min-width: unset !important;
             width: 100% !important;
         }
@@ -670,114 +723,6 @@
             line-height: 1.8;
         }
 
-        /* Booking Form Section */
-        .booking-section {
-            background: #f5f5f5;
-            padding: 80px 40px;
-        }
-
-        .booking-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .booking-container h2 {
-            font-family: 'Lato', sans-serif;
-            font-size: 2.5em;
-            font-weight: 400;
-            color: #2d3436;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .booking-subtitle {
-            font-size: 1.1em;
-            color: #5a5a5a;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .booking-form {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 10px;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 1em;
-            font-weight: 600;
-            color: #2d3436;
-            margin-bottom: 10px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 15px;
-            font-size: 1em;
-            font-family: 'Lato', sans-serif;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background: #ffffff;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #5B8FDB;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 18px;
-            font-size: 1.1em;
-            font-weight: 700;
-            font-family: 'Lato', sans-serif;
-            background: #5B8FDB;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-
-        .submit-btn:hover {
-            background: #4A7AC9;
-            transform: translateY(-2px);
-        }
-
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-
-        /* Footer */
-        footer {
-            background: #2d3436;
-            color: #ffffff;
-            padding: 40px;
-            text-align: center;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.95em;
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .main-section {
@@ -803,18 +748,6 @@
 
             .price-amount {
                 font-size: 2em;
-            }
-
-            .booking-section {
-                padding: 60px 30px;
-            }
-
-            .booking-container h2 {
-                font-size: 2em;
-            }
-
-            .booking-form {
-                padding: 30px 25px;
             }
         }
 
@@ -928,6 +861,20 @@
             font-size: 0.9em;
         }
 
+        .footer-powered {
+            color: #5a5a5a;
+            font-size: 0.9em;
+        }
+
+        .footer-powered a {
+            color: #9b59b6;
+            text-decoration: none;
+        }
+
+        .footer-powered a:hover {
+            text-decoration: underline;
+        }
+
         .footer-legal {
             display: flex;
             gap: 30px;
@@ -971,7 +918,15 @@
                 align-items: flex-start;
             }
         }
+
     </style>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "vbfvigt7zj");
+    </script>
 </head>
 <body>
     <!-- Preview Toggle Bar -->
@@ -992,8 +947,12 @@
 
             <ul class="nav-menu">
                 <li class="nav-home"><a href="index.html#home">HOME</a></li>
-                <li class="nav-session">
+                <li class="nav-session dropdown">
                     <a href="60min-session.html">1 TO 1 SESSION</a>
+                    <div class="dropdown-content">
+                        <a href="60min-session.html">60 Min Session</a>
+                        <a href="30min-session.html">Micro Session</a>
+                    </div>
                 </li>
                 <li class="nav-question"><a href="ask-gari.html">Quick Question?</a></li>
                 <li class="nav-about-us"><a href="about-ptob.html"><span class="desktop-text">ABOUT US</span><span class="mobile-text">ABOUT US</span></a></li>
@@ -1016,80 +975,66 @@
     <!-- Main Content Section -->
     <section class="main-section">
         <div class="main-container">
-            <h1 class="main-title">1-to-1 Personalised English Session (30 Minutes)</h1>
+            <h1 class="main-title">1-to-1 Personalised English Session</h1>
 
             <p class="intro-text">
-                Get expert English help exactly when you need it. This focused, 30-minute session is conducted via Zoom or Google Meet, providing you with direct support for any challenge.
+                <a href="#my-cal-inline-micro-sessions">Click here</a> to book a session with Gari for personalised English support.
             </p>
 
-            <h2 class="section-title">Tailored Support with Gari</h2>
+            <h2 class="section-title">Get the help you need from PToB</h2>
 
             <p class="section-text">
-                Whether you are working on a university application, preparing a business presentation, or tackling specific grammar hurdles, you set the agenda! Gari can help you with absolutely any issue you have with English.
+                PToB will help you with absolutely any issue you have with English, including university application, exam preparation and general English support.
+            </p>
+
+            <p class="section-text">
+                You can have as many or as few sessions as you wish. Each session is 30 minutes long. You will be given a PDF review sheet at the end of each session.
             </p>
 
             <p class="section-text" style="font-weight: 600; margin-bottom: 20px;">
-                Gari will personally:
+                PToB will:
             </p>
 
             <ul class="benefits-list">
-                <li>Correct your writing and your speaking in real-time.</li>
-                <li>Direct your learning so you focus only on what matters.</li>
-                <li>Explain complex rules so they finally make sense.</li>
+                <li>Correct your writing and the way you speak.</li>
+                <li>Direct you so you focus on what really matters.</li>
+                <li>Explain things clearly so they finally click.</li>
             </ul>
 
             <div class="price-box">
-                <div class="price-label">Price:</div>
-                <div class="price-amount">$20*</div>
+                <div class="price-label">30 Minutes — £20</div>
+                <div class="price-description" style="margin-bottom: 20px;">
+                    <span>Ideal when you need more time, deeper fixes, and a thorough look at your work.</span>
+                </div>
                 <div class="price-description">
-                    <strong>Ideal for:</strong> Quick fixes, targeted feedback, or a final professional check before a deadline.
-                    <br><br>
-                    * Fees include currency exchange and platform fees. There are no hidden charges.
+                    <strong>Terms & Conditions</strong><br>
+                    <strong>Payment:</strong> Pay in full before you book.<br>
+                    <strong>Total:</strong> Price includes everything (currency exchange and platform fees).<br>
+                    <strong>Cancellations:</strong> You can cancel your session more than 24 hours in advance.<br>
+                    <strong>How to Cancel:</strong> To cancel, an email must be sent to <a href="mailto:contact@PastTenseOfBanana.com" style="color: #5B8FDB;">contact@PastTenseOfBanana.com</a>.<br>
+                    <strong>Admin Fee:</strong> A £2 admin fee is retained for all bookings.
                 </div>
             </div>
 
-            <h2 class="section-title">How to Sign Up</h2>
-
-            <p class="section-text">
-                To book your session, please fill out the contact form below. Once submitted, we will get back to you as soon as we can to finalize your booking and schedule your time with Gari.
+            <p class="section-text" style="margin-top: 40px;">
+                Book your session below. Simply select a date and time slot. You will receive a confirmation email once your booking is completed.
             </p>
-        </div>
-    </section>
 
-    <!-- Booking Form Section -->
-    <section class="booking-section" id="book-session">
-        <div class="booking-container">
-            <h2>Book Your Session</h2>
-            <p class="booking-subtitle">Fill out the form below and we'll get back to you within 24 hours</p>
+            <!-- Cal inline embed code begins -->
+            <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-micro-sessions"></div>
+            <script type="text/javascript">
+              (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+            Cal("init", "micro-sessions", {origin:"https://app.cal.com"});
 
-            <form class="booking-form" action="#" method="POST">
-                <!-- Name -->
-                <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your name">
-                </div>
+              Cal.ns["micro-sessions"]("inline", {
+                elementOrSelector:"#my-cal-inline-micro-sessions",
+                config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+                calLink: "pasttenseofbanana/micro-sessions",
+              });
 
-                <!-- Email -->
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
-                </div>
-
-                <!-- Preferred Date/Time -->
-                <div class="form-group">
-                    <label for="preferred-time">Preferred Date & Time</label>
-                    <input type="text" id="preferred-time" name="preferred_time" placeholder="e.g., Monday 3pm, or flexible">
-                </div>
-
-                <!-- Message -->
-                <div class="form-group">
-                    <label for="message">Briefly describe what would you like me to help you with</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="submit" class="submit-btn">Book Session</button>
-            </form>
+              Cal.ns["micro-sessions"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+            </script>
+            <!-- Cal inline embed code ends -->
         </div>
     </section>
 
@@ -1144,6 +1089,7 @@
                         <h3>English Support</h3>
                         <ul>
                             <li><a href="60min-session.html">1 to 1 Session</a></li>
+                            <li><a href="30min-session.html">Micro Session</a></li>
                             <li><a href="ask-gari.html">Got a quick question? Click here!</a></li>
                             <li><a href="yet-to-come.html">Courses</a></li>
                         </ul>
