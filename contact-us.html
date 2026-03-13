@@ -9,7 +9,19 @@
     <script src="https://dmme.ee/widget/dmme-widget.js" data-creator="ptb"></script>
     <style>
         /* Preview Toggle Bar */
-       
+        .preview-toggle-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #1a1a2e;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            z-index: 10000;
+            font-family: 'Lato', sans-serif;
         }
 
         .preview-toggle-bar span {
@@ -633,14 +645,7 @@
             transition: all 0.3s ease;
         }
 
-        @media (max-width: 768px) .mobile-menu-toggle {
-                display: flex;
-                order: 1;
-            }
-
-            .logo {
-                order: -1;
-            }{
+        @media (max-width: 768px) {
             nav {
                 position: sticky;
                 top: 0;
@@ -1103,7 +1108,15 @@
     </script>
 </head>
 <body>
-    
+    <!-- Preview Toggle Bar -->
+    <div class="preview-toggle-bar">
+        <span>Preview:</span>
+        <button id="desktop-btn" class="active" onclick="setDesktopView()">Desktop</button>
+        <button id="mobile-btn" onclick="setMobileView()">Mobile (375px)</button>
+    </div>
+
+    <div class="preview-wrapper">
+
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
@@ -1290,9 +1303,14 @@
     <!-- Gari Widget (centralised) -->
     <script src="js/gari-widget.js"></script>
 
-    
+    </div>
 
-   
+    <script>
+        function setMobileView() {
+            document.body.classList.add('mobile-preview');
+            document.getElementById('mobile-btn').classList.add('active');
+            document.getElementById('desktop-btn').classList.remove('active');
+        }
 
         function setDesktopView() {
             document.body.classList.remove('mobile-preview');
