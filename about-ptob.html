@@ -8,327 +8,6 @@
     <link rel="stylesheet" href="css/dmme-widget-custom.css">
     <script src="https://dmme.ee/widget/dmme-widget.js" data-creator="ptb"></script>
     <style>
-        /* Preview Toggle Bar */
-        .preview-toggle-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: #1a1a2e;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            z-index: 10000;
-            font-family: 'Lato', sans-serif;
-        }
-
-        .preview-toggle-bar span {
-            color: #ffffff;
-            font-size: 14px;
-            margin-right: 10px;
-        }
-
-        .preview-toggle-bar button {
-            padding: 8px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .preview-toggle-bar button.active {
-            background: #FFD54F;
-            color: #1a1a2e;
-        }
-
-        .preview-toggle-bar button:not(.active) {
-            background: #333;
-            color: #fff;
-        }
-
-        .preview-toggle-bar button:hover:not(.active) {
-            background: #444;
-        }
-
-        body {
-            padding-top: 50px;
-        }
-
-        body.mobile-preview {
-            background: #e0e0e0;
-        }
-
-        .preview-wrapper {
-            transition: all 0.3s ease;
-        }
-
-        body.mobile-preview .preview-wrapper {
-            max-width: 375px;
-            margin: 20px auto;
-            box-shadow: 0 0 30px rgba(0,0,0,0.3);
-            overflow-x: hidden;
-            background: #ffffff;
-        }
-
-        /* Mobile Preview Styles */
-        body.mobile-preview .nav-container {
-            flex-wrap: wrap;
-            padding: 0 15px;
-        }
-
-        body.mobile-preview .mobile-menu-toggle {
-            display: flex;
-            order: -1;
-        }
-        /* Mobile Sticky Header */
-        body.mobile-preview nav {
-            position: sticky;
-            top: 50px;
-            z-index: 1000;
-            background: #ffffff;
-        }
-
-        /* Mobile Nav - Swap About Us/About Gari and change text */
-        .mobile-text {
-            display: none;
-        }
-        
-        body.mobile-preview .desktop-text {
-            display: none;
-        }
-        
-        body.mobile-preview .mobile-text {
-            display: inline;
-        }
-        body.mobile-preview .nav-home {
-            display: none !important;
-        }
-
-        
-        body.mobile-preview .nav-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            order: 2;
-            background: #ffffff;
-            padding: 20px 0;
-            gap: 0;
-            align-items: flex-start;
-        }
-        
-/* Mobile Nav - Reorder menu items */
-        body.mobile-preview .nav-menu .nav-session {
-            order: 1 !important;
-        }
-        
-        body.mobile-preview .nav-menu .nav-question {
-            order: 2 !important;
-        }
-        
-        body.mobile-preview .nav-menu .nav-about-us {
-            order: 3 !important;
-        }
-        
-        body.mobile-preview .nav-menu .nav-about-gari {
-            order: 4 !important;
-        }
-        
-        body.mobile-preview .nav-menu .nav-courses {
-            order: 5 !important;
-        }
-        
-        body.mobile-preview .nav-menu .nav-blog {
-            order: 6 !important;
-        }
-        
-        body.mobile-preview .nav-menu .nav-contact {
-            order: 7 !important;
-        }
-        /* Hide dropdown content on mobile */
-        body.mobile-preview .dropdown-content {
-            display: none !important;
-        }
-
-
-
-        body.mobile-preview .logo {
-            order: 1;
-        }
-
-        body.mobile-preview .nav-menu {
-            display: none;
-            flex-direction: column;
-            width: 100%;
-            order: 2;
-            background: #ffffff;
-            padding: 20px 0;
-            gap: 0;
-            align-items: flex-start;
-        }
-
-        body.mobile-preview .nav-menu.active {
-            display: flex;
-        }
-
-        body.mobile-preview .nav-menu li {
-            width: 100%;
-        }
-
-        body.mobile-preview .nav-menu a {
-            display: block;
-            padding: 12px 0;
-            font-size: 1em;
-        }
-
-        body.mobile-preview .logo img {
-            height: 60px;
-        }
-
-        /* Hero Section - Mobile Preview */
-        body.mobile-preview .hero-section {
-            padding: 60px 20px 30px;
-        }
-
-        body.mobile-preview .hero-container h1 {
-            font-size: 1.8em;
-            line-height: 1.3;
-        }
-
-        /* Mission Section - Mobile Preview */
-        body.mobile-preview .mission-section {
-            padding: 40px 20px;
-        }
-
-        body.mobile-preview .mission-container {
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-
-        body.mobile-preview .mission-content h2 {
-            color: #2d3436;
-            font-size: 1.5em;
-            font-weight: 600;
-            margin-bottom: 20px;
-        }
-
-        body.mobile-preview .mission-content p {
-            font-size: 0.95em;
-            line-height: 1.7;
-        }
-
-        body.mobile-preview .mission-image img {
-            max-width: 180px;
-        }
-
-        /* About Section - Mobile Preview */
-        body.mobile-preview .about-section {
-            padding: 40px 20px;
-        }
-
-        body.mobile-preview .about-container {
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-
-        body.mobile-preview .about-content {
-            order: 1;
-        }
-
-        body.mobile-preview .about-content h2 {
-            color: #2d3436;
-            font-size: 1.4em;
-            font-weight: 600;
-        }
-
-        body.mobile-preview .about-content p {
-            font-size: 0.95em;
-            line-height: 1.7;
-        }
-
-        body.mobile-preview .about-image {
-            order: 2;
-            text-align: center;
-        }
-
-        body.mobile-preview .about-image img {
-            max-width: 180px;
-        }
-
-        /* Approach Section - Mobile Preview */
-        body.mobile-preview .approach-section {
-            padding: 40px 20px;
-        }
-
-        body.mobile-preview .approach-container {
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-
-        body.mobile-preview .approach-content h2 {
-            color: #2d3436;
-            font-size: 1.4em;
-            font-weight: 600;
-        }
-
-        body.mobile-preview .approach-content p {
-            font-size: 0.95em;
-            line-height: 1.7;
-        }
-
-        body.mobile-preview .approach-image {
-            text-align: center;
-        }
-
-        body.mobile-preview .approach-image img {
-            max-width: 180px;
-        }
-
-        /* Footer - Mobile Preview */
-        body.mobile-preview .footer-content {
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-
-        body.mobile-preview .footer-links {
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-        body.mobile-preview .footer-bottom {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 15px;
-        }
-
-        body.mobile-preview footer {
-            padding: 30px 20px 20px;
-        }
-
-        /* Gari Widget - Mobile Preview */
-        body.mobile-preview .gari-widget-launcher {
-            position: fixed;
-            bottom: 15px;
-            right: calc(50% - 187.5px + 15px);
-            z-index: 9999;
-        }
-
-        body.mobile-preview .gari-widget-circle {
-            width: 60px;
-            height: 60px;
-            border-width: 3px;
-        }
-
-        body.mobile-preview .gari-widget-text {
-            font-size: 9px;
-            padding: 4px 8px;
-            max-width: 90px;
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -1111,6 +790,20 @@
             font-size: 0.9em;
         }
 
+        .footer-powered {
+            color: #5a5a5a;
+            font-size: 0.9em;
+        }
+
+        .footer-powered a {
+            color: #9b59b6;
+            text-decoration: none;
+        }
+
+        .footer-powered a:hover {
+            text-decoration: underline;
+        }
+
         .footer-legal {
             display: flex;
             gap: 30px;
@@ -1164,14 +857,6 @@
     </script>
 </head>
 <body>
-    <!-- Preview Toggle Bar -->
-    <div class="preview-toggle-bar">
-        <span>Preview:</span>
-        <button id="desktop-btn" class="active" onclick="setDesktopView()">Desktop</button>
-        <button id="mobile-btn" onclick="setMobileView()">Mobile (375px)</button>
-    </div>
-
-    <div class="preview-wrapper">
 
     <!-- Navigation -->
     <nav>
@@ -1190,7 +875,7 @@
                     </div>
                 </li>
                 <li class="nav-question"><a href="ask-gari.html">Quick Question?</a></li>
-                <li class="nav-about-us"><a href="about-ptob.html"><span class="desktop-text">ABOUT US</span><span class="mobile-text">ABOUT US</span></a></li>
+                <li class="nav-about-us"><a href="about-ptob.html">ABOUT US</a></li>
                 <li class="nav-about-gari"><a href="about-gari.html">ABOUT GARI</a></li>
                 <li class="nav-courses">
                     <a href="yet-to-come.html">COURSES</a>
@@ -1261,7 +946,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <a href="index.html#home"><img src="img/trans logo 12.png" alt="PToB Logo"></a>
+                        <a href="index.html"><img src="img/trans logo 12.png" alt="PToB Logo"></a>
                     </div>
                     <div class="footer-social">
                         <a href="https://www.tiktok.com/@pasttenseofbanana?_r=1&_t=ZN-93GWAAxRASE" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
@@ -1296,7 +981,7 @@
                     <div class="footer-column">
                         <h3>Quick Links</h3>
                         <ul>
-                            <li><a href="about-ptob.html"><span class="desktop-text">About Us</span><span class="mobile-text">About Us</span></a></li>
+                            <li><a href="about-ptob.html">About Us</a></li>
                             <li><a href="about-gari.html">About Gari</a></li>
                             <li><a href="contact-us.html">Contact</a></li>
                         </ul>
@@ -1364,22 +1049,6 @@
 
     <!-- Gari Widget (centralised) -->
     <script src="js/gari-widget.js"></script>
-
-    </div>
-
-    <script>
-        function setMobileView() {
-            document.body.classList.add('mobile-preview');
-            document.getElementById('mobile-btn').classList.add('active');
-            document.getElementById('desktop-btn').classList.remove('active');
-        }
-
-        function setDesktopView() {
-            document.body.classList.remove('mobile-preview');
-            document.getElementById('desktop-btn').classList.add('active');
-            document.getElementById('mobile-btn').classList.remove('active');
-        }
-    </script>
 
 </body>
 </html>
