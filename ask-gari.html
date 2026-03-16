@@ -761,14 +761,7 @@
     </script>
 </head>
 <body>
-    <!-- Preview Toggle Bar -->
-    <div class="preview-toggle-bar">
-        <span>Preview:</span>
-        <button id="desktop-btn" class="active" onclick="setDesktopView()">Desktop</button>
-        <button id="mobile-btn" onclick="setMobileView()">Mobile (375px)</button>
-    </div>
-
-    <div class="preview-wrapper">
+  
 
     <!-- Navigation -->
     <nav>
@@ -953,20 +946,8 @@
     <!-- Gari Widget (centralised) -->
     <script src="js/gari-widget.js"></script>
 
-    </div>
+    
 
-    <script>
-        function setMobileView() {
-            document.body.classList.add('mobile-preview');
-            document.getElementById('mobile-btn').classList.add('active');
-            document.getElementById('desktop-btn').classList.remove('active');
-        }
-
-        function setDesktopView() {
-            document.body.classList.remove('mobile-preview');
-            document.getElementById('desktop-btn').classList.add('active');
-            document.getElementById('mobile-btn').classList.remove('active');
-        }
-    </script>
+    
 </body>
 </html>
