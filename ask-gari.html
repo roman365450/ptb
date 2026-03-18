@@ -202,52 +202,28 @@
             transform: scale(1.1);
         }
 
-        /* Mobile Menu Toggle */
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .mobile-menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background: #212121;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
         @media (max-width: 768px) {
             nav {
                 position: sticky;
                 top: 0;
                 z-index: 1000;
                 background: #ffffff;
-            }
-
-            .mobile-menu-toggle {
-                display: flex;
+                padding: 15px 0;
             }
 
             .nav-container {
-                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
             }
 
             .nav-menu {
-                display: none;
+                display: flex;
                 flex-direction: column;
                 width: 100%;
-                order: 2;
                 background: #ffffff;
-                padding: 20px 0;
                 gap: 0;
                 align-items: flex-start;
-            }
-
-            .nav-menu.active {
-                display: flex;
             }
 
             .nav-menu li {
@@ -259,15 +235,6 @@
                 padding: 12px 0;
                 font-size: 1em;
             }
-
-            .nav-menu .nav-home { order: 0; }
-            .nav-menu .nav-session { order: 1; }
-            .nav-menu .nav-question { order: 2; }
-            .nav-menu .nav-about-us { order: 3; }
-            .nav-menu .nav-about-gari { order: 4; }
-            .nav-menu .nav-courses { order: 5; }
-            .nav-menu .nav-blog { order: 6; }
-            .nav-menu .nav-contact { order: 7; }
 
             .logo img {
                 height: 60px;
@@ -780,7 +747,7 @@
                     </div>
                 </li>
                 <li class="nav-question"><a href="ask-gari.html">Quick Question?</a></li>
-                <li class="nav-about-us"><a href="about-ptob.html"><span class="desktop-text">ABOUT US</span><span class="mobile-text">ABOUT US</span></a></li>
+                <li class="nav-about-us"><a href="about-ptob.html">ABOUT US</a></li>
                 <li class="nav-about-gari"><a href="about-gari.html">ABOUT GARI</a></li>
                 <li class="nav-courses">
                     <a href="yet-to-come.html">COURSES</a>
@@ -788,12 +755,6 @@
                 <li class="nav-blog"><a href="https://garisullivan.substack.com/s/english-teaching" target="_blank" rel="noopener noreferrer">BLOG</a></li>
                 <li class="nav-contact"><a href="contact-us.html">CONTACT</a></li>
             </ul>
-
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
@@ -877,7 +838,7 @@
                     <div class="footer-column">
                         <h3>Quick Links</h3>
                         <ul>
-                            <li><a href="about-ptob.html"><span class="desktop-text">About Us</span><span class="mobile-text">About Us</span></a></li>
+                            <li><a href="about-ptob.html">About Us</a></li>
                             <li><a href="about-gari.html">About Gari</a></li>
                             <li><a href="contact-us.html">Contact</a></li>
                         </ul>
@@ -918,16 +879,6 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const mobileToggle = document.querySelector('.mobile-menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-
-        if (mobileToggle) {
-            mobileToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-            });
-        }
-
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -946,8 +897,5 @@
     <!-- Gari Widget (centralised) -->
     <script src="js/gari-widget.js"></script>
 
-    
-
-    
 </body>
 </html>
