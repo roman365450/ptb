@@ -201,6 +201,76 @@
             transform: scale(1.1);
         }
 
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #212121;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                background: #ffffff;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+
+            /* Swap: hamburger first, logo second */
+            .mobile-menu-toggle {
+                display: flex;
+                order: 1;
+            }
+
+            .logo {
+                order: 2;
+            }
+
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                order: 3;
+                background: #ffffff;
+                padding: 20px 0;
+                gap: 0;
+                align-items: flex-start;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .nav-menu li {
+                width: 100%;
+            }
+
+            .nav-menu a {
+                display: block;
+                padding: 12px 0;
+                font-size: 1em;
+            }
+
+            .logo img {
+                height: 60px;
+            }
+        }
+
         /* Hero Section */
         .hero {
             background: #f0f0f0;
@@ -580,55 +650,6 @@
         }
 
         @media (max-width: 768px) {
-            nav {
-                position: sticky;
-                top: 0;
-                z-index: 1000;
-                background: #ffffff;
-            }
-
-            .nav-container {
-                flex-wrap: wrap;
-            }
-
-            .nav-menu {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                order: 2;
-                background: #ffffff;
-                padding: 20px 0;
-                gap: 0;
-                align-items: flex-start;
-            }
-
-            .nav-menu.active {
-                display: flex;
-            }
-
-            .nav-menu li {
-                width: 100%;
-            }
-
-            .nav-menu a {
-                display: block;
-                padding: 12px 0;
-                font-size: 1em;
-            }
-
-            .nav-menu .nav-home { order: 0; }
-            .nav-menu .nav-session { order: 1; }
-            .nav-menu .nav-question { order: 2; }
-            .nav-menu .nav-about-us { order: 3; }
-            .nav-menu .nav-about-gari { order: 4; }
-            .nav-menu .nav-courses { order: 5; }
-            .nav-menu .nav-blog { order: 6; }
-            .nav-menu .nav-contact { order: 7; }
-
-            .logo img {
-                height: 60px;
-            }
-
             .hero-image img {
                 max-width: 400px;
             }
@@ -667,29 +688,6 @@
 
             .newsletter-container h2 {
                 font-size: 2em;
-            }
-        }
-
-        /* Mobile Menu Toggle */
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 10px;
-        }
-
-        .mobile-menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background: #212121;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-toggle {
-                display: flex;
             }
         }
 
@@ -860,6 +858,12 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <div class="logo">
                 <a href="index.html"><img src="img/trans logo 12.png" alt="PToB Logo"></a>
             </div>
@@ -874,20 +878,12 @@
                     </div>
                 </li>
                 <li class="nav-question"><a href="ask-gari.html">Quick Question?</a></li>
-                <li class="nav-about-us"><a href="about-ptob.html"><span class="desktop-text">ABOUT US</span><span class="mobile-text">ABOUT US</span></a></li>
+                <li class="nav-about-us"><a href="about-ptob.html">ABOUT US</a></li>
                 <li class="nav-about-gari"><a href="about-gari.html">ABOUT GARI</a></li>
-                <li class="nav-courses">
-                    <a href="yet-to-come.html">COURSES</a>
-                </li>
+                <li class="nav-courses"><a href="yet-to-come.html">COURSES</a></li>
                 <li class="nav-blog"><a href="https://garisullivan.substack.com/s/english-teaching" target="_blank" rel="noopener noreferrer">BLOG</a></li>
                 <li class="nav-contact"><a href="contact-us.html">CONTACT</a></li>
             </ul>
-
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
@@ -958,7 +954,6 @@
             </div>
             <div class="about-content">
                 <h2>Our approach</h2>
-
                 <p>In a world of streaming and gaming the old structure of linear learning is redundant. Non-natives can be exposed to English as much as natives, so they are able to learn the same way as natives. Past Tense of Banana works within this new reality. We reject the notion of English levels and define English understanding in terms of "skill" and "experience". This means we teach "advanced" structures like the third conditional and future perfect continuous to everyone from day one. By mirroring how native speakers naturally acquire language - exposure without immediate pressure for perfection - we align our teaching with how the modern world actually communicates.</p>
             </div>
         </div>
