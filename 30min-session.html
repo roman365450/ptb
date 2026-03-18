@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="css/dmme-widget-custom.css">
     <script src="https://dmme.ee/widget/dmme-widget.js" data-creator="ptb"></script>
     <style>
-        
-
         * {
             margin: 0;
             padding: 0;
@@ -162,47 +160,6 @@
             width: 100%;
         }
 
-        .nav-icons {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .cart-icon {
-            position: relative;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .cart-icon:hover {
-            transform: scale(1.1);
-        }
-
-        .cart-count {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: #ff6b6b;
-            color: white;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 11px;
-            font-weight: bold;
-        }
-
-        .search-icon {
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .search-icon:hover {
-            transform: scale(1.1);
-        }
-
         /* Mobile Menu Toggle */
         .mobile-menu-toggle {
             display: none;
@@ -228,19 +185,26 @@
                 background: #ffffff;
             }
 
-            .mobile-menu-toggle {
-                display: flex;
-            }
-
             .nav-container {
                 flex-wrap: wrap;
+                flex-direction: row;
+            }
+
+            /* Hamburger left, logo right */
+            .mobile-menu-toggle {
+                display: flex;
+                order: 1;
+            }
+
+            .logo {
+                order: 2;
             }
 
             .nav-menu {
                 display: none;
                 flex-direction: column;
                 width: 100%;
-                order: 2;
+                order: 3;
                 background: #ffffff;
                 padding: 20px 0;
                 gap: 0;
@@ -260,15 +224,6 @@
                 padding: 12px 0;
                 font-size: 1em;
             }
-
-            .nav-menu .nav-home { order: 0; }
-            .nav-menu .nav-session { order: 1; }
-            .nav-menu .nav-question { order: 2; }
-            .nav-menu .nav-about-us { order: 3; }
-            .nav-menu .nav-about-gari { order: 4; }
-            .nav-menu .nav-courses { order: 5; }
-            .nav-menu .nav-blog { order: 6; }
-            .nav-menu .nav-contact { order: 7; }
 
             .logo img {
                 height: 60px;
@@ -540,10 +495,6 @@
             color: #2d3436;
         }
 
-        .footer-spacer {
-            flex: 1;
-        }
-
         @media (max-width: 1024px) {
             .footer-content {
                 grid-template-columns: 1fr;
@@ -566,7 +517,6 @@
                 align-items: flex-start;
             }
         }
-
     </style>
     <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
@@ -577,18 +527,16 @@
     </script>
 </head>
 <body>
-    <!-- Preview Toggle Bar -->
-    <div class="preview-toggle-bar">
-        <span>Preview:</span>
-        <button id="desktop-btn" class="active" onclick="setDesktopView()">Desktop</button>
-        <button id="mobile-btn" onclick="setMobileView()">Mobile (375px)</button>
-    </div>
-
-    <div class="preview-wrapper">
 
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <div class="logo">
                 <a href="index.html"><img src="img/trans logo 12.png" alt="PToB Logo"></a>
             </div>
@@ -603,20 +551,12 @@
                     </div>
                 </li>
                 <li class="nav-question"><a href="ask-gari.html">Quick Question?</a></li>
-                <li class="nav-about-us"><a href="about-ptob.html"><span class="desktop-text">ABOUT US</span><span class="mobile-text">ABOUT US</span></a></li>
+                <li class="nav-about-us"><a href="about-ptob.html">ABOUT US</a></li>
                 <li class="nav-about-gari"><a href="about-gari.html">ABOUT GARI</a></li>
-                <li class="nav-courses">
-                    <a href="yet-to-come.html">COURSES</a>
-                </li>
+                <li class="nav-courses"><a href="yet-to-come.html">COURSES</a></li>
                 <li class="nav-blog"><a href="https://garisullivan.substack.com/s/english-teaching" target="_blank" rel="noopener noreferrer">BLOG</a></li>
                 <li class="nav-contact"><a href="contact-us.html">CONTACT</a></li>
             </ul>
-
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
     </nav>
 
@@ -727,7 +667,7 @@
                     <div class="footer-column">
                         <h3>Quick Links</h3>
                         <ul>
-                            <li><a href="about-ptob.html"><span class="desktop-text">About Us</span><span class="mobile-text">About Us</span></a></li>
+                            <li><a href="about-ptob.html">About Us</a></li>
                             <li><a href="about-gari.html">About Gari</a></li>
                             <li><a href="contact-us.html">Contact</a></li>
                         </ul>
@@ -770,32 +710,23 @@
     <!-- Gari Widget (centralised) -->
     <script src="js/gari-widget.js"></script>
 
-    </div>
-
     <script>
-        function setMobileView() {
-            document.body.classList.add('mobile-preview');
-            document.getElementById('mobile-btn').classList.add('active');
-            document.getElementById('desktop-btn').classList.remove('active');
-        }
-
-        function setDesktopView() {
-            document.body.classList.remove('mobile-preview');
-            document.getElementById('desktop-btn').classList.add('active');
-            document.getElementById('mobile-btn').classList.remove('active');
-        }
-    </script>
-
-    <script>
-        // Mobile menu toggle
         const mobileToggle = document.querySelector('.mobile-menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
 
         if (mobileToggle) {
-            mobileToggle.addEventListener('click', () => {
+            mobileToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
                 navMenu.classList.toggle('active');
             });
         }
+
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('active') && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
     </script>
+
 </body>
 </html>
